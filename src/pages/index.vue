@@ -9,7 +9,7 @@
           q-btn.shadow-5(size="xl" color="blue") Learn More 
             q-icon.on-right(name="arrow_downward")
       .row.absolute-bottom.justify-center
-        // img.transition(src="assets/transition1.svg")
+        // img.transition(src="~assets/transition1.svg")
         svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
           path(d="M0 100 C 20 0 50 0 100 100 Z")
     .row.justify-center.gutter-md
@@ -20,28 +20,28 @@
     .row.justify-center.gutter-sm.q-ma-lg(style="margin-top:120px;")
       .col-lg-3.col-md-12
         .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="assets/team2.svg")
+          img.heroicon.absolute-center(src="~assets/team2.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Join a Team
           p Each team provides unique incentives and competes against other teams.
       .verticalSpacer.lt-lg
       .col-lg-3.col-md-12
         .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="assets/installBoid.svg")
+          img.heroicon.absolute-center(src="~assets/installBoid.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Connect your Devices
           p Install the Boid app on your computers and phones.
       .verticalSpacer.lt-lg
       .col-lg-3.col-md-12
         .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="assets/team2.svg")
+          img.heroicon.absolute-center(src="~assets/team2.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Contribute to big ideas
           p Your spare computing resouces will make an impact in important science and cryptocurrency projects.
       .verticalSpacer.lt-lg
       .col-lg-3.col-md-12
         .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="assets/bitcoin.svg")
+          img.heroicon.absolute-center(src="~assets/bitcoin.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Earn Rewards
           p Earn money for your computing power, or donate your earnings to charity.
@@ -55,13 +55,13 @@
           .col-lg-4.col-md-12.lt-md
             q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000")
               q-carousel-slide
-                img.teamicon(src="assets/commoncause.svg")
+                img.teamicon(src="~assets/commoncause.svg")
               q-carousel-slide
-                img.teamicon(src="assets/boidteams.svg")
+                img.teamicon(src="~assets/boidteams.svg")
               q-carousel-slide
-                img.teamicon(src="assets/winprizes.svg")
+                img.teamicon(src="~assets/winprizes.svg")
               q-carousel-slide
-                img.teamicon(src="assets/teamleader.svg")
+                img.teamicon(src="~assets/teamleader.svg")
           ul(style="max-width:500px;")
             transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
               li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
@@ -75,13 +75,13 @@
         .col-lg-6.col-md-12.gt-md
           q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000")
             q-carousel-slide
-              img.teamicon(src="assets/commoncause.svg")
+              img.teamicon(src="~assets/commoncause.svg")
             q-carousel-slide
-              img.teamicon(src="assets/boidteams.svg")
+              img.teamicon(src="~assets/boidteams.svg")
             q-carousel-slide
-              img.teamicon(src="assets/winprizes.svg")
+              img.teamicon(src="~assets/winprizes.svg")
             q-carousel-slide
-              img.teamicon(src="assets/teamleader.svg")
+              img.teamicon(src="~assets/teamleader.svg")
     .explainer.relative-position.layout-padding(style="margin-top:0px;")
       .row.reverse.justify-center.relative-position
         .col-lg-4.col-xl-2
@@ -121,7 +121,7 @@
       .row.justify-center.gutter-xl(style="margin-top:180px;")
         .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
           .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="assets/sciexplain/problem.svg").shadow-5
+            img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg").shadow-5
           .explaincard.bg-white.shadow-3
             table.full-width
               tr
@@ -131,7 +131,7 @@
                   p.poverride Researchers need computing power to solve complex problems. 
         .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
           .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="assets/sciexplain/solution.svg").shadow-5
+            img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg").shadow-5
           .explaincard.bg-white.shadow-3
             table.full-width
               tr
@@ -141,7 +141,7 @@
                   p.poverride Complex problems are broken into small tasks that can run on any computer.
         .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
           .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="assets/sciexplain/distribute.svg").shadow-5
+            img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg").shadow-5
           .explaincard.bg-white.shadow-3
             table.full-width
               tr
@@ -151,7 +151,7 @@
                   p.poverride Small tasks are distributed to computers and phones globally.  
         .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
           .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="assets/sciexplain/process.svg").shadow-5
+            img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg").shadow-5
           .explaincard.bg-white.shadow-3
             table.full-width
               tr
@@ -161,7 +161,7 @@
                   p.poverride Tasks are processed, and the result of each computation is returned.   
         .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
           .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="assets/sciexplain/assemble.svg").shadow-5
+            img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg").shadow-5
           .explaincard.bg-white.shadow-3
             table.full-width
               tr
@@ -171,14 +171,14 @@
                   p.poverride Individual results are verified and assembled together into one big solution.
         .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
           .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="assets/sciexplain/earn.svg").shadow-5
+            img.sciExplain.absolute-center(src="~assets/sciexplain/earn.svg").shadow-5
           .explaincard.bg-white.shadow-3
             table.full-width
               tr
                 th
                   h5 6
                 th 
-                  p.poverride Users generate ⚡Boid Power in exchange for their contributions
+                  p.poverride Users generate ⚡Boid Power in exchange for their contributions.
 </template>
 
 <style lang="stylus">
@@ -208,7 +208,7 @@ th
   position:relative
 
 .explainer
-  background-image url("/assets/hexbg.png")
+  background-image url("~assets/hexbg.png")
   background-scale 200%
   height 5000px
 .scienceHeader
@@ -294,7 +294,7 @@ h6
 
 .heading 
   background linear-gradient(left, rgba(30,87,153,.5) 0%,rgba(79,138,194,0.45) 52%,rgba(125,185,232,.5) 100%),
-  url("/assets/header2.png")
+  url("~assets/header2.png")
   background-size cover
   background-repeat no-repeat
   background-position top center
@@ -333,31 +333,31 @@ export default {
         return {
           headerText:'Save Lives',
           paragraphText:'Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:'assets/scicons/chemistry.svg'
+          img:'~assets/scicons/chemistry.svg'
         }
       } else if (this.activeScienceBtn === 1){
         return {
           headerText:'Study Global Warming',
           paragraphText:'Help run climate simulations that predict the effects of climate change on our planet.',
-          img:'assets/scicons/chemistry.svg'
+          img:'~assets/scicons/chemistry.svg'
         }
       } else if (this.activeScienceBtn === 2){
         return {
           headerText:'Save Lives',
           paragraphText:'Your computer can help scientists simulate proteins to isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:'assets/scicons/chemistry.svg'
+          img:'~assets/scicons/chemistry.svg'
         }
       } else if (this.activeScienceBtn === 3){
         return {
           headerText:'Save Lives',
           paragraphText:'Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:'assets/scicons/chemistry.svg'
+          img:'~assets/scicons/chemistry.svg'
         }
       } else if (this.activeScienceBtn === 4){
         return {
           headerText:'Save Lives',
           paragraphText:'Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:'assets/scicons/chemistry.svg'
+          img:'~assets/scicons/chemistry.svg'
         }
       }
     }
