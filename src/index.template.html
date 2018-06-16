@@ -12,7 +12,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="statics/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="statics/icons/favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://rawgit.com/peacepostman/wavify/master/jquery.wavify.js"></script> -->
     <% if (htmlWebpackPlugin.options.ctx.mode.pwa) { %>
     <!-- Add to home screen for Android and modern mobile browsers -->
     <link rel="manifest" href="manifest.json">
@@ -25,7 +27,6 @@
     <!-- Add to home screen for Windows -->
     <meta name="msapplication-TileImage" content="statics/icons/ms-icon-144x144.png">
     <meta name="msapplication-TileColor" content="<%= htmlWebpackPlugin.options.pwaManifest.background_color %>">
-    <link type="text/css" rel="stylesheet" href="node_modules/firebaseui/dist/firebaseui.css" />
     <% } %>
 
     <%= htmlWebpackPlugin.options.headScripts %>
