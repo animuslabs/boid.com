@@ -333,31 +333,31 @@ export default {
         return {
           headerText:'Save Lives',
           paragraphText:'Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:'~assets/scicons/chemistry.svg'
+          img:require('assets/scicons/chemistry.svg')
         }
       } else if (this.activeScienceBtn === 1){
         return {
           headerText:'Study Global Warming',
           paragraphText:'Help run climate simulations that predict the effects of climate change on our planet.',
-          img:'~assets/scicons/chemistry.svg'
+          img:require('assets/scicons/earth.svg')
         }
       } else if (this.activeScienceBtn === 2){
         return {
           headerText:'Save Lives',
           paragraphText:'Your computer can help scientists simulate proteins to isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:'~assets/scicons/chemistry.svg'
+          img:require('assets/scicons/planetary.svg')
         }
       } else if (this.activeScienceBtn === 3){
         return {
           headerText:'Save Lives',
           paragraphText:'Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:'~assets/scicons/chemistry.svg'
+          img:require('assets/scicons/magnifyingglass.svg')
         }
       } else if (this.activeScienceBtn === 4){
         return {
           headerText:'Save Lives',
           paragraphText:'Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:'~assets/scicons/chemistry.svg'
+          img:require('assets/scicons/earth.svg')
         }
       }
     }
