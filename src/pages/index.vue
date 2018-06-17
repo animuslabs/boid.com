@@ -17,29 +17,30 @@
         div.absolute-center
           h3 Do something Huge
           h4 boid makes it easy
-    .row.justify-center.gutter-sm.q-ma-lg(style="margin-top:120px;")
-      .col-lg-3.col-md-12
+    .row.justify-center(style="margin-top:120px;")
+      .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
           img.heroicon.absolute-center(src="~assets/team2.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Join a Team
           p Each team provides unique incentives and competes against other teams.
-      .verticalSpacer.lt-lg
-      .col-lg-3.col-md-12
+      .verticalSpacer.lt-md
+      .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
           img.heroicon.absolute-center(src="~assets/installBoid.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Connect your Devices
           p Install the Boid app on your computers and phones.
-      .verticalSpacer.lt-lg
-      .col-lg-3.col-md-12
+      .col-12.gt-sm.lt-lg(style="height:170px;")
+      .verticalSpacer.lt-md
+      .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
           img.heroicon.absolute-center(src="~assets/team2.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Contribute to big ideas
           p Your spare computing resouces will make an impact in important science and cryptocurrency projects.
-      .verticalSpacer.lt-lg
-      .col-lg-3.col-md-12
+      .verticalSpacer.lt-md
+      .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
           img.heroicon.absolute-center(src="~assets/bitcoin.svg")
         .herocard.bg-white.shadow-3
@@ -48,11 +49,11 @@
     .relative-position
       <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
     div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
-      .row.justify-center(style="margin-top:124px; margin-bottom:10px;")
+      .row.justify-center(style="margin-top:100px; margin-bottom:10px;")
         .col-lg-5.col-md-12.layout-padding
           h3.text-white Fight the good fight
           h4.yellowheading Our communities have real impact
-          .col-lg-4.col-md-12.lt-md
+          .col-lg-4.col-md-12.lt-lg
             q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000")
               q-carousel-slide
                 img.teamicon(src="~assets/commoncause.svg")
@@ -92,10 +93,10 @@
           br
           br
           .absolute-center
-            .row.justify-center.bg-white.shadow-2(style="width:530px")
+            .row.justify-center.bg-white.shadow-2(style="width:630px")
               .col-md-12.relative-position.q-ma-lg
-                QBtnToggle.absolute-center(@input="clearSciInterval" size="lg" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="orange-6" :options="scienceBtns")
-              .col-sm-12.col-md-3.col-lg-4.relative-position(style="height:210px;")
+                QBtnToggle.absolute-center(@input="clearSciInterval" size="xl" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="orange-6" :options="scienceBtns")
+              .col-sm-12.col-md-5.col-lg-6.relative-position(style="height:310px;")
                 img.scienceIcons.absolute-center(:src="scienceInfo.img")
               .col-sm-12.col-md-8.col-lg-7.col-xl-6
                 div
@@ -119,7 +120,7 @@
         .col-lg-12.layout-padding
           h3 This is How it works
       .row.justify-center.gutter-xl(style="margin-top:180px;")
-        .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
+        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg").shadow-5
           .explaincard.bg-white.shadow-3
@@ -129,7 +130,7 @@
                   h5 1
                 th 
                   p.poverride Researchers need computing power to solve complex problems. 
-        .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
+        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg").shadow-5
           .explaincard.bg-white.shadow-3
@@ -139,7 +140,7 @@
                   h5 2
                 th 
                   p.poverride Complex problems are broken into small tasks that can run on any computer.
-        .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
+        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg").shadow-5
           .explaincard.bg-white.shadow-3
@@ -149,7 +150,7 @@
                   h5 3
                 th 
                   p.poverride Small tasks are distributed to computers and phones globally.  
-        .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
+        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg").shadow-5
           .explaincard.bg-white.shadow-3
@@ -159,7 +160,7 @@
                   h5 4
                 th 
                   p.poverride Tasks are processed, and the result of each computation is returned.   
-        .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
+        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg").shadow-5
           .explaincard.bg-white.shadow-3
@@ -169,7 +170,7 @@
                   h5 5
                 th 
                   p.poverride Individual results are verified and assembled together into one big solution.
-        .col-lg-5.col-md-12.col-xl-4(style="height:600px;")
+        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/earn.svg").shadow-5
           .explaincard.bg-white.shadow-3
@@ -179,193 +180,310 @@
                   h5 6
                 th 
                   p.poverride Users generate ⚡Boid Power in exchange for their contributions.
+    .relative-position()
+      svg.absolute-bottom(style="width:100%; height:100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
+        // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
+        polygon.svg--lg(fill="rgb(0, 112, 208)" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100")
+    .layout-padding(style="background-color:rgb(0, 112, 208); height:1000px;")
+      .row.justify-center.q-mt-xl
+        .col-lg-4.col-md-6.col-sm-7.col-xs-8
+          div(style="height: 230px;")
+            h1.text-white.relative-position boid
+              h1.text-white.absolute(style="top:80px") power
+          h4.text-yellow-8(style="text-shadow: 1px 1px 1px black; white-space:nowrap;") Your gateway to the new economy
+        .col-2.col-sm-1.col-xs-1
+          .relative-position.justify-center
+            img.boidPowerLogo(src="~assets/BoidPower.svg" )
+        .col-xs-3.lt-sm
+
+
+
+
+    
+
 </template>
 
 <style lang="stylus">
-@import '~variables'
+@import '~variables';
 
-.poverride
-  padding-left 10px
-
-th
-  font-weight normal
-  text-align left
-
-.verticalSpacer2
-  height 250px
-.sciExplain
-  padding 10px
-  width 500px
-  height 500px
-  background-color $blue-9
-  border-radius 100%
-  z-index 3
-.explaincard
-  border-radius 30px
-  z-index 5
-  margin-top 180px
-  padding 30px
-  position:relative
-
-.explainer
-  background-image url("~assets/hexbg.png")
-  background-scale 200%
-  height 5000px
-.scienceHeader
-  margin-bottom 10px
-
-.scienceIcons
-  width 180px
-  padding 0px
+.boidPowerHeader 
+  color: $yellow-2
+.boidPowerLogo
+  // filter: drop-shadow( 1px 1px 30px alpha($yellow-9,1))
+  width: 100px
   margin 0 auto
-  display: block
+  animation powerflicker 1s linear infinite
 
-.scienceCard
-  border-radius 30px
-  z-index 1
-  margin 20px
-  padding 20px
-  height 200px
+@keyframes powerflicker
+  0% 
+    filter: drop-shadow( 1px 1px 60px alpha($yellow-11,1))
+  2% 
+    filter: drop-shadow( 1px 1px 30px alpha($yellow-9,.1))
+  4% 
+    filter: drop-shadow( 1px 1px 30px alpha($yellow-9,.5))
+  8%
+    filter: drop-shadow( 1px 1px 20px alpha($yellow-11,1))
+  70%
+    filter: drop-shadow( 1px 1px 10px alpha($yellow-9,.1))
+  100%
+    filter: drop-shadow( 1px 1px 60px alpha($yellow-11,1))
 
-.wave 
-  position: absolute;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
+.poverride {
+  padding-left: 10px;
+}
+
+th {
+  font-weight: normal;
+  text-align: left;
+}
+
+.verticalSpacer2 {
+  height: 250px;
+}
+
+.sciExplain {
+  padding: 10px;
+  width: 480px;
+  background-color: $blue-9;
+  border-radius: 100%;
+  z-index: 3;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    width: 400px;
+  }
+}
+
+.explaincard {
+  border-radius: 30px;
   z-index: 1;
+  margin-top: 195px;
+  padding: 30px;
+  padding-top: 50px;
+  position: relative;
 
-.wave + .wave 
+  @media screen and (max-width: $breakpoint-sm) {
+    margin-top: 170px;
+  }
+
+  @media screen and (max-width: $breakpoint-lg) {
+    margin-top: 160px;
+  }
+}
+
+.explainer {
+  background-image: url('~assets/hexbg.png');
+  background-scale: 200%;
+}
+
+.scienceHeader {
+  margin-bottom: 10px;
+}
+
+.scienceIcons {
+  width: 300px;
+  padding: 0px;
+  margin: 0 auto;
+  display: block;
+}
+
+.scienceCard {
+  border-radius: 30px;
+  z-index: 1;
+  margin: 20px;
+  padding: 20px;
+  height: 200px;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.wave + .wave {
   z-index: 2;
+}
 
-.yellowheading
-  color $green-5
-  font-weight 400
-li
-  color $grey-1
-  font-size 24px
-  padding 10px
-.activelist
-  background-color $green-5
-  color $grey-1
-  border-radius 10px
-  box-shadow 2 2 10 4 black
-.verticalSpacer
-  height 180px
-.heroicon
-  padding 30px
-  width 350px
-.teamicon
-  max-width 600px
-  display: block
-  margin: 0 auto 
-.herocard
-  border-radius 30px
-  z-index 1
-  margin-top 130px
-  padding 20px
-.transition
-  width 100%
-  height 500px
-h2
-  color white
-  font-family 'Comfortaa'
-h3
-  color #089cfc
-  font-family 'Comfortaa'
-  text-transform uppercase
-  margin-bottom 0px
-p
-  font-size 18px
-  margin-bottom 0px
+.yellowheading {
+  color: $green-5;
+  font-weight: 400;
+}
 
-h4
+li {
+  color: $grey-1;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.activelist {
+  background-color: $green-5;
+  color: $grey-1;
+  border-radius: 10px;
+  box-shadow: 2 2 10 4 black;
+}
+
+.verticalSpacer {
+  height: 180px;
+}
+
+.heroicon {
+  padding: 30px;
+  width: 350px;
+}
+
+.teamicon {
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+.herocard {
+  border-radius: 30px;
+  z-index: 1;
+  margin-top: 130px;
+  margin-left:30px;
+  margin-right:30px;
+  padding: 20px;
+}
+
+.transition {
+  width: 100%;
+  height: 500px;
+}
+
+h1
+  font-family 'Comfortaa'
+  margin-top: 0px
+  margin-bottom 0px
+  @media screen and (max-width: $breakpoint-lg) 
+    font-size 112px
+  @media screen and (max-width: $breakpoint-sm) 
+    font-size 80px
+
+h2 {
+  color: white;
+  font-family: 'Comfortaa';
+}
+
+h3 {
+  color: #089cfc;
+  font-family: 'Comfortaa';
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+h4 
   color $green-6
   margin-top 0px
-h5
-  color $grey-9
-  font-size 35px
-  margin-top 25px
-  margin-bottom 20px
-h6
-  margin 0px
-  
-  
+  @media screen and (max-width: $breakpoint-lg) 
+    font-size 34px
+  @media screen and (max-width: $breakpoint-sm) 
+    font-size 25px
 
-.heading 
-  background linear-gradient(left, rgba(30,87,153,.5) 0%,rgba(79,138,194,0.45) 52%,rgba(125,185,232,.5) 100%),
-  url("~assets/header2.png")
-  background-size cover
-  background-repeat no-repeat
-  background-position top center
-  width 100%
-  height 100%
-  min-height 950px
+h5 {
+  color: $grey-9;
+  font-size: 35px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+h6 {
+  margin: 0px;
+}
+
+.heading {
+  background: linear-gradient(left, rgba(30, 87, 153, 0.5) 0%, rgba(79, 138, 194, 0.45) 52%, rgba(125, 185, 232, 0.5) 100%), url('~assets/header2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  height: 100%;
+  min-height: 950px;
+}
 </style>
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      teamActiveItem:0,
-      activeScienceBtn:0,
-      sciInterval:'',
-      scienceBtns:[
-            {label:'Medicine',value:0},
-            {label:'Ecology',value:1},
-            {label:'Astronomy',value:2},
-            {label:'Machine Learning',value:3},{label:'More',value:4}]
-    }
+      teamActiveItem: 0,
+      activeScienceBtn: 0,
+      sciInterval: "",
+      scienceBtns: [
+        { label: "Medicine", value: 0 },
+        { label: "Ecology", value: 1 },
+        { label: "Astronomy", value: 2 },
+        { label: "Machine Learning", value: 3 },
+        { label: "More", value: 4 }
+      ]
+    };
   },
-  mounted(){
-    this.sciInterval = setInterval(()=>{
-      if (this.activeScienceBtn>3){
-        this.activeScienceBtn = 0
-      } else this.activeScienceBtn++
-    },1000)
-    this.$refs.teamSlides.$on('slide',(i)=>{
-      this.teamActiveItem = i
-    })
+  mounted() {
+    this.sciInterval = setInterval(() => {
+      if (this.activeScienceBtn > 3) {
+        this.activeScienceBtn = 0;
+      } else this.activeScienceBtn++;
+    }, 1000);
+    this.$refs.teamSlides.$on("slide", i => {
+      this.teamActiveItem = i;
+    });
   },
-  computed:{
-    scienceInfo(){
-      if (this.activeScienceBtn === 0){
+  computed: {
+    scienceInfo() {
+      if (this.activeScienceBtn === 0) {
         return {
-          headerText:'Save Lives',
-          paragraphText:'Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:require('assets/scicons/chemistry.svg')
-        }
-      } else if (this.activeScienceBtn === 1){
+          headerText: "Save Lives",
+          paragraphText:
+            "Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.",
+          img: require("assets/scicons/chemistry.svg")
+        };
+      } else if (this.activeScienceBtn === 1) {
         return {
-          headerText:'Study Global Warming',
-          paragraphText:'Help run climate simulations that predict the effects of climate change on our planet.',
-          img:require('assets/scicons/earth.svg')
-        }
-      } else if (this.activeScienceBtn === 2){
+          headerText: "Study Global Warming",
+          paragraphText:
+            "Help run climate simulations that predict the effects of climate change on our planet.",
+          img: require("assets/scicons/earth.svg")
+        };
+      } else if (this.activeScienceBtn === 2) {
         return {
-          headerText:'Save Lives',
-          paragraphText:'Your computer can help scientists simulate proteins to isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:require('assets/scicons/planetary.svg')
-        }
-      } else if (this.activeScienceBtn === 3){
+          headerText: "Save Lives",
+          paragraphText:
+            "Your computer can help scientists simulate proteins to isolate more effictive treatments for cancer, alzheimers, and many other diseases.",
+          img: require("assets/scicons/planetary.svg")
+        };
+      } else if (this.activeScienceBtn === 3) {
         return {
-          headerText:'Save Lives',
-          paragraphText:'Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:require('assets/scicons/magnifyingglass.svg')
-        }
-      } else if (this.activeScienceBtn === 4){
+          headerText: "Save Lives",
+          paragraphText:
+            "Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.",
+          img: require("assets/scicons/magnifyingglass.svg")
+        };
+      } else if (this.activeScienceBtn === 4) {
         return {
-          headerText:'Save Lives',
-          paragraphText:'Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.',
-          img:require('assets/scicons/earth.svg')
-        }
+          headerText: "Save Lives",
+          paragraphText:
+            "Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.",
+          img: require("assets/scicons/earth.svg")
+        };
       }
     }
   },
-  methods:{
-    clearSciInterval(){
-      clearInterval(this.sciInterval)
+  methods: {
+    clearSciInterval() {
+      clearInterval(this.sciInterval);
     }
   }
-}
+};
 </script>
