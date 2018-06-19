@@ -5,8 +5,8 @@
         .col-12(style="margin-top:300px;")
           h2.text-center The Social Supercomputer
         div
-          q-btn.on-left.shadow-5(size="xl" color="green-6") Join Us
-          q-btn.shadow-5(size="xl" color="blue") Learn More 
+          q-btn.on-left.shadow-5(:size="buttonSize" color="green-6") Join Us
+          q-btn.shadow-5(:size="buttonSize" color="blue") Learn More 
             q-icon.on-right(name="arrow_downward")
       .row.absolute-bottom.justify-center
         // img.transition(src="~assets/transition1.svg")
@@ -17,7 +17,8 @@
         div.absolute-center
           h3 Do something Huge
           h4 boid makes it easy
-    .row.justify-center(style="margin-top:120px;")
+      div(style="height:30px;").lt-lg
+    .row.justify-center.xl-padding.md-padding(style="margin-top:120px;")
       .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
           img.heroicon.absolute-center(src="~assets/team2.svg")
@@ -31,7 +32,7 @@
         .herocard.bg-white.shadow-3
           h5.text-center Connect your Devices
           p Install the Boid app on your computers and phones.
-      .col-12.gt-sm.lt-lg(style="height:170px;")
+      .col-12.gt-sm.lt-lg(style="height:200px;")
       .verticalSpacer.lt-md
       .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
@@ -51,19 +52,31 @@
     div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
       .row.justify-center(style="margin-top:100px; margin-bottom:10px;")
         .col-lg-5.col-md-12.layout-padding
-          h3.text-white Fight the good fight
-          h4.yellowheading Our communities have real impact
-          .col-lg-4.col-md-12.lt-lg
-            q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000")
-              q-carousel-slide
-                img.teamicon(src="~assets/commoncause.svg")
-              q-carousel-slide
-                img.teamicon(src="~assets/boidteams.svg")
-              q-carousel-slide
-                img.teamicon(src="~assets/winprizes.svg")
-              q-carousel-slide
-                img.teamicon(src="~assets/teamleader.svg")
-          ul(style="max-width:500px;")
+          h3.text-white(style="") Fight the good fight
+          h4.yellowheading(style="margin-bottom:0px;") Our communities have real impact
+          .col-lg-4.col-md-12.lt-lg.teamExplainer
+            .relative-position
+              q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000" style="margin:0px !important;")
+                q-carousel-slide
+                  img.teamicon(src="~assets/commoncause.svg")
+                q-carousel-slide
+                  img.teamicon(src="~assets/boidteams.svg")
+                q-carousel-slide
+                  img.teamicon(src="~assets/winprizes.svg")
+                q-carousel-slide
+                  img.teamicon(src="~assets/teamleader.svg")
+              div(style="height:250px;")
+                ul(style="max-width:500px; bottom:0px;").absolute-bottom
+                  transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
+                    li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
+                      h6 Team Leaders rally users around important causes
+                    li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
+                      h6 Users contribute their computing resouces on global leaderboards
+                    li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
+                      h6 Users can win money and prizes for their contributions
+                    li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
+                      h6 Team leaders can keep or donate commisions earned from their team performance
+          ul.gt-md(style="max-width:500px;")
             transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
               li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
                 h6 Team Leaders rally users around important causes
@@ -74,7 +87,7 @@
               li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
                 h6 Team leaders can keep or donate commisions earned from their team performance
         .col-lg-6.col-md-12.gt-md
-          q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000")
+          q-carousel(ref="teamSlides" infinite :autoplay="4000")
             q-carousel-slide
               img.teamicon(src="~assets/commoncause.svg")
             q-carousel-slide
@@ -85,11 +98,10 @@
               img.teamicon(src="~assets/teamleader.svg")
     .explainer.relative-position.layout-padding(style="margin-top:0px;")
       .row.reverse.justify-center.relative-position
-        .col-lg-4.col-xl-2
-          div
+        .col-lg-12.col-xl-4
+          div.headingfix
             h3 Help researchers solve hard problems
-        .col-lg-1
-        .col-lg-6.col-md-12.col-xl-5.relative-position.gt-sm(style="height:400px;")
+        .col-lg-7.col-md-12.col-xl-5.relative-position.gt-sm(style="height:400px;")
           br
           br
           .absolute-center
@@ -98,7 +110,7 @@
                 QBtnToggle.absolute-center(@input="clearSciInterval" size="xl" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="orange-6" :options="scienceBtns")
               .col-sm-12.col-md-5.col-lg-6.relative-position(style="height:310px;")
                 img.scienceIcons.absolute-center(:src="scienceInfo.img")
-              .col-sm-12.col-md-8.col-lg-7.col-xl-6
+              .col-sm-12.col-md-6.col-lg-6.col-xl-6
                 div
                   .scienceCard
                     h6.scienceHeader.text-orange-6 {{scienceInfo.headerText}}
@@ -106,20 +118,22 @@
         .col-lg-6.col-md-12.col-xl-5.lt-md
           br
           br
-          .row.justify-center.bg-white.shadow-2(style="margin-top:0px;")
-            .col-md-12.relative-position.q-ma-lg
-              // QBtnToggle.absolute-center(@input="clearSciInterval" size="sm" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="orange-6" :options="scienceBtns")
-            .col-sm-12.col-md-3.col-lg-4.relative-position(style="height:210px;")
-              img.scienceIcons.absolute-center(:src="scienceInfo.img")
-            .col-sm-12.col-md-8.col-lg-7.col-xl-6
-              div
-                .scienceCard(style="height:150px;")
-                  h6.scienceHeader.text-orange-6 {{scienceInfo.headerText}}
-                  p  {{scienceInfo.paragraphText}}
+          .row.justify-center
+            .row.justify-center.bg-white.shadow-2(style="margin-top:0px; width:500px; height:490px;")
+              .col-md-12.relative-position.q-ma-lg
+                QBtnToggle.absolute-center.gt-xs(@input="clearSciInterval" size="lg" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="orange-6" :options="scienceBtns")
+                QBtnToggle.absolute-center.lt-sm(@input="clearSciInterval" size="sm" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="orange-6" :options="scienceBtns")
+              .col-sm-12.col-md-3.col-lg-4.relative-position(style="height:250px;")
+                img.scienceIcons.absolute-center(:src="scienceInfo.img")
+              .col-sm-12.col-md-8.col-lg-7.col-xl-6
+                div
+                  .scienceCard
+                    h6.scienceHeader.text-orange-6 {{scienceInfo.headerText}}
+                    p  {{scienceInfo.paragraphText}}
       .row
         .col-lg-12.layout-padding
           h3 This is How it works
-      .row.justify-center.gutter-xl(style="margin-top:180px;")
+      .row.justify-center.gutter-lg.xl-padding(style="margin-top:180px;")
         .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg").shadow-5
@@ -129,7 +143,8 @@
                 th
                   h5 1
                 th 
-                  p.poverride Researchers need computing power to solve complex problems. 
+                  h6.poverride Researchers need computing power to solve complex problems. 
+        .col-1.gt-md.lt-xl
         .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg").shadow-5
@@ -139,7 +154,7 @@
                 th
                   h5 2
                 th 
-                  p.poverride Complex problems are broken into small tasks that can run on any computer.
+                  h6.poverride Complex problems are broken into small tasks that can run on any computer.
         .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg").shadow-5
@@ -149,7 +164,8 @@
                 th
                   h5 3
                 th 
-                  p.poverride Small tasks are distributed to computers and phones globally.  
+                  h6.poverride Small tasks are distributed to computers and phones globally.  
+        .col-1.gt-md.lt-xl
         .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg").shadow-5
@@ -159,7 +175,7 @@
                 th
                   h5 4
                 th 
-                  p.poverride Tasks are processed, and the result of each computation is returned.   
+                  h6.poverride Tasks are processed, and the result of each computation is returned.   
         .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg").shadow-5
@@ -169,7 +185,8 @@
                 th
                   h5 5
                 th 
-                  p.poverride Individual results are verified and assembled together into one big solution.
+                  h6.poverride Individual results are verified and assembled together into one big solution.
+        .col-1.gt-md.lt-xl
         .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
           .row.justify-center.relative-position
             img.sciExplain.absolute-center(src="~assets/sciexplain/earn.svg").shadow-5
@@ -179,32 +196,152 @@
                 th
                   h5 6
                 th 
-                  p.poverride Users generate ⚡Boid Power in exchange for their contributions.
+                  h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
     .relative-position()
       svg.absolute-bottom(style="width:100%; height:100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
         // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
         polygon.svg--lg(fill="rgb(0, 112, 208)" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100")
     .layout-padding(style="background-color:rgb(0, 112, 208); height:1000px;")
       .row.justify-center.q-mt-xl
-        .col-lg-4.col-md-6.col-sm-7.col-xs-8
+        .col-xl-3.col-lg-5.col-md-6.col-sm-7.col-xs-8
           div(style="height: 230px;")
             h1.text-white.relative-position boid
               h1.text-white.absolute(style="top:80px") power
-          h4.text-yellow-8(style="text-shadow: 1px 1px 1px black; white-space:nowrap;") Your gateway to the new economy
+          h4.text-yellow-8(style="text-shadow: 1px 1px 1px yellow-6; white-space:nowrap;") Your gateway to the new economy
         .col-2.col-sm-1.col-xs-1
           .relative-position.justify-center
-            img.boidPowerLogo(src="~assets/BoidPower.svg" )
+            img.boidPowerLogo(src="~assets/BoidPower.svg")
         .col-xs-3.lt-sm
-
-
-
-
-    
-
+      .row.justify-center.q-mt-xl
+        .col-12-auto
+          .row.justify-center
+            .col-sm-12.col-md-5.col-lg-5
+              .row.justify-center
+                img.bpicons(src="~assets/BoidPower.svg")
+            .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
+              .bpinfocard
+                h6.bpHeading Users generate Boid power
+                h6 This is explainer text
+      .gt-sm.bpspacer
+      .row.justify-center.q-mt-xl
+        .col-12-auto
+          .row.justify-center.reverse
+            .col-sm-12.col-md-5.col-lg-5
+              .row.justify-center
+                img.bpicons(src="~assets/BoidPower.svg")
+            .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
+              .bpinfocard2
+                h6.bpHeading Users generate Boid power
+                h6 This is explainer text
+      .gt-sm.bpspacer              
+      .row.justify-center.q-mt-xl
+        .col-12-auto
+          .row.justify-center
+            .col-sm-12.col-md-5.col-lg-5
+              .row.justify-center
+                img.bpicons(src="~assets/BoidPower.svg")
+            .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
+              .bpinfocard
+                h6.bpHeading Users generate Boid power
+                h6 This is explainer text
+      .gt-sm.bpspacer              
+      .row.justify-center.q-mt-xl
+        .col-12-auto
+          .row.reverse.justify-center
+            .col-sm-12.col-md-5.col-lg-5
+              .row.justify-center
+                img.bpicons(src="~assets/BoidPower.svg")
+            .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
+              .bpinfocard2
+                h6.bpHeading Users generate Boid power
+                h6 This is explainer text
 </template>
 
 <style lang="stylus">
-@import '~variables';
+@import '~variables'
+.teamExplainer
+  height: 100%
+  padding-bottom: 40px
+
+
+
+
+.bpspacer
+  height:50px;
+  
+
+.bpHeading
+  margin-bottom: 10px
+  font-weight: 800
+  font-size 25px
+
+.bpinfocard2
+  height:190px
+  width:550px
+  background-color:white
+  z-index 1
+  left:-30px
+  top:30px
+  position:absolute
+  border-radius 30px
+  padding 20px
+  padding-right:155px
+  box-shadow 0px 1px 4px rgb(0,0,0,0.2)
+  @media screen and (max-width: $breakpoint-sm) 
+    left:0px
+    top:-40px
+    width:100%
+    height:100%
+    padding 25px
+    padding-top 55px
+
+.bpinfocard
+  height:190px
+  width:550px
+  background-color:white
+  z-index 1
+  left:-140px
+  top:30px
+  position:absolute
+  border-radius 30px
+  padding 20px
+  padding-left:155px
+  box-shadow 0px 1px 4px rgb(0,0,0,0.2)
+  @media screen and (max-width: $breakpoint-sm) 
+    left:0px
+    top:-40px
+    width:100%
+    height:100%
+    padding 25px
+    padding-top 55px
+
+.bpicons
+  height: 250px
+  width: 250px
+  background-color: $grey-9;
+  border-radius: 100%;
+  z-index 4
+  position relative
+  filter drop-shadow( 0px 0px 4px black)
+
+
+.md-padding
+  @media screen and (max-width: $breakpoint-lg) 
+    padding-right: 20px
+    padding-left: 20px
+
+.xl-padding
+  @media screen and (min-width: $breakpoint-lg) 
+    padding-right: 100px
+    padding-left: 100px
+  @media screen and (min-width 1200px) and (max-width 1800px)
+    padding-right: 0px
+    padding-left: 0px
+  
+
+.headingfix
+  @media screen and (min-width 1200px) and (max-width 1800px)
+    padding-left:140px
 
 .boidPowerHeader 
   color: $yellow-2
@@ -213,6 +350,8 @@
   width: 100px
   margin 0 auto
   animation powerflicker 1s linear infinite
+  @media screen and (min-width 1200px) and (max-width 1800px)
+    margin-left:100px
 
 @keyframes powerflicker
   0% 
@@ -230,6 +369,7 @@
 
 .poverride {
   padding-left: 10px;
+  font-weight 400
 }
 
 th {
@@ -241,21 +381,22 @@ th {
   height: 250px;
 }
 
-.sciExplain {
+.sciExplain 
   padding: 10px;
   width: 480px;
   background-color: $blue-9;
   border-radius: 100%;
   z-index: 3;
-
-  @media screen and (max-width: $breakpoint-lg) {
+  @media screen and (min-width 1200px) and (max-width 1800px)
+    width: 380px;
+    margin-top: 40px;
+  @media screen and (max-width $breakpoint-lg) 
     width: 450px;
-  }
 
-  @media screen and (max-width: $breakpoint-sm) {
+  @media screen and (max-width $breakpoint-sm) 
     width: 400px;
-  }
-}
+  
+
 
 .explaincard {
   border-radius: 30px;
@@ -283,20 +424,22 @@ th {
   margin-bottom: 10px;
 }
 
-.scienceIcons {
+.scienceIcons 
   width: 300px;
   padding: 0px;
   margin: 0 auto;
   display: block;
-}
+  @media screen and (max-width: $breakpoint-sm) 
+    width: 200px;
 
-.scienceCard {
+
+.scienceCard 
   border-radius: 30px;
   z-index: 1;
   margin: 20px;
   padding: 20px;
   height: 200px;
-}
+
 
 .wave {
   position: absolute;
@@ -330,13 +473,20 @@ li {
 }
 
 .verticalSpacer {
-  height: 180px;
+  height: 440px;
 }
 
-.heroicon {
+.heroicon 
   padding: 30px;
   width: 350px;
-}
+  filter: drop-shadow( 0px 2px 2px grey)
+  @media screen and (max-width $breakpoint-lg) 
+    width: 300px
+  @media screen and (max-width $breakpoint-md) 
+    width: 350px
+
+
+
 
 .teamicon {
   max-width: 600px;
@@ -347,9 +497,9 @@ li {
 .herocard {
   border-radius: 30px;
   z-index: 1;
-  margin-top: 130px;
-  margin-left:30px;
-  margin-right:30px;
+  margin-top: 110px;
+  margin-left:15px;
+  margin-right:15px;
   padding: 20px;
 }
 
@@ -372,12 +522,14 @@ h2 {
   font-family: 'Comfortaa';
 }
 
-h3 {
+h3 
   color: #089cfc;
   font-family: 'Comfortaa';
   text-transform: uppercase;
   margin-bottom: 0px;
-}
+  @media screen and (max-width: $breakpoint-sm) 
+    font-size 35px
+
 
 p {
   font-size: 18px;
@@ -399,12 +551,14 @@ h5 {
   margin-bottom: 20px;
 }
 
-h6 {
+h6 
   margin: 0px;
-}
+  @media screen and (max-width: $breakpoint-md) 
+    font-size 20px
+
 
 .heading {
-  background: linear-gradient(left, rgba(30, 87, 153, 0.5) 0%, rgba(79, 138, 194, 0.45) 52%, rgba(125, 185, 232, 0.5) 100%), url('~assets/header2.png');
+  background: linear-gradient(to right, rgba(30, 87, 153, 0.5) 0%, rgba(79, 138, 194, 0.45) 52%, rgba(125, 185, 232, 0.5) 100%), url('~assets/header2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -415,9 +569,15 @@ h6 {
 </style>
 
 <script>
+console.log(screen.height,screen.width)
+
 export default {
   data() {
     return {
+      screenSize:{
+        height: window.innerHeight,
+        width: window.innerWidth
+      },
       teamActiveItem: 0,
       activeScienceBtn: 0,
       sciInterval: "",
@@ -431,6 +591,9 @@ export default {
     };
   },
   mounted() {
+    this.$root.$on('resize',(data)=>{
+      this.screenSize = data
+    })
     this.sciInterval = setInterval(() => {
       if (this.activeScienceBtn > 3) {
         this.activeScienceBtn = 0;
@@ -441,6 +604,10 @@ export default {
     });
   },
   computed: {
+    buttonSize(){
+      if (this.screenSize.width > 769) return 'xl'
+      else return 'lg'
+    },
     scienceInfo() {
       if (this.activeScienceBtn === 0) {
         return {

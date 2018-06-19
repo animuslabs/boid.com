@@ -1,5 +1,5 @@
 <template lang="pug">
-  q-layout(view="lHh Lpr lFf")
+  q-layout(view="lHh Lpr lFf" ref="pageLayout")
     q-layout-header
       q-toolbar(color="white" text-color="black")
         q-toolbar-title.q-ma-sm
@@ -22,6 +22,12 @@ export default {
     openURL,
     logout(){
     }
+  },
+  mounted(){
+    this.$refs.pageLayout.$on('resize',(data)=>{
+      this.$root.$emit('resize',data)
+    })
+    
   },
   props:[]
 }

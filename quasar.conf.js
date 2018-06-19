@@ -24,7 +24,12 @@ module.exports = function (ctx) {
       // analyze: true,
       // extractCSS: false,
       // useNotifier: false,
-      extendWebpack(cfg) {}
+      extendWebpack(cfg) {
+        cfg.module.rules.push({
+          test: /\.pug$/,
+          loader: 'pug-plain-loader'
+        })
+      }
     },
     devServer: {
       // https: true,
