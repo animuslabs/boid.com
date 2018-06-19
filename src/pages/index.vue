@@ -21,13 +21,6 @@
     .row.justify-center.xl-padding.md-padding(style="margin-top:120px;")
       .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="~assets/team2.svg")
-        .herocard.bg-white.shadow-3
-          h5.text-center Join a Team
-          p Each team provides unique incentives and competes against other teams.
-      .verticalSpacer.lt-md
-      .col-lg-3.col-md-6.col-sm-12
-        .row.justify-center.relative-position
           img.heroicon.absolute-center(src="~assets/installBoid.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Connect your Devices
@@ -50,32 +43,33 @@
     .relative-position
       <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
     div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
-      .row.justify-center(style="margin-top:100px; margin-bottom:10px;")
-        .col-lg-5.col-md-12.layout-padding
+      .row.justify-center.gutter-sm(style="margin-top:100px; margin-bottom:10px;")
+        .col-lg-5.col-md-auto.col-sm-10
           h3.text-white(style="") Fight the good fight
           h4.yellowheading(style="margin-bottom:0px;") Our communities have real impact
-          .col-lg-4.col-md-12.lt-lg.teamExplainer
-            .relative-position
-              q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000" style="margin:0px !important;")
-                q-carousel-slide
-                  img.teamicon(src="~assets/commoncause.svg")
-                q-carousel-slide
-                  img.teamicon(src="~assets/boidteams.svg")
-                q-carousel-slide
-                  img.teamicon(src="~assets/winprizes.svg")
-                q-carousel-slide
-                  img.teamicon(src="~assets/teamleader.svg")
-              div(style="height:250px;")
-                ul(style="max-width:500px; bottom:0px;").absolute-bottom
-                  transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
-                    li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
-                      h6 Team Leaders rally users around important causes
-                    li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
-                      h6 Users contribute their computing resouces on global leaderboards
-                    li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
-                      h6 Users can win money and prizes for their contributions
-                    li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
-                      h6 Team leaders can keep or donate commisions earned from their team performance
+          .row.justify-center
+            .col-lg-4.col-md-10.col-sm-10.lt-lg.teamExplainer
+              .relative-position(style="width:450px;")
+                q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000" style="margin:0px !important;")
+                  q-carousel-slide
+                    img.teamicon(src="~assets/commoncause.svg")
+                  q-carousel-slide
+                    img.teamicon(src="~assets/boidteams.svg")
+                  q-carousel-slide
+                    img.teamicon(src="~assets/winprizes.svg")
+                  q-carousel-slide
+                    img.teamicon(src="~assets/teamleader.svg")
+                div(style="height:250px;")
+                  ul(style="max-width:500px; bottom:0px;").absolute-bottom
+                    transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
+                      li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
+                        h6 Team Leaders rally users around important causes
+                      li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
+                        h6 Users contribute their computing resouces on global leaderboards
+                      li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
+                        h6 Users can win money and prizes for their contributions
+                      li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
+                        h6 Team leaders can keep or donate commisions earned from their team performance
           ul.gt-md(style="max-width:500px;")
             transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
               li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
@@ -86,8 +80,8 @@
                 h6 Users can win money and prizes for their contributions
               li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
                 h6 Team leaders can keep or donate commisions earned from their team performance
-        .col-lg-6.col-md-12.gt-md
-          q-carousel(ref="teamSlides" infinite :autoplay="4000")
+        .col-lg-4.col-md-12.gt-md
+          q-carousel(style="width:600px" ref="teamSlides" infinite :autoplay="4000")
             q-carousel-slide
               img.teamicon(src="~assets/commoncause.svg")
             q-carousel-slide
@@ -96,6 +90,7 @@
               img.teamicon(src="~assets/winprizes.svg")
             q-carousel-slide
               img.teamicon(src="~assets/teamleader.svg")
+
     .explainer.relative-position.layout-padding(style="margin-top:0px;")
       .row.reverse.justify-center.relative-position
         .col-lg-12.col-xl-4
@@ -201,7 +196,7 @@
       svg.absolute-bottom(style="width:100%; height:100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
         // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
         polygon.svg--lg(fill="rgb(0, 112, 208)" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100")
-    .layout-padding(style="background-color:rgb(0, 112, 208); height:1000px;")
+    .layout-padding(style="background-color:rgb(0, 112, 208);")
       .row.justify-center.q-mt-xl
         .col-xl-3.col-lg-5.col-md-6.col-sm-7.col-xs-8
           div(style="height: 230px;")
@@ -220,8 +215,8 @@
                 img.bpicons(src="~assets/BoidPower.svg")
             .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
               .bpinfocard
-                h6.bpHeading Users generate Boid power
-                h6 This is explainer text
+                h6.bpHeading Devices generate Boid Power
+                h6.bpinfoText The amount of Boid Power generated by a device is determined by it's hardware performance and how long the Boid application is running each day.
       .gt-sm.bpspacer
       .row.justify-center.q-mt-xl
         .col-12-auto
@@ -231,8 +226,8 @@
                 img.bpicons(src="~assets/BoidPower.svg")
             .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
               .bpinfocard2
-                h6.bpHeading Users generate Boid power
-                h6 This is explainer text
+                h6.bpHeading Weekly competitions
+                h6.bpinfoText Users compete in weekly challenges for money and prizes. Our global leaderboards are based on live Boid Power metrics.
       .gt-sm.bpspacer              
       .row.justify-center.q-mt-xl
         .col-12-auto
@@ -242,8 +237,8 @@
                 img.bpicons(src="~assets/BoidPower.svg")
             .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
               .bpinfocard
-                h6.bpHeading Users generate Boid power
-                h6 This is explainer text
+                h6.bpHeading Passive Income
+                h6.bpinfoText Your Boid Power can be used to mine for various cryptos. Get paid out daily however you like.
       .gt-sm.bpspacer              
       .row.justify-center.q-mt-xl
         .col-12-auto
@@ -253,8 +248,11 @@
                 img.bpicons(src="~assets/BoidPower.svg")
             .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
               .bpinfocard2
-                h6.bpHeading Users generate Boid power
-                h6 This is explainer text
+                h6.bpHeading Do Good
+                h6.bpinfoText Divert your Boid Power towards important non-profits in epic fundraising campaigns.
+    svg.absolute-bottom(style="width:100%; height:100px; padding-top:300px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
+      // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
+      polygon.svg--lg(fill="white" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100")
 </template>
 
 <style lang="stylus">
@@ -262,9 +260,9 @@
 .teamExplainer
   height: 100%
   padding-bottom: 40px
-
-
-
+ 
+.bpinfoText
+  padding-left 35px
 
 .bpspacer
   height:50px;
