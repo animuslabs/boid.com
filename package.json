@@ -16,7 +16,7 @@
   "devDependencies": {
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
-    "quasar-cli": "^1.16.0"
+    "quasar-cli": "^0.16.4"
   },
   "engines": {
     "node": ">= 8.9.0",
