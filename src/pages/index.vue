@@ -110,6 +110,7 @@
                   .scienceCard
                     h6.scienceHeader.text-orange-6 {{scienceInfo.headerText}}
                     p  {{scienceInfo.paragraphText}}
+            q-btn.full-width(color="green" size="lg" glossy @click="hideSciExplain = false") Learn More
         .col-lg-6.col-md-12.col-xl-5.lt-md
           br
           br
@@ -125,73 +126,77 @@
                   .scienceCard
                     h6.scienceHeader.text-orange-6 {{scienceInfo.headerText}}
                     p  {{scienceInfo.paragraphText}}
-      .row
-        .col-lg-12.layout-padding
-          h3 This is How it works
-      .row.justify-center.gutter-lg.xl-padding(style="margin-top:180px;")
-        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
-          .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg").shadow-5
-          .explaincard.bg-white.shadow-3
-            table.full-width
-              tr
-                th
-                  h5 1
-                th 
-                  h6.poverride Researchers need computing power to solve complex problems. 
-        .col-1.gt-md.lt-xl
-        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
-          .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg").shadow-5
-          .explaincard.bg-white.shadow-3
-            table.full-width
-              tr
-                th
-                  h5 2
-                th 
-                  h6.poverride Complex problems are broken into small tasks that can run on any computer.
-        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
-          .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg").shadow-5
-          .explaincard.bg-white.shadow-3
-            table.full-width
-              tr
-                th
-                  h5 3
-                th 
-                  h6.poverride Small tasks are distributed to computers and phones globally.  
-        .col-1.gt-md.lt-xl
-        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
-          .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg").shadow-5
-          .explaincard.bg-white.shadow-3
-            table.full-width
-              tr
-                th
-                  h5 4
-                th 
-                  h6.poverride Tasks are processed, and the result of each computation is returned.   
-        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
-          .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg").shadow-5
-          .explaincard.bg-white.shadow-3
-            table.full-width
-              tr
-                th
-                  h5 5
-                th 
-                  h6.poverride Individual results are verified and assembled together into one big solution.
-        .col-1.gt-md.lt-xl
-        .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
-          .row.justify-center.relative-position
-            img.sciExplain.absolute-center(src="~assets/sciexplain/earn.svg").shadow-5
-          .explaincard.bg-white.shadow-3
-            table.full-width
-              tr
-                th
-                  h5 6
-                th 
-                  h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
+
+            q-btn.full-width(color="green" size="lg" glossy @click="hideSciExplain = false") Learn More
+      div(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
+      div(v-bind:class="{hidden:hideSciExplain}")
+        .row
+          .col-lg-12.layout-padding
+            h3 This is How it works
+        .row.justify-center.gutter-lg.xl-padding(style="margin-top:120px;")
+          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+            .row.justify-center.relative-position
+              img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg").shadow-5
+            .explaincard.bg-white.shadow-3
+              table.full-width
+                tr
+                  th
+                    h5 1
+                  th 
+                    h6.poverride Researchers need computing power to solve complex problems. 
+          .col-1.gt-md.lt-xl
+          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+            .row.justify-center.relative-position
+              img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg").shadow-5
+            .explaincard.bg-white.shadow-3
+              table.full-width
+                tr
+                  th
+                    h5 2
+                  th 
+                    h6.poverride Complex problems are broken into small tasks that can run on any computer.
+          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+            .row.justify-center.relative-position
+              img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg").shadow-5
+            .explaincard.bg-white.shadow-3
+              table.full-width
+                tr
+                  th
+                    h5 3
+                  th 
+                    h6.poverride Small tasks are distributed to computers and phones globally.  
+          .col-1.gt-md.lt-xl
+          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+            .row.justify-center.relative-position
+              img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg").shadow-5
+            .explaincard.bg-white.shadow-3
+              table.full-width
+                tr
+                  th
+                    h5 4
+                  th 
+                    h6.poverride Tasks are processed, and the result of each computation is returned.   
+          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+            .row.justify-center.relative-position
+              img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg").shadow-5
+            .explaincard.bg-white.shadow-3
+              table.full-width
+                tr
+                  th
+                    h5 5
+                  th 
+                    h6.poverride Individual results are verified and assembled together into one big solution.
+          .col-1.gt-md.lt-xl
+          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+            .row.justify-center.relative-position
+              img.sciExplain.absolute-center(src="~assets/sciexplain/earn.svg").shadow-5
+            .explaincard.bg-white.shadow-3
+              table.full-width
+                tr
+                  th
+                    h5 6
+                  th 
+                    h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
     .relative-position()
       svg.absolute-bottom(style="width:100%; height:100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
         // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
@@ -572,6 +577,7 @@ console.log(screen.height,screen.width)
 export default {
   data() {
     return {
+      hideSciExplain:true,
       screenSize:{
         height: window.innerHeight,
         width: window.innerWidth
