@@ -21,7 +21,7 @@
     .row.justify-center.xl-padding.md-padding(style="margin-top:120px;")
       .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="~assets/installBoid.svg")
+          img.heroicon.absolute-center(src="~assets/connectdevices.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Connect your Devices
           p Install the Boid app on your computers and phones.
@@ -29,14 +29,14 @@
       .verticalSpacer.lt-md
       .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="~assets/team2.svg")
+          img.heroicon.absolute-center(src="~assets/contribute2.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Contribute to big ideas
           p Your spare computing resouces will make an impact in important science and cryptocurrency projects.
       .verticalSpacer.lt-md
       .col-lg-3.col-md-6.col-sm-12
         .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="~assets/bitcoin.svg")
+          img.heroicon.absolute-center(src="~assets/earnrewards.svg")
         .herocard.bg-white.shadow-3
           h5.text-center Earn Rewards
           p Earn money for your computing power, or donate your earnings to charity.
@@ -44,7 +44,7 @@
       <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
     div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
       .row.justify-center.gutter-sm(style="margin-top:100px; margin-bottom:10px;")
-        .col-lg-5.col-md-auto.col-sm-10
+        .col-xl-4.col-lg-5.col-md-auto.col-sm-10
           h3.text-white(style="") Fight the good fight
           h4.yellowheading(style="margin-bottom:0px;") Our communities have real impact
           .row.justify-center
@@ -133,10 +133,10 @@
         .row
           .col-lg-12.layout-padding
             h3 This is How it works
-        .row.justify-center.gutter-lg.xl-padding(style="margin-top:120px;")
-          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+        .row.justify-center.gutter-lg.xl-padding(style="margin-top:200px;")
+          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
             .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg").shadow-5
+              img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg")
             .explaincard.bg-white.shadow-3
               table.full-width
                 tr
@@ -145,9 +145,9 @@
                   th 
                     h6.poverride Researchers need computing power to solve complex problems. 
           .col-1.gt-md.lt-xl
-          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
             .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg").shadow-5
+              img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg")
             .explaincard.bg-white.shadow-3
               table.full-width
                 tr
@@ -155,9 +155,9 @@
                     h5 2
                   th 
                     h6.poverride Complex problems are broken into small tasks that can run on any computer.
-          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
             .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg").shadow-5
+              img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg")
             .explaincard.bg-white.shadow-3
               table.full-width
                 tr
@@ -166,9 +166,9 @@
                   th 
                     h6.poverride Small tasks are distributed to computers and phones globally.  
           .col-1.gt-md.lt-xl
-          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
             .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg").shadow-5
+              img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg")
             .explaincard.bg-white.shadow-3
               table.full-width
                 tr
@@ -176,9 +176,9 @@
                     h5 4
                   th 
                     h6.poverride Tasks are processed, and the result of each computation is returned.   
-          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
             .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg").shadow-5
+              img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg")
             .explaincard.bg-white.shadow-3
               table.full-width
                 tr
@@ -187,9 +187,9 @@
                   th 
                     h6.poverride Individual results are verified and assembled together into one big solution.
           .col-1.gt-md.lt-xl
-          .col-lg-5.col-md-12.col-xl-4(style="height:620px;")
+          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
             .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/earn.svg").shadow-5
+              img.sciExplain.absolute-center(src="~assets/sciexplain/generate.svg")
             .explaincard.bg-white.shadow-3
               table.full-width
                 tr
@@ -217,7 +217,7 @@
           .row.justify-center
             .col-sm-12.col-md-5.col-lg-5
               .row.justify-center
-                img.bpicons(src="~assets/BoidPower.svg")
+                img.bpicons(src="~assets/boidpower/generate.svg")
             .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
               .bpinfocard
                 h6.bpHeading Devices generate Boid Power
@@ -228,7 +228,7 @@
           .row.justify-center.reverse
             .col-sm-12.col-md-5.col-lg-5
               .row.justify-center
-                img.bpicons(src="~assets/BoidPower.svg")
+                img.bpicons(src="~assets/boidpower/competitions.svg")
             .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
               .bpinfocard2
                 h6.bpHeading Weekly competitions
@@ -239,7 +239,7 @@
           .row.justify-center
             .col-sm-12.col-md-5.col-lg-5
               .row.justify-center
-                img.bpicons(src="~assets/BoidPower.svg")
+                img.bpicons(src="~assets/boidpower/passiveincome.svg")
             .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
               .bpinfocard
                 h6.bpHeading Passive Income
@@ -250,7 +250,7 @@
           .row.reverse.justify-center
             .col-sm-12.col-md-5.col-lg-5
               .row.justify-center
-                img.bpicons(src="~assets/BoidPower.svg")
+                img.bpicons(src="~assets/boidpower/dogood.svg")
             .col-sm-12.col-md-7.col-lg-7.relative-position(style="width:400px; height:200px;")
               .bpinfocard2
                 h6.bpHeading Do Good
@@ -321,7 +321,8 @@
 .bpicons
   height: 250px
   width: 250px
-  background-color: $grey-9;
+  padding:20px;
+  background-color: white
   border-radius: 100%;
   z-index 4
   position relative
@@ -386,35 +387,34 @@ th {
 
 .sciExplain 
   padding: 10px;
-  width: 480px;
-  background-color: $blue-9;
-  border-radius: 100%;
+  width: 680px;
+  // background-color: $blue-9;
+  // border-radius: 100%;
   z-index: 3;
   @media screen and (min-width 1200px) and (max-width 1800px)
-    width: 380px;
+    width: 580px;
     margin-top: 40px;
   @media screen and (max-width $breakpoint-lg) 
-    width: 450px;
-
+    width: 620px;
   @media screen and (max-width $breakpoint-sm) 
-    width: 400px;
+    width: 600px;
   
 
 
 .explaincard {
   border-radius: 30px;
   z-index: 1;
-  margin-top: 195px;
+  margin-top: 295px;
   padding: 30px;
   padding-top: 50px;
   position: relative;
 
   @media screen and (max-width: $breakpoint-sm) {
-    margin-top: 170px;
+    margin-top: 270px;
   }
 
   @media screen and (max-width: $breakpoint-lg) {
-    margin-top: 160px;
+    margin-top: 260px;
   }
 }
 
@@ -480,13 +480,15 @@ li {
 }
 
 .heroicon 
-  padding: 30px;
-  width: 350px;
+  background-color #089cfc
+  border-radius 100%
+  padding: 0px;
+  width: 290px;
   filter: drop-shadow( 0px 2px 2px grey)
   @media screen and (max-width $breakpoint-lg) 
-    width: 300px
+    width: 270px
   @media screen and (max-width $breakpoint-md) 
-    width: 350px
+    width: 290px
 
 
 
@@ -542,6 +544,7 @@ p {
 h4 
   color $green-6
   margin-top 0px
+  font-family: 'Comfortaa'
   @media screen and (max-width: $breakpoint-lg) 
     font-size 34px
   @media screen and (max-width: $breakpoint-sm) 
@@ -653,7 +656,7 @@ export default {
   },
   methods: {
     clearSciInterval() {
-      clearInterval(this.sciInterval);
+      clearInterval(this.sciInterval)
     }
   }
 };
