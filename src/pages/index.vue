@@ -1,272 +1,366 @@
 <template lang="pug">
   q-page
-    .heading.relative-position
-      .row.justify-center
-        .col-12(style="margin-top:300px;")
-          h2.text-center The Social Supercomputer
-        div
-          q-btn.on-left.shadow-5(:size="buttonSize" color="green-6") Join Us
-          q-btn.shadow-5(:size="buttonSize" color="blue") Learn More 
-            q-icon.on-right(name="arrow_downward")
-      .row.absolute-bottom.justify-center
-        // img.transition(src="~assets/transition1.svg")
-        svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
-          path(d="M0 100 C 20 0 50 0 100 100 Z")
-    .row.justify-center.gutter-md
-      .col-12.relative-position(style="margin-top:100px; margin-bottom:100px;")
-        div.absolute-center
-          h3 Do something Huge
-          h4 boid makes it easy
-      div(style="height:30px;").lt-lg
-    .row.justify-center.xl-padding.md-padding(style="margin-top:120px;")
-      .col-lg-3.col-md-6.col-sm-12
-        .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="~assets/connectdevices.svg")
-        .herocard.bg-white.shadow-3
-          h5.text-center Connect your Devices
-          p Install the Boid app on your computers and phones.
-      .col-12.gt-sm.lt-lg(style="height:200px;")
-      .verticalSpacer.lt-md
-      .col-lg-3.col-md-6.col-sm-12
-        .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="~assets/contribute2.svg")
-        .herocard.bg-white.shadow-3
-          h5.text-center Contribute to big ideas
-          p Your spare computing resouces will make an impact in important science and cryptocurrency projects.
-      .verticalSpacer.lt-md
-      .col-lg-3.col-md-6.col-sm-12
-        .row.justify-center.relative-position
-          img.heroicon.absolute-center(src="~assets/earnrewards.svg")
-        .herocard.bg-white.shadow-3
-          h5.text-center Earn Rewards
-          p Earn money for your computing power, or donate your earnings to charity.
-    .relative-position
-      <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
-    div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
-      .row.justify-center.gutter-sm(style="margin-top:100px; margin-bottom:10px;")
-        .col-xl-4.col-lg-5.col-md-auto.col-sm-10
-          h3.text-white(style="") Fight the good fight
-          h4.yellowheading(style="margin-bottom:0px;") Our communities have real impact
+    .relative-position(style="height:80%")
+      .heading.relative-position
+        .row.justify-center
+          .col-12(style="margin-top:300px;")
+            h2.text-center The Social Supercomputer
+          div
+            q-btn.on-left.shadow-5(:size="buttonSize" color="green-6") Join Us
+            q-btn.shadow-5(:size="buttonSize" color="blue") Learn More 
+              q-icon.on-right(name="arrow_downward")
+        .row.absolute-bottom.justify-center
+          // img.transition(src="~assets/transition1.svg")
+          svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
+            path(d="M0 100 C 20 0 50 0 100 100 Z")
+      .row.justify-center.gutter-md
+        .col-12.relative-position(style="margin-top:100px; margin-bottom:100px;")
+          div.absolute-center
+            h3 Do something Huge
+            h4 boid makes it easy
+        div(style="height:30px;").lt-lg
+      .row.justify-center.xl-padding.md-padding(style="margin-top:120px;")
+        .col-lg-3.col-md-6.col-sm-12
+          .row.justify-center.relative-position
+            img.heroicon.absolute-center(src="~assets/connectdevices.svg")
+          .herocard.bg-white.shadow-3
+            h5.text-center Connect your Devices
+            p Install the Boid app on your computers and phones.
+        .col-12.gt-sm.lt-lg(style="height:200px;")
+        .verticalSpacer.lt-md
+        .col-lg-3.col-md-6.col-sm-12
+          .row.justify-center.relative-position
+            img.heroicon.absolute-center(src="~assets/contribute3.svg")
+          .herocard.bg-white.shadow-3
+            h5.text-center Contribute to big ideas
+            p Your spare computing resouces will make an impact in important science and cryptocurrency projects.
+        .verticalSpacer.lt-md
+        .col-lg-3.col-md-6.col-sm-12
+          .row.justify-center.relative-position
+            img.heroicon.absolute-center(src="~assets/earnrewards.svg")
+          .herocard.bg-white.shadow-3
+            h5.text-center Earn Rewards
+            p Earn money for your computing power, or donate your earnings to charity.
+      .relative-position.justify-center(style="top:103px;")
+        svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100px" style="fill: white;" viewBox="0 0 100 100" preserveAspectRatio="none")
+          path(d="M0 0 C 50 100 80 100 100 0 Z")
+        .absolute-bottom.full-width.videobuttonoffset
           .row.justify-center
-            .col-lg-4.col-md-10.col-sm-10.lt-lg.teamExplainer
-              .relative-position(style="width:450px;")
-                q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000" style="margin:0px !important;")
-                  q-carousel-slide
-                    img.teamicon(src="~assets/commoncause.svg")
-                  q-carousel-slide
-                    img.teamicon(src="~assets/boidteams.svg")
-                  q-carousel-slide
-                    img.teamicon(src="~assets/winprizes.svg")
-                  q-carousel-slide
-                    img.teamicon(src="~assets/teamleader.svg")
-                div(style="height:250px;")
-                  ul(style="max-width:500px; bottom:0px;").absolute-bottom
-                    transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
-                      li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
-                        h6 Team Leaders rally users around important causes
-                      li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
-                        h6 Users contribute their computing resouces on global leaderboards
-                      li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
-                        h6 Users can win money and prizes for their contributions
-                      li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
-                        h6 Team leaders can keep or donate commisions earned from their team performance
-          ul.gt-md(style="max-width:500px;")
-            transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
-              li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
-                h6 Team Leaders rally users around important causes
-              li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
-                h6 Users contribute their computing resouces on global leaderboards
-              li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
-                h6 Users can win money and prizes for their contributions
-              li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
-                h6 Team leaders can keep or donate commisions earned from their team performance
-        .col-lg-4.col-md-12.gt-md
-          q-carousel(style="width:600px" ref="teamSlides" infinite :autoplay="4000")
-            q-carousel-slide
-              img.teamicon(src="~assets/commoncause.svg")
-            q-carousel-slide
-              img.teamicon(src="~assets/boidteams.svg")
-            q-carousel-slide
-              img.teamicon(src="~assets/winprizes.svg")
-            q-carousel-slide
-              img.teamicon(src="~assets/teamleader.svg")
+            .col-12
+              .row.justify-center
+                q-btn(round push :size="buttonSize3" color="rgba(1,1,1,.9)").bg-green-5
+                  q-icon(name="play_arrow")
+            h4.text-white.q-pt-lg Explainer Video
+    div(style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden").relative-position
+      .videocover
+      iframe(allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
+    .relative-position.adjustvideofooter
+      .relative-position(style="top:-100px;")
+        <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
+      div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
+        .row.justify-center.gutter-sm(style="margin-top:100px; margin-bottom:10px; padding-bottom: 80px;")
+          .col-xl-4.col-lg-5.col-md-auto.col-sm-10
+            h3.text-white(style="") Fight the good fight
+            h4(style="margin-bottom:0px;") Our communities have real impact
+            .row.justify-center
+              .col-lg-4.col-md-10.col-sm-10.lt-lg.teamExplainer
+                .relative-position(style="width:450px;")
+                  q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000" style="margin:0px !important;")
+                    q-carousel-slide
+                      img.teamicon(src="~assets/commoncause.svg")
+                    q-carousel-slide
+                      img.teamicon(src="~assets/boidteams.svg")
+                    q-carousel-slide
+                      img.teamicon(src="~assets/winprizes.svg")
+                    q-carousel-slide
+                      img.teamicon(src="~assets/teamleader.svg")
+                  div(style="height:250px;")
+                    ul(style="max-width:500px; bottom:0px;").absolute-bottom
+                      transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
+                        li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
+                          h6 Team Leaders rally users around important causes
+                        li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
+                          h6 Users contribute their computing resouces on global leaderboards
+                        li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
+                          h6 Users can win money and prizes for their contributions
+                        li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
+                          h6 Team leaders can keep or donate commisions earned from their team performance
+            ul.gt-md(style="max-width:500px;")
+              transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
+                li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
+                  h6 Team Leaders rally users around important causes
+                li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
+                  h6 Users contribute their computing resouces on global leaderboards
+                li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
+                  h6 Users can win money and prizes for their contributions
+                li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
+                  h6 Team leaders can keep or donate commisions earned from their team performance
+          .col-xl-4.col-lg-5.col-md-12.gt-md
+            q-carousel.carouselfix(ref="teamSlides" infinite :autoplay="4000")
+              q-carousel-slide
+                img.teamicon(src="~assets/commoncause.svg")
+              q-carousel-slide
+                img.teamicon(src="~assets/boidteams.svg")
+              q-carousel-slide
+                img.teamicon(src="~assets/winprizes.svg")
+              q-carousel-slide
+                img.teamicon(src="~assets/teamleader.svg")
 
-    .explainer.relative-position.layout-padding(style="margin-top:0px;")
-      .row.reverse.justify-center.relative-position
-        .col-lg-12.col-xl-4
-          div.headingfix
-            h3 Help researchers solve hard problems
-        .col-lg-7.col-md-12.col-xl-5.relative-position.gt-sm(style="height:400px;")
-          br
-          br
-          .absolute-center
-            .row.justify-center.bg-white.shadow-2(style="width:630px")
-              .col-md-12.relative-position.q-ma-lg
-                QBtnToggle.absolute-center(@input="clearSciInterval" size="xl" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="orange-6" :options="scienceBtns")
-              .col-sm-12.col-md-5.col-lg-6.relative-position(style="height:310px;")
-                img.scienceIcons.absolute-center(:src="scienceInfo.img")
-              .col-sm-12.col-md-6.col-lg-6.col-xl-6
-                div
-                  .scienceCard
-                    h6.scienceHeader.text-orange-6 {{scienceInfo.headerText}}
-                    p  {{scienceInfo.paragraphText}}
-            q-btn.full-width(color="green" size="lg" glossy @click="hideSciExplain = false") Learn More
-        .col-lg-6.col-md-12.col-xl-5.lt-md
-          br
-          br
-          .row.justify-center
-            .row.justify-center.bg-white.shadow-2(style="margin-top:0px; width:500px; height:490px;")
-              .col-md-12.relative-position.q-ma-lg
-                QBtnToggle.absolute-center.gt-xs(@input="clearSciInterval" size="lg" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="orange-6" :options="scienceBtns")
-                QBtnToggle.absolute-center.lt-sm(@input="clearSciInterval" size="sm" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="orange-6" :options="scienceBtns")
-              .col-sm-12.col-md-3.col-lg-4.relative-position(style="height:250px;")
-                img.scienceIcons.absolute-center(:src="scienceInfo.img")
-              .col-sm-12.col-md-8.col-lg-7.col-xl-6
-                div
-                  .scienceCard
-                    h6.scienceHeader.text-orange-6 {{scienceInfo.headerText}}
-                    p  {{scienceInfo.paragraphText}}
+      .explainer.relative-position.layout-padding(style="margin-top:0px;")
+        .row.reverse.justify-center.relative-position
+          .col-lg-12.col-xl-4
+            div.headingfix
+              h3 Help researchers solve hard problems
+          // .lt-md(style="height:300px;")
+          .col-md-12.col-lg-7.col-xl-5.relative-position(style="height:400px; margin-top:50px;")
+            .row.justify-center
+              .row.justify-center.bg-white.shadow-2.sciwidget
+                .col-md-12.relative-position.q-ma-lg
+                  QBtnToggle.absolute-center(@input="clearSciInterval" :size="buttonSize2" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="amber-8" :options="scienceBtns")
+                .col-sm-12.col-md-5.col-lg-5.col-xl-5.relative-position(style="height:310px;")
+                  img.scienceIcons.absolute-center(:src="scienceInfo.img")
+                .col-sm-12.col-md-6.col-lg-6.col-xl-6
+                  div
+                    .scienceCard
+                      h4.scienceHeader.text-grey-8 {{scienceInfo.headerText}}
+                      h6.bpinfoText {{scienceInfo.paragraphText}}
+                q-btn.full-width( v-if="hideSciExplain" color="green" size="lg" glossy @click="hideSciExplain = false") Learn More
+        div(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
+        div(v-bind:class="{hidden:hideSciExplain}")
+          .row
+            .col-lg-12.layout-padding
+              h3 This is How it works
+          .row.justify-center.gutter-lg.xl-padding(style="margin-top:200px;")
+            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+              .row.justify-center.relative-position
+                img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg")
+              .explaincard.bg-white.shadow-3
+                table.full-width
+                  tr
+                    th
+                      h5 1
+                    th 
+                      h6.poverride Researchers need computing power to solve complex problems. 
+            .col-1.gt-md.lt-xl
+            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+              .row.justify-center.relative-position
+                img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg")
+              .explaincard.bg-white.shadow-3
+                table.full-width
+                  tr
+                    th
+                      h5 2
+                    th 
+                      h6.poverride Complex problems are broken into small tasks that can run on any computer.
+            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+              .row.justify-center.relative-position
+                img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg")
+              .explaincard.bg-white.shadow-3
+                table.full-width
+                  tr
+                    th
+                      h5 3
+                    th 
+                      h6.poverride Small tasks are distributed to computers and phones globally.  
+            .col-1.gt-md.lt-xl
+            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+              .row.justify-center.relative-position
+                img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg")
+              .explaincard.bg-white.shadow-3
+                table.full-width
+                  tr
+                    th
+                      h5 4
+                    th 
+                      h6.poverride Tasks are processed, and the result of each computation is returned.   
+            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+              .row.justify-center.relative-position
+                img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg")
+              .explaincard.bg-white.shadow-3
+                table.full-width
+                  tr
+                    th
+                      h5 5
+                    th 
+                      h6.poverride Individual results are verified and assembled together into one big solution.
+            .col-1.gt-md.lt-xl
+            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+              .row.justify-center.relative-position
+                img.sciExplain.absolute-center(src="~assets/sciexplain/generate.svg")
+              .explaincard.bg-white.shadow-3
+                table.full-width
+                  tr
+                    th
+                      h5 6
+                    th 
+                      h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
 
-            q-btn.full-width(color="green" size="lg" glossy @click="hideSciExplain = false") Learn More
-      div(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
-      div(v-bind:class="{hidden:hideSciExplain}")
-        .row
-          .col-lg-12.layout-padding
-            h3 This is How it works
-        .row.justify-center.gutter-lg.xl-padding(style="margin-top:200px;")
-          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
-            .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg")
-            .explaincard.bg-white.shadow-3
-              table.full-width
-                tr
-                  th
-                    h5 1
-                  th 
-                    h6.poverride Researchers need computing power to solve complex problems. 
-          .col-1.gt-md.lt-xl
-          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
-            .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg")
-            .explaincard.bg-white.shadow-3
-              table.full-width
-                tr
-                  th
-                    h5 2
-                  th 
-                    h6.poverride Complex problems are broken into small tasks that can run on any computer.
-          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
-            .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg")
-            .explaincard.bg-white.shadow-3
-              table.full-width
-                tr
-                  th
-                    h5 3
-                  th 
-                    h6.poverride Small tasks are distributed to computers and phones globally.  
-          .col-1.gt-md.lt-xl
-          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
-            .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg")
-            .explaincard.bg-white.shadow-3
-              table.full-width
-                tr
-                  th
-                    h5 4
-                  th 
-                    h6.poverride Tasks are processed, and the result of each computation is returned.   
-          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
-            .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg")
-            .explaincard.bg-white.shadow-3
-              table.full-width
-                tr
-                  th
-                    h5 5
-                  th 
-                    h6.poverride Individual results are verified and assembled together into one big solution.
-          .col-1.gt-md.lt-xl
-          .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
-            .row.justify-center.relative-position
-              img.sciExplain.absolute-center(src="~assets/sciexplain/generate.svg")
-            .explaincard.bg-white.shadow-3
-              table.full-width
-                tr
-                  th
-                    h5 6
-                  th 
-                    h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
-    .relative-position()
-      svg.absolute-bottom(style="width:100%; height:100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
-        // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
-        polygon.svg--lg(fill="rgb(0, 112, 208)" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100")
-    .layout-padding(style="background-color:rgb(0, 112, 208);")
-      .row.justify-center.q-mt-xl
-        .col-xl-3.col-lg-5.col-md-6.col-sm-7.col-xs-8
-          div(style="height: 230px;")
-            h1.text-white.relative-position boid
-              h1.text-white.absolute(style="top:80px") power
-          h4.text-yellow-8(style="text-shadow: 1px 1px 1px yellow-6; white-space:nowrap;") Your gateway to the new economy
-        .col-2.col-sm-1.col-xs-1
-          .relative-position.justify-center
-            img.boidPowerLogo(src="~assets/BoidPower.svg")
-        .col-xs-3.lt-sm
-      .row.justify-center.q-mt-xl
-        .col-12-auto
-          .row.justify-center.bpmasterrow
-            .col-sm-12.col-md-5.col-lg-6
-              .row.justify-center
-                img.bpicons(src="~assets/boidpower/generate.svg")
-            .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
-              .bpinfocard
-                h6.bpHeading Devices generate Boid Power
-                h6.bpinfoText The amount of Boid Power generated by a device is determined by it's hardware performance and how long the Boid application is running each day.
-      .gt-sm.bpspacer
-      .row.justify-center.q-mt-xl
-        .col-12-auto
-          .row.justify-center.reverse.bpmasterrow
-            .col-sm-12.col-md-5.col-lg-6
-              .row.justify-center
-                img.bpicons(src="~assets/boidpower/competitions.svg")
-            .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
-              .bpinfocard2
-                h6.bpHeading Weekly competitions
-                h6.bpinfoText Users compete in weekly challenges for money and prizes. Our global leaderboards are based on live Boid Power metrics.
-      .gt-sm.bpspacer              
-      .row.justify-center.q-mt-xl
-        .col-12-auto
-          .row.justify-center.bpmasterrow
-            .col-sm-12.col-md-5.col-lg-6
-              .row.justify-center
-                img.bpicons(src="~assets/boidpower/passiveincome.svg")
-            .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
-              .bpinfocard
-                h6.bpHeading Passive Income
-                h6.bpinfoText Your Boid Power can be used to mine for various cryptos. Get paid out daily however you like.
-      .gt-sm.bpspacer              
-      .row.justify-center.q-mt-xl
-        .col-12-auto
-          .row.reverse.justify-center.bpmasterrow
-            .col-sm-12.col-md-5.col-lg-6
-              .row.justify-center
-                img.bpicons(src="~assets/boidpower/dogood.svg")
-            .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
-              .bpinfocard2
-                h6.bpHeading Do Good
-                h6.bpinfoText Divert your Boid Power towards important non-profits in epic fundraising campaigns.
-    svg.absolute-bottom(style="width:100%; height:100px; padding-top:300px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
-      // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
-      polygon.svg--lg(fill="white" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100")
+      .relative-position.bg-green-6(style="padding-bottom:200px")
+        svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0;  margin-top:0;fill: rgb(76, 175, 80); top:-100px;" viewBox="0 0 100 100" preserveAspectRatio="none")
+          path(d="M0 100 C 60 10 90 50 100 100 Z")
+        .row.justify-center.gutter-lg
+          .col-12
+            .row.justify-center
+              .col-8
+                h3.text-white(style="text-shadow: 0px 1px 0px grey") The Boid app
+                h4.text-yellow-8(style="margin-bottom: 0px;") just set it and forget it
+          .col-sm-12.col-md-8.col-lg-5.col-xl-4
+            img(src="~assets/connectdevices.svg" style="max-width:600px; filter: drop-shadow( 1px 4px 2px grey")
+          .col-sm-12.col-md-12.col-lg-5.col-xl-
+            table.full-width
+              tr
+                td
+                  q-icon(name="security" size="70px" color="white")
+                td(style="padding-top:35px; padding-left:20px")
+                  h6.bpHeading.text-white Secure 
+                  h6.bpinfoText.text-white Modern code sandboxing and cryptography ensure personal data security.
+              tr
+                td
+                  q-icon(name="check_circle" size="70px" color="white")
+                td(style="padding-top:35px; padding-left:20px")
+                  h6.bpHeading.text-white Simple 
+                  h6.bpinfoText.text-white All you need to do is install the application and link it to your Boid account.
+              tr
+                td
+                  q-icon(name="visibility_off" size="70px" color="white")
+                td(style="padding-top:35px; padding-left:20px")
+                  h6.bpHeading.text-white Seamless 
+                  h6.bpinfoText.text-white The application inteligently runs in the background to utilize unused resouces. 
+
+          
+        svg.absolute-bottom(style="width:100%; height:50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
+          // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
+          polygon.svg--lg(fill="rgb(0, 112, 208)" points="0,0 15,100 33,21 45,100 72,20 85,100 95,50 100,80 100,100 0,100")
+      .layout-padding(style="background-color:rgb(0, 112, 208);")
+        .row.justify-center.q-mt-xl
+          .col-xl-3.col-lg-5.col-md-6.col-sm-7.col-xs-8
+            div(style="height: 230px;")
+              h1.text-white.relative-position boid
+                h1.text-white.absolute(style="top:80px") power
+            h4.text-yellow-8(style="font-weight: 600; text-shadow: 1px 1px 1px yellow-6; white-space:nowrap;") Your gateway to the new economy
+          .col-2.col-sm-1.col-xs-1
+            .relative-position.justify-center
+              img.boidPowerLogo(src="~assets/BoidPower.svg")
+          .col-xs-3.lt-sm
+        .row.justify-center
+          .col-12-auto
+            .row.justify-center.bpmasterrow
+              .col-sm-12.col-md-5.col-lg-6.col-xl-6
+                .row.justify-center
+                  img.bpicons(src="~assets/boidpower/generate.svg")
+              .col-sm-12.col-md-7.col-lg-6.col-xl-6.relative-position(style="width:400px; height:300px;")
+                .bpinfocard
+                  h6.bpHeading Devices generate Boid Power
+                  h6.bpinfoText The amount of Boid Power generated by a device is determined by it's hardware performance and how long the Boid application is running each day.
+        .gt-sm.bpspacer
+        .row.justify-center.q-mt-xl
+          .col-12-auto
+            .row.justify-center.reverse.bpmasterrow
+              .col-sm-12.col-md-5.col-lg-6
+                .row.justify-center
+                  img.bpicons(src="~assets/boidpower/competitions.svg")
+              .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
+                .bpinfocard2
+                  h6.bpHeading Weekly competitions
+                  h6.bpinfoText Users compete in weekly challenges for money and prizes. Our global leaderboards are based on live Boid Power metrics.
+        .gt-sm.bpspacer                
+        .row.justify-center.q-mt-xl
+          .col-12-auto
+            .row.justify-center.bpmasterrow
+              .col-sm-12.col-md-5.col-lg-6
+                .row.justify-center
+                  img.bpicons(src="~assets/boidpower/passiveincome.svg")
+              .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
+                .bpinfocard
+                  h6.bpHeading Passive Income
+                  h6.bpinfoText Your Boid Power can be used to mine for various cryptos. Get paid out daily however you like.
+        .gt-sm.bpspacer              
+        .row.justify-center.q-mt-xl
+          .col-12-auto
+            .row.reverse.justify-center.bpmasterrow
+              .col-sm-12.col-md-5.col-lg-6
+                .row.justify-center
+                  img.bpicons(src="~assets/boidpower/dogood.svg")
+              .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
+                .bpinfocard2
+                  h6.bpHeading Do Good
+                  h6.bpinfoText Divert your Boid Power towards important non-profits in epic fundraising campaigns.
 </template>
 
 <style lang="stylus">
 @import '~variables'
 
-.bpmasterrow
-  height:450px;
+
+.videobuttonoffset
+  z-index:999 
+  top:-30px
+  @media screen and (max-width: $breakpoint-lg) 
+    top: 20px
+  @media screen and (max-width: $breakpoint-md) 
+    top: -10px
   @media screen and (max-width: $breakpoint-sm) 
-    height 600px
+    top: 10px
+  @media screen and (max-width: $breakpoint-xs) 
+    top: 35px
+.adjustvideofooter
+  top: -600px
+  @media screen and (min-width 1200px) and (max-width 1560px)
+    top: -400px
+  @media screen and (max-width: $breakpoint-lg) 
+    top: -300px
+  @media screen and (max-width: $breakpoint-md) 
+    top: -250px
+  @media screen and (max-width: $breakpoint-sm) 
+    top: -180px
+  @media screen and (max-width: $breakpoint-xs) 
+    top: -100px
+.adjustvideoheader
+
+.videoadjust
+  width:100%; 
+  height:100%; 
+  position:absolute; 
+  top:-300px; 
+  left:0;
+  @media screen and (max-width: $breakpoint-lg) 
+    top: -100px
+  @media screen and (max-width: $breakpoint-md) 
+    top: -100px
+  @media screen and (max-width: $breakpoint-sm) 
+    top: -50px
+  @media screen and (max-width: $breakpoint-xs) 
+    top: -0px
+.videoadjust:hover
+  height: 0px
+
+.videocover
+  background-image: linear-gradient(to left top, #00e8ff, #00c8f7, #00a7ea, #0086d7, #0064bd);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  opacity: .7;
+.videocover:hover
+  opacity: 1
+  background-color black
+  height: 0px
+.sciwidget
+  width: 600px
+
+.carouselfix
+  width:600px
+  @media screen and (max-width: $breakpoint-lg) 
+    width 500px
+.appsection
+  background-color $green-5
+.bpmasterrow
+  height:490px;
+  @media screen and (max-width: $breakpoint-md) 
+    height 380px
+  @media screen and (max-width: $breakpoint-sm) 
+    height 640px
 
 
 .teamExplainer
@@ -282,12 +376,10 @@
 
 .bpHeading
   margin-bottom: 10px
-  font-weight: 700
+  font-weight: 500
   font-size 35px
-  color $grey-7
+  color $grey-8
   font-family: 'Comfortaa';
-
-
 
 .bpinfocard2
   height:290px
@@ -301,11 +393,14 @@
   padding 30px
   padding-right:455px
   box-shadow 0px 1px 4px rgb(0,0,0,0.2)
+  @media screen and (max-width: $breakpoint-md) 
+    top:190px
+    height:230px
   @media screen and (max-width: $breakpoint-sm) 
     left:0px
-    top:-40px
+    top:-60px
     width:100%
-    height:100%
+    height:210px
     padding 25px
     padding-top 55px
 
@@ -321,11 +416,14 @@
   padding 30px
   padding-left:455px
   box-shadow 0px 1px 4px rgb(0,0,0,0.2)
+  @media screen and (max-width: $breakpoint-md) 
+    top:190px
+    height:270px
   @media screen and (max-width: $breakpoint-sm) 
     left:0px
-    top:-40px
+    top:-60px
     width:100%
-    height:100%
+    height:210px
     padding 25px
     padding-top 55px
 
@@ -359,7 +457,7 @@
 
 .headingfix
   @media screen and (min-width 1200px) and (max-width 1800px)
-    padding-left:140px
+    padding-left:200px
 
 .boidPowerHeader 
   color: $yellow-2
@@ -432,20 +530,22 @@ th {
   }
 }
 
-.explainer {
+.explainer 
   // background-image: url('~assets/hexbg.png');
   background-scale: 200%;
-}
+  @media screen and (max-width: $breakpoint-md)
+    padding-bottom:250px;
+
 
 .scienceHeader {
   margin-bottom: 10px;
 }
 
 .scienceIcons 
-  width: 300px;
-  padding: 0px;
+  width: 270px;
   margin: 0 auto;
   display: block;
+  padding-left: 20px;
   @media screen and (max-width: $breakpoint-sm) 
     width: 200px;
 
@@ -456,6 +556,8 @@ th {
   margin: 20px;
   padding: 20px;
   height: 200px;
+  padding-right 10px
+  width: 100%
 
 
 .wave {
@@ -473,7 +575,6 @@ th {
 
 .yellowheading {
   color: $green-5;
-  font-weight: 400;
 }
 
 li {
@@ -494,11 +595,11 @@ li {
 }
 
 .heroicon 
-  background-color #089cfc
-  border-radius 100%
+  // background-color #089cfc
+  // border-radius 100%
   padding: 0px;
   width: 290px;
-  filter: drop-shadow( 0px 2px 2px grey)
+  filter: drop-shadow( 0px 2px 1px grey)
   @media screen and (max-width $breakpoint-lg) 
     width: 270px
   @media screen and (max-width $breakpoint-md) 
@@ -556,9 +657,10 @@ p {
 }
 
 h4 
-  color $green-6
+  color $green-5
   margin-top 0px
   font-family: 'Comfortaa'
+  font-weight 800
   @media screen and (max-width: $breakpoint-lg) 
     font-size 34px
   @media screen and (max-width: $breakpoint-sm) 
@@ -585,6 +687,7 @@ h6
   width: 100%;
   height: 100%;
   min-height: 950px;
+
 }
 </style>
 
@@ -628,6 +731,18 @@ export default {
     buttonSize(){
       if (this.screenSize.width > 769) return 'xl'
       else return 'lg'
+    },
+    buttonSize2(){
+      if (this.screenSize.width > 769) return 'xl'
+      else if (this.screenSize.width > 570) return 'lg'
+      else if (this.screenSize.width > 450) return 'md'
+      else return 'sm'
+    },
+    buttonSize3(){
+      if (this.screenSize.width > 769) return '55px'
+      else if (this.screenSize.width > 570) return '50px'
+      else if (this.screenSize.width > 450) return '30px'
+      else return '20px'
     },
     scienceInfo() {
       if (this.activeScienceBtn === 0) {
