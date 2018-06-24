@@ -3,7 +3,8 @@ export default [
     path: '/',
     component: () => import('layouts/default'),
     children: [
-      { path: '', component: () => import('pages/index'),meta:{ requiresAuth: true } }
+      { path: '', component: () => import('pages/index')},
+      { path: 'app', component: () => import('components/boidApp')}
     ]
   },
 

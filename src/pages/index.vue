@@ -48,34 +48,37 @@
           .row.justify-center
             .col-12
               .row.justify-center
-                q-btn(round push :size="buttonSize3" color="rgba(1,1,1,.9)").bg-green-5
+                q-btn(round push :size="buttonSize3" color="white" @click="videoPlaying=true,$root.$emit('videoModal',true)").bg-green-5
                   q-icon(name="play_arrow")
             h4.text-white.q-pt-lg Explainer Video
     div(style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden").relative-position
       .videocover
-      iframe(allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
+      iframe(v-if="!videoPlaying" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
     .relative-position.adjustvideofooter
       .relative-position(style="top:-100px;")
         <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
       div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
         .row.justify-center.gutter-sm(style="margin-top:100px; margin-bottom:10px; padding-bottom: 80px;")
           .col-xl-4.col-lg-5.col-md-auto.col-sm-10
-            h3.text-white(style="") Fight the good fight
-            h4(style="margin-bottom:0px;") Our communities have real impact
+            .row.justify-center
+              .col-xs-10
+                h3.text-white(style="") Fight the good fight
+                h4(style="margin-bottom:0px;") Our communities have real impact
             .row.justify-center
               .col-lg-4.col-md-10.col-sm-10.lt-lg.teamExplainer
-                .relative-position(style="width:450px;")
-                  q-carousel(ref="teamSlides" infinite no-swipe :autoplay="4000" style="margin:0px !important;")
-                    q-carousel-slide
-                      img.teamicon(src="~assets/commoncause.svg")
-                    q-carousel-slide
-                      img.teamicon(src="~assets/boidteams.svg")
-                    q-carousel-slide
-                      img.teamicon(src="~assets/winprizes.svg")
-                    q-carousel-slide
-                      img.teamicon(src="~assets/teamleader.svg")
-                  div(style="height:250px;")
-                    ul(style="max-width:500px; bottom:0px;").absolute-bottom
+                .relative-position(style="width:450px;" )
+                  .relative-position(style="height:390px;")
+                    q-carousel.carouselfix2(ref="teamSlides" infinite no-swipe :autoplay="4000" style="position:absolute; top:-30px; margin:0px !important;")
+                      q-carousel-slide
+                        img.teamicon(src="~assets/commoncause.svg")
+                      q-carousel-slide
+                        img.teamicon(src="~assets/boidteams.svg")
+                      q-carousel-slide
+                        img.teamicon(src="~assets/winprizes.svg")
+                      q-carousel-slide
+                        img.teamicon(src="~assets/teamleader.svg")
+                  div(style="height:280px;")
+                    ul(style="max-width:400px; bottom:0px;").absolute-bottom
                       transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
                         li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
                           h6 Team Leaders rally users around important causes
@@ -108,24 +111,27 @@
 
       .explainer.relative-position.layout-padding(style="margin-top:0px;")
         .row.reverse.justify-center.relative-position
-          .col-lg-12.col-xl-4
+          .col-sm-10.col-md-12.col-lg-12.col-xl-4
             div.headingfix
               h3 Help researchers solve hard problems
-          // .lt-md(style="height:300px;")
+          // .lt-md.gt-xs(style="height:300px;")
           .col-md-12.col-lg-7.col-xl-5.relative-position(style="height:400px; margin-top:50px;")
             .row.justify-center
               .row.justify-center.bg-white.shadow-2.sciwidget
-                .col-md-12.relative-position.q-ma-lg
-                  QBtnToggle.absolute-center(@input="clearSciInterval" :size="buttonSize2" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="amber-8" :options="scienceBtns")
+                .col-md-12.relative-position(style="height: 0px;")
+                  q-btn-toggle.absolute-center(@input="clearSciInterval" :size="buttonSize2" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="amber-8" :options="scienceBtns")
+                .col-12(style="height:15px;")
                 .col-sm-12.col-md-5.col-lg-5.col-xl-5.relative-position(style="height:310px;")
                   img.scienceIcons.absolute-center(:src="scienceInfo.img")
-                .col-sm-12.col-md-6.col-lg-6.col-xl-6
+                .col-xs-10.col-sm-12.col-md-6.col-lg-6.col-xl-6
                   div
                     .scienceCard
                       h4.scienceHeader.text-grey-8 {{scienceInfo.headerText}}
                       h6.bpinfoText {{scienceInfo.paragraphText}}
-                q-btn.full-width( v-if="hideSciExplain" color="green" size="lg" glossy @click="hideSciExplain = false") Learn More
-        div(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
+                q-btn.full-width(v-if="hideSciExplain" color="blue" size="lg" glossy @click="hideSciExplain = false") Learn How
+        .gt-md(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
+        .gt-xs.lt-md(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
+        .lt-sm(style="height:160px;" v-bind:class="{hidden:!hideSciExplain}")
         div(v-bind:class="{hidden:hideSciExplain}")
           .row
             .col-lg-12.layout-padding
@@ -195,100 +201,21 @@
                     th 
                       h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
 
-      .relative-position.bg-green-6(style="padding-bottom:200px")
-        svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0;  margin-top:0;fill: rgb(76, 175, 80); top:-100px;" viewBox="0 0 100 100" preserveAspectRatio="none")
-          path(d="M0 100 C 60 10 90 50 100 100 Z")
-        .row.justify-center.gutter-lg
-          .col-12
-            .row.justify-center
-              .col-8
-                h3.text-white(style="text-shadow: 0px 1px 0px grey") The Boid app
-                h4.text-yellow-8(style="margin-bottom: 0px;") just set it and forget it
-          .col-sm-12.col-md-8.col-lg-5.col-xl-4
-            img(src="~assets/connectdevices.svg" style="max-width:600px; filter: drop-shadow( 1px 4px 2px grey")
-          .col-sm-12.col-md-12.col-lg-5.col-xl-
-            table.full-width
-              tr
-                td
-                  q-icon(name="security" size="70px" color="white")
-                td(style="padding-top:35px; padding-left:20px")
-                  h6.bpHeading.text-white Secure 
-                  h6.bpinfoText.text-white Modern code sandboxing and cryptography ensure personal data security.
-              tr
-                td
-                  q-icon(name="check_circle" size="70px" color="white")
-                td(style="padding-top:35px; padding-left:20px")
-                  h6.bpHeading.text-white Simple 
-                  h6.bpinfoText.text-white All you need to do is install the application and link it to your Boid account.
-              tr
-                td
-                  q-icon(name="visibility_off" size="70px" color="white")
-                td(style="padding-top:35px; padding-left:20px")
-                  h6.bpHeading.text-white Seamless 
-                  h6.bpinfoText.text-white The application inteligently runs in the background to utilize unused resouces. 
-
-          
-        svg.absolute-bottom(style="width:100%; height:50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
-          // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
-          polygon.svg--lg(fill="rgb(0, 112, 208)" points="0,0 15,100 33,21 45,100 72,20 85,100 95,50 100,80 100,100 0,100")
-      .layout-padding(style="background-color:rgb(0, 112, 208);")
-        .row.justify-center.q-mt-xl
-          .col-xl-3.col-lg-5.col-md-6.col-sm-7.col-xs-8
-            div(style="height: 230px;")
-              h1.text-white.relative-position boid
-                h1.text-white.absolute(style="top:80px") power
-            h4.text-yellow-8(style="font-weight: 600; text-shadow: 1px 1px 1px yellow-6; white-space:nowrap;") Your gateway to the new economy
-          .col-2.col-sm-1.col-xs-1
-            .relative-position.justify-center
-              img.boidPowerLogo(src="~assets/BoidPower.svg")
-          .col-xs-3.lt-sm
-        .row.justify-center
-          .col-12-auto
-            .row.justify-center.bpmasterrow
-              .col-sm-12.col-md-5.col-lg-6.col-xl-6
-                .row.justify-center
-                  img.bpicons(src="~assets/boidpower/generate.svg")
-              .col-sm-12.col-md-7.col-lg-6.col-xl-6.relative-position(style="width:400px; height:300px;")
-                .bpinfocard
-                  h6.bpHeading Devices generate Boid Power
-                  h6.bpinfoText The amount of Boid Power generated by a device is determined by it's hardware performance and how long the Boid application is running each day.
-        .gt-sm.bpspacer
-        .row.justify-center.q-mt-xl
-          .col-12-auto
-            .row.justify-center.reverse.bpmasterrow
-              .col-sm-12.col-md-5.col-lg-6
-                .row.justify-center
-                  img.bpicons(src="~assets/boidpower/competitions.svg")
-              .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
-                .bpinfocard2
-                  h6.bpHeading Weekly competitions
-                  h6.bpinfoText Users compete in weekly challenges for money and prizes. Our global leaderboards are based on live Boid Power metrics.
-        .gt-sm.bpspacer                
-        .row.justify-center.q-mt-xl
-          .col-12-auto
-            .row.justify-center.bpmasterrow
-              .col-sm-12.col-md-5.col-lg-6
-                .row.justify-center
-                  img.bpicons(src="~assets/boidpower/passiveincome.svg")
-              .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
-                .bpinfocard
-                  h6.bpHeading Passive Income
-                  h6.bpinfoText Your Boid Power can be used to mine for various cryptos. Get paid out daily however you like.
-        .gt-sm.bpspacer              
-        .row.justify-center.q-mt-xl
-          .col-12-auto
-            .row.reverse.justify-center.bpmasterrow
-              .col-sm-12.col-md-5.col-lg-6
-                .row.justify-center
-                  img.bpicons(src="~assets/boidpower/dogood.svg")
-              .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
-                .bpinfocard2
-                  h6.bpHeading Do Good
-                  h6.bpinfoText Divert your Boid Power towards important non-profits in epic fundraising campaigns.
+      boidApp
+      boidPower
+      roadMap
+      faq
 </template>
 
 <style lang="stylus">
 @import '~variables'
+
+button
+  font-family: 'Comfortaa'
+  font-weight 800
+body
+  overflow-y: scroll
+  overflow-x: hidden
 
 
 .videobuttonoffset
@@ -301,11 +228,11 @@
   @media screen and (max-width: $breakpoint-sm) 
     top: 10px
   @media screen and (max-width: $breakpoint-xs) 
-    top: 35px
+    top: 10px
 .adjustvideofooter
   top: -600px
   @media screen and (min-width 1200px) and (max-width 1560px)
-    top: -400px
+    top: -330px
   @media screen and (max-width: $breakpoint-lg) 
     top: -300px
   @media screen and (max-width: $breakpoint-md) 
@@ -322,6 +249,8 @@
   position:absolute; 
   top:-300px; 
   left:0;
+  @media screen and (min-width 1200px) and (max-width 1560px)
+    top: -80px
   @media screen and (max-width: $breakpoint-lg) 
     top: -100px
   @media screen and (max-width: $breakpoint-md) 
@@ -329,12 +258,12 @@
   @media screen and (max-width: $breakpoint-sm) 
     top: -50px
   @media screen and (max-width: $breakpoint-xs) 
-    top: -0px
+    top: 0px
 .videoadjust:hover
   height: 0px
 
 .videocover
-  background-image: linear-gradient(to left top, #00e8ff, #00c8f7, #00a7ea, #0086d7, #0064bd);
+  background-image: linear-gradient(to left top, #00e8ff, alpha(#00c8f7,.9), alpha(#00a7ea,.7), #0086d7, #0064bd);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -349,10 +278,15 @@
 .sciwidget
   width: 600px
 
+
 .carouselfix
   width:600px
   @media screen and (max-width: $breakpoint-lg) 
     width 500px
+.carouselfix2
+  width:450px
+  @media screen and (max-width: $breakpoint-sm) 
+    width 400px
 .appsection
   background-color $green-5
 .bpmasterrow
@@ -396,11 +330,12 @@
   @media screen and (max-width: $breakpoint-md) 
     top:190px
     height:230px
+    width:100vw
   @media screen and (max-width: $breakpoint-sm) 
     left:0px
     top:-60px
     width:100%
-    height:210px
+    height:auto
     padding 25px
     padding-top 55px
 
@@ -423,7 +358,7 @@
     left:0px
     top:-60px
     width:100%
-    height:210px
+    height:auto
     padding 25px
     padding-top 55px
 
@@ -439,6 +374,9 @@
   @media screen and (max-width: $breakpoint-md)
     width: 480px
     height: 480px
+  // @media screen and (max-width: $breakpoint-xs)
+  //   width: 380px
+  //   height: 380px
 
 
 .md-padding
@@ -547,7 +485,7 @@ th {
   display: block;
   padding-left: 20px;
   @media screen and (max-width: $breakpoint-sm) 
-    width: 200px;
+    width: 270px;
 
 
 .scienceCard 
@@ -591,7 +529,7 @@ li {
 }
 
 .verticalSpacer {
-  height: 440px;
+  height:490px
 }
 
 .heroicon 
@@ -650,7 +588,6 @@ h3
   @media screen and (max-width: $breakpoint-sm) 
     font-size 35px
 
-
 p {
   font-size: 18px;
   margin-bottom: 0px;
@@ -665,6 +602,8 @@ h4
     font-size 34px
   @media screen and (max-width: $breakpoint-sm) 
     font-size 25px
+  @media screen and (max-width: $breakpoint-xs) 
+    font-size 20px
 
 h5 {
   color: $grey-9;
@@ -672,7 +611,6 @@ h5 {
   margin-top: 25px;
   margin-bottom: 20px;
 }
-
 h6 
   margin: 0px;
   @media screen and (max-width: $breakpoint-md) 
@@ -692,11 +630,14 @@ h6
 </style>
 
 <script>
-console.log(screen.height,screen.width)
-
+import roadMap from 'components/roadmap.vue'
+import boidPower from 'components/boidPower.vue'
+import boidApp from 'components/boidApp.vue'
+import faq from 'components/faq.vue'
 export default {
   data() {
     return {
+      videoPlaying:false,
       hideSciExplain:true,
       screenSize:{
         height: window.innerHeight,
@@ -714,7 +655,19 @@ export default {
       ]
     };
   },
+  components:{
+    roadMap,
+    boidPower,
+    boidApp,
+    faq
+  },
   mounted() {
+    this.$root.$on('videoPlaying',(data)=>{
+      this.videoPlaying = data
+    })
+    // setInterval(()=>{
+    //   console.log(window.scrollY)
+    // },1000)
     this.$root.$on('resize',(data)=>{
       this.screenSize = data
     })
@@ -733,16 +686,17 @@ export default {
       else return 'lg'
     },
     buttonSize2(){
-      if (this.screenSize.width > 769) return 'xl'
+      if (this.screenSize.width > 769) return 'lg'
       else if (this.screenSize.width > 570) return 'lg'
       else if (this.screenSize.width > 450) return 'md'
       else return 'sm'
     },
     buttonSize3(){
-      if (this.screenSize.width > 769) return '55px'
-      else if (this.screenSize.width > 570) return '50px'
-      else if (this.screenSize.width > 450) return '30px'
-      else return '20px'
+      if (this.screenSize.width > 869) return '55px'
+      else if (this.screenSize.width > 670) return '45px'
+      else if (this.screenSize.width > 570) return '40px'
+      else if (this.screenSize.width > 450) return '35px'
+      else return '30px'
     },
     scienceInfo() {
       if (this.activeScienceBtn === 0) {

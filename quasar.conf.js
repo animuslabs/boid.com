@@ -62,7 +62,12 @@ module.exports = function (ctx) {
         'QModal',
         'QCarousel',
         'QCarouselSlide',
-        'QBtnToggle'
+        'QBtnToggle',
+        'QVideo',
+        'QTimeline',
+        'QTimelineEntry',
+        'QCollapsible',
+        'QScrollArea'
       ],
       directives: [
         'Ripple'
