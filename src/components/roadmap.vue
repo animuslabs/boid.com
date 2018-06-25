@@ -36,8 +36,7 @@
         .row.justify-center
           q-btn(color="green" style="z-index:10" size="lg" rounded glossy @click="viewTimeline = true") View Detailed Roadmap
            
-
-    .col-10(v-if="viewTimeline")
+    .col-11(v-if="viewTimeline")
       .row.justify-center
         .col-xs-9.col-xl-6
           q-timeline(color="blue")

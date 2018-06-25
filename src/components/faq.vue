@@ -51,7 +51,7 @@ export default {
       if (this.screenSize.width > 769) return 'lg'
       else if (this.screenSize.width > 570) return 'lg'
       else if (this.screenSize.width > 450) return 'md'
-      else return 'md'
+      else return 'sm'
     }
   }
 }

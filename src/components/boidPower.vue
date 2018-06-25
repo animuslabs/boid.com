@@ -1,5 +1,5 @@
 <template lang="pug">
-  .layout-padding(style="background-color:rgb(0, 112, 208); padding-bottom:300px;")
+  .layout-padding(style="background-color:rgb(0, 112, 208);")
     .row.justify-center.q-mt-xl
       .col-xl-3.col-lg-5.col-md-6.col-sm-7.col-xs-8
         div(style="height: 230px;")
@@ -53,6 +53,8 @@
             .bpinfocard2
               h6.bpHeading Do Good
               h6.bpinfoText Divert your Boid Power towards important non-profits in epic fundraising campaigns.
+    .gt-sm(style="height:200px;")
+    .gt-xs(style="height:100px;")
 
 </template>
 

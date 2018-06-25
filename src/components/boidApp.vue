@@ -10,7 +10,7 @@
             h4.text-yellow-8(style="margin-bottom: 0px;") just set it and forget it
       .col-sm-12.col-md-8.col-lg-5.col-xl-4
         img(src="~assets/connectdevices.svg" style="max-width:600px; filter: drop-shadow( 1px 4px 2px grey")
-      .col-sm-12.col-md-12.col-lg-5.col-xl-
+      .col-sm-12.col-md-10.col-lg-5.col-xl-4
         table.full-width
           tr
             td

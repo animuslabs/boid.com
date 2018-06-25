@@ -1,14 +1,20 @@
 <template lang="pug">
   q-page
     .relative-position(style="height:80%")
+      .sharethis-inline-follow-buttons
       .heading.relative-position
         .row.justify-center
-          .col-12(style="margin-top:300px;")
+          .col-12.headingtextoffset
             h2.text-center The Social Supercomputer
-          div
-            q-btn.on-left.shadow-5(:size="buttonSize" color="green-6") Join Us
-            q-btn.shadow-5(:size="buttonSize" color="blue") Learn More 
+          .col-auto
+            q-btn.shadow-5(:size="buttonSize" color="green-6") Join Us
+            // q-btn.shadow-5(:size="buttonSize" color="blue") Learn More 
               q-icon.on-right(name="arrow_downward")
+        .row.justify-center
+          .col-12
+            .row.justify-center
+              .col-auto.q-mt-lg
+                q-btn(rounded outline size="lg" color="white") Follow us @boidcom
         .row.absolute-bottom.justify-center
           // img.transition(src="~assets/transition1.svg")
           svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
@@ -55,19 +61,19 @@
       .videocover
       iframe(v-if="!videoPlaying" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
     .relative-position.adjustvideofooter
-      .relative-position(style="top:-100px;")
-        <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
+      .relative-position(style="top:-50px;")
+        <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
       div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
         .row.justify-center.gutter-sm(style="margin-top:100px; margin-bottom:10px; padding-bottom: 80px;")
           .col-xl-4.col-lg-5.col-md-auto.col-sm-10
             .row.justify-center
               .col-xs-10
                 h3.text-white(style="") Fight the good fight
-                h4(style="margin-bottom:0px;") Our communities have real impact
+                h4(style="margin-bottom:0px; text-shadow: 0px 2px 4px grey-1;").text-green-4 Our communities have real impact
             .row.justify-center
-              .col-lg-4.col-md-10.col-sm-10.lt-lg.teamExplainer
+              .col-lg-4.col-md-10.col-sm-10.col-xs-12.lt-lg.teamExplainer
                 .relative-position(style="width:450px;" )
-                  .relative-position(style="height:390px;")
+                  .relative-position(style="height:300px;")
                     q-carousel.carouselfix2(ref="teamSlides" infinite no-swipe :autoplay="4000" style="position:absolute; top:-30px; margin:0px !important;")
                       q-carousel-slide
                         img.teamicon(src="~assets/commoncause.svg")
@@ -78,16 +84,16 @@
                       q-carousel-slide
                         img.teamicon(src="~assets/teamleader.svg")
                   div(style="height:280px;")
-                    ul(style="max-width:400px; bottom:0px;").absolute-bottom
+                    ul(style="max-width:340px; bottom:0px;").absolute-bottom
                       transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
                         li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
-                          h6 Team Leaders rally users around important causes
+                          h6 Team leaders rally users around important causes.
                         li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
-                          h6 Users contribute their computing resouces on global leaderboards
+                          h6 Users contribute their computing resouces on global leaderboards.
                         li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
-                          h6 Users can win money and prizes for their contributions
+                          h6 Users can win money and prizes for their contributions.
                         li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
-                          h6 Team leaders can keep or donate commisions earned from their team performance
+                          h6 Team leaders can keep or donate commisions earned from their team performance.
             ul.gt-md(style="max-width:500px;")
               transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
                 li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
@@ -114,16 +120,15 @@
           .col-sm-10.col-md-12.col-lg-12.col-xl-4
             div.headingfix
               h3 Help researchers solve hard problems
-          // .lt-md.gt-xs(style="height:300px;")
           .col-md-12.col-lg-7.col-xl-5.relative-position(style="height:400px; margin-top:50px;")
             .row.justify-center
               .row.justify-center.bg-white.shadow-2.sciwidget
                 .col-md-12.relative-position(style="height: 0px;")
                   q-btn-toggle.absolute-center(@input="clearSciInterval" :size="buttonSize2" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="amber-8" :options="scienceBtns")
                 .col-12(style="height:15px;")
-                .col-sm-12.col-md-5.col-lg-5.col-xl-5.relative-position(style="height:310px;")
+                .col-sm-12.col-md-5.col-lg-4.col-xl-3.relative-position(style="height:310px;")
                   img.scienceIcons.absolute-center(:src="scienceInfo.img")
-                .col-xs-10.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                .col-xs-10.col-sm-12.col-md-6.col-lg-6.col-xl-8
                   div
                     .scienceCard
                       h4.scienceHeader.text-grey-8 {{scienceInfo.headerText}}
@@ -133,11 +138,15 @@
         .gt-xs.lt-md(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
         .lt-sm(style="height:160px;" v-bind:class="{hidden:!hideSciExplain}")
         div(v-bind:class="{hidden:hideSciExplain}")
+          // .lt-md(style="height: 1780px;")
+          .lt-md(style="height:200px;")
           .row
-            .col-lg-12.layout-padding
-              h3 This is How it works
+            .col-lg-12(style="height: 150px;")
+              .absolute
+                h3 This is how it works
+          .lt-xl.gt-sm(style="height:80px;")
           .row.justify-center.gutter-lg.xl-padding(style="margin-top:200px;")
-            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+            .col-lg-5.col-md-12.col-xl-6.sciexplainspacer
               .row.justify-center.relative-position
                 img.sciExplain.absolute-center(src="~assets/sciexplain/problem.svg")
               .explaincard.bg-white.shadow-3
@@ -148,7 +157,7 @@
                     th 
                       h6.poverride Researchers need computing power to solve complex problems. 
             .col-1.gt-md.lt-xl
-            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+            .col-lg-5.col-md-12.col-xl-6.sciexplainspacer
               .row.justify-center.relative-position
                 img.sciExplain.absolute-center(src="~assets/sciexplain/solution.svg")
               .explaincard.bg-white.shadow-3
@@ -158,7 +167,8 @@
                       h5 2
                     th 
                       h6.poverride Complex problems are broken into small tasks that can run on any computer.
-            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+            .col-12.gt-md(style="height:150px;")
+            .col-lg-5.col-md-12.col-xl-6.sciexplainspacer
               .row.justify-center.relative-position
                 img.sciExplain.absolute-center(src="~assets/sciexplain/distribute.svg")
               .explaincard.bg-white.shadow-3
@@ -169,7 +179,7 @@
                     th 
                       h6.poverride Small tasks are distributed to computers and phones globally.  
             .col-1.gt-md.lt-xl
-            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+            .col-lg-5.col-md-12.col-xl-6.sciexplainspacer
               .row.justify-center.relative-position
                 img.sciExplain.absolute-center(src="~assets/sciexplain/process.svg")
               .explaincard.bg-white.shadow-3
@@ -179,7 +189,8 @@
                       h5 4
                     th 
                       h6.poverride Tasks are processed, and the result of each computation is returned.   
-            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+            .col-12.gt-md(style="height:200px;")
+            .col-lg-5.col-md-12.col-xl-6.sciexplainspacer
               .row.justify-center.relative-position
                 img.sciExplain.absolute-center(src="~assets/sciexplain/assemble.svg")
               .explaincard.bg-white.shadow-3
@@ -190,7 +201,7 @@
                     th 
                       h6.poverride Individual results are verified and assembled together into one big solution.
             .col-1.gt-md.lt-xl
-            .col-lg-5.col-md-12.col-xl-6(style="height:720px;")
+            .col-lg-5.col-md-12.col-xl-6.sciexplainspacer
               .row.justify-center.relative-position
                 img.sciExplain.absolute-center(src="~assets/sciexplain/generate.svg")
               .explaincard.bg-white.shadow-3
@@ -200,6 +211,7 @@
                       h5 6
                     th 
                       h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
+        .lt-md(style="height:200px" v-if="hideSciExplain")
 
       boidApp
       boidPower
@@ -209,10 +221,28 @@
 
 <style lang="stylus">
 @import '~variables'
+.sciexplainspacer
+  @media screen and (max-width: $breakpoint-xl) 
+    height 900px
+  @media screen and (max-width: $breakpoint-lg) 
+    height 700px
+  @media screen and (max-width: $breakpoint-md) 
+    height 750px
+  @media screen and (max-width: $breakpoint-sm) 
+    height 660px
+  @media screen and (max-width: $breakpoint-xs) 
+    height 500px
 
+.headingtextoffset
+  margin-top 300px
+  @media screen and (max-width: $breakpoint-md) 
+    margin-top: 50px
+
+.q-btn
+  font-weight 800
 button
   font-family: 'Comfortaa'
-  font-weight 800
+  font-weight 1000
 body
   overflow-y: scroll
   overflow-x: hidden
@@ -284,9 +314,9 @@ body
   @media screen and (max-width: $breakpoint-lg) 
     width 500px
 .carouselfix2
-  width:450px
+  width:400px
   @media screen and (max-width: $breakpoint-sm) 
-    width 400px
+    width 340px
 .appsection
   background-color $green-5
 .bpmasterrow
@@ -303,6 +333,7 @@ body
  
 .bpinfoText
   padding-left 35px
+  
 
 .bpspacer
   height:0px;
@@ -374,9 +405,9 @@ body
   @media screen and (max-width: $breakpoint-md)
     width: 480px
     height: 480px
-  // @media screen and (max-width: $breakpoint-xs)
-  //   width: 380px
-  //   height: 380px
+  @media screen and (max-width: $breakpoint-xs)
+    width: 380px
+    height: 380px
 
 
 .md-padding
@@ -406,6 +437,9 @@ body
   animation powerflicker 1s linear infinite
   @media screen and (min-width 1200px) and (max-width 1800px)
     margin-left:100px
+  @media screen and (max-width: $breakpoint-xs)
+    width 70px
+    margin-left 25px
 
 @keyframes powerflicker
   0% 
@@ -447,7 +481,9 @@ th {
   @media screen and (max-width $breakpoint-lg) 
     width: 620px;
   @media screen and (max-width $breakpoint-sm) 
-    width: 600px;
+    width: 550px;
+  @media screen and (max-width $breakpoint-xs) 
+    width: 350px;
   
 
 
@@ -458,32 +494,34 @@ th {
   padding: 30px;
   padding-top: 50px;
   position: relative;
-
-  @media screen and (max-width: $breakpoint-sm) {
-    margin-top: 270px;
-  }
-
   @media screen and (max-width: $breakpoint-lg) {
     margin-top: 260px;
   }
+  @media screen and (max-width: $breakpoint-sm) {
+    margin-top: 270px;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    margin-top: 110px;
+  }
+
+
 }
 
 .explainer 
   // background-image: url('~assets/hexbg.png');
   background-scale: 200%;
-  @media screen and (max-width: $breakpoint-md)
-    padding-bottom:250px;
-
 
 .scienceHeader {
   margin-bottom: 10px;
 }
 
 .scienceIcons 
-  width: 270px;
+  width: 230px;
   margin: 0 auto;
   display: block;
   padding-left: 20px;
+  @media screen and (max-width: $breakpoint-xl) 
+    width: 50px;
   @media screen and (max-width: $breakpoint-sm) 
     width: 270px;
 
@@ -603,7 +641,7 @@ h4
   @media screen and (max-width: $breakpoint-sm) 
     font-size 25px
   @media screen and (max-width: $breakpoint-xs) 
-    font-size 20px
+    font-size 18px
 
 h5 {
   color: $grey-9;
@@ -612,12 +650,15 @@ h5 {
   margin-bottom: 20px;
 }
 h6 
-  margin: 0px;
+  margin: 0px
+  font-weight:400
   @media screen and (max-width: $breakpoint-md) 
     font-size 20px
+  @media screen and (max-width: $breakpoint-md) 
+    font-size 16px
 
 
-.heading {
+.heading 
   background: linear-gradient(to right, rgba(30, 87, 153, 0.5) 0%, rgba(79, 138, 194, 0.45) 52%, rgba(125, 185, 232, 0.5) 100%), url('~assets/header2.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -625,8 +666,12 @@ h6
   width: 100%;
   height: 100%;
   min-height: 950px;
+  @media screen and (max-width: $breakpoint-md) 
+    min-height: 490px
+  @media screen and (max-width: $breakpoint-sm) 
+    min-height: 390px
 
-}
+
 </style>
 
 <script>
@@ -650,8 +695,7 @@ export default {
         { label: "Medicine", value: 0 },
         { label: "Ecology", value: 1 },
         { label: "Astronomy", value: 2 },
-        { label: "Machine Learning", value: 3 },
-        { label: "More", value: 4 }
+        { label: "Machine Learning", value: 3 }
       ]
     };
   },

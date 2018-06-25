@@ -1,7 +1,7 @@
 module.exports = {
   general: [{
       "q": "What does “Boid” mean?",
-      "a": "Boid is short for bird-oid. A computer simulation of birds in a flock. Each “boid” follows simple rules of interaction with nearby boids. Many boids interacting results in emergent meta patterns. Likewise, the Boid Platform relies on computing resources from a large number of individual contributors. These small contributions cumulate into massive real-world impact. The sum of our contribution is greater than the individual elements.\n"
+      "a": "Boid is short for bird-oid. A computer simulation of birds in a flock. Each “boid” follows simple rules of interaction with nearby boids. Many boids interacting results in emergent meta patterns. Likewise, the Boid Platform relies on computing resources from a large number of individual contributors. These small contributions cumulate into massive real-world impact."
     },
     {
       "q": "What is Boid?",
@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       "q": "How can I contribute computing power towards Boid?",
-      "a": "The easiest way to contribute computing power is to simply log in to Boid and enable the “Browser” device. To increase your Boid Power substantially, you need to install the simple Boid application on your device. The Boid application runs in the background, transparently taking advantage of unused computing power. The Boid application connects to your Boid account, and can tap into your CPU, GPU, and HDD space automatically, to maximize your Boid Power rating. You can install the Boid app on as many of your devices as you like. Desktop computers with dedicated GPUs tend to perform the best, but laptops and cell-phones can also work as well."
+      "a": "To increase your Boid Power , you need to install the simple Boid application on your device. The Boid application runs in the background, transparently taking advantage of unused computing power. The Boid application connects to your Boid account, and can tap into your CPU, GPU, and HDD space automatically, to maximize your Boid Power rating. You can install the Boid app on as many of your devices as you like. Desktop computers with dedicated GPUs tend to perform the best, but laptops and cell-phones can also work as well."
     },
     {
       "q": "Is Boid safe?",
@@ -54,7 +54,7 @@ module.exports = {
       "a": "The Boid Desktop app apps act as a wrapper over multiple blockchains and distributed scientific computing technologies. The Boid apps automatically connect and run various computing tasks based on your computer hardware. The app connects to your Boid account, and can tap into your CPU, GPU, and HDD space automatically. You can install the Boid app on as many of your devices as you like. Desktop computers with dedicated GPUs tend to perform the best, but laptops and cell-phones can also work as well.\n"
     },
     {
-      "q": "what is distributed computing?",
+      "q": "What is distributed computing?",
       "a": "Distributed science projects help researchers to solve some large and complex problem which would otherwise be prohibitively expensive to run on a specialized supercomputer or take decades or centuries to run on a single desktop computer."
     },
     {
