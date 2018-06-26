@@ -9,14 +9,14 @@
           .col-auto
             transition(appear enter-active-class="animated pulse"
             leave-active-class="animated fadeOut")
-              q-btn.shadow-5(style="z-index:1000" rounded push :size="buttonSize" color="green-6" @click="openURL('https://app.boid.com')") Join Us
+              q-btn.shadow-5(style="z-index:1000" :size="buttonSize" color="green-6" @click="openURL('https://app.boid.com')") Join Us
             // q-btn.shadow-5(:size="buttonSize" color="blue") Learn More 
               q-icon.on-right(name="arrow_downward")
         .row.justify-center
           .col-12
             .row.justify-center
               .col-auto.q-mt-lg
-                q-btn(style="z-index:1000" rounded outline size="md" color="white" @click="openURL('http://twitter.com/boidcom')") Follow us @boidcom
+                q-btn(style="z-index:1000" outline size="md" color="white" @click="openURL('http://twitter.com/boidcom')") Follow us @boidcom
         .row.absolute-bottom.justify-center
           // img.transition(src="~assets/transition1.svg")
           svg.headingsvgheight(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
@@ -56,7 +56,7 @@
           .row.justify-center
             .col-12
               .row.justify-center
-                q-btn(round push :size="buttonSize3" color="white" @click="videoPlaying=true,$root.$emit('videoModal',true)").bg-green-5
+                q-btn( round :size="buttonSize3" color="white" @click="videoPlaying=true,$root.$emit('videoModal',true)").bg-green-5
                   q-icon(name="play_arrow")
             h4.text-white.q-pt-lg.cursor-pointer Explainer Video
     div(style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").relative-position.cursor-pointer
@@ -135,7 +135,7 @@
                     .scienceCard.animate-fade(v-if="refresh")
                       h4.scienceHeader.text-grey-8(key="headertxt") {{scienceInfo.headerText}}
                       h6.bpinfoText(key="infotxt") {{scienceInfo.paragraphText}}
-                q-btn.full-width(v-if="hideSciExplain" color="blue" size="lg" @click="hideSciExplain = false" push) Learn How
+                q-btn.full-width(v-if="hideSciExplain" color="blue" size="lg" @click="hideSciExplain = false") Learn How
         .gt-md(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
         .gt-xs.lt-lg(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
         .lt-sm(style="height:160px;" v-bind:class="{hidden:!hideSciExplain}")
