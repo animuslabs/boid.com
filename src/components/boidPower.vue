@@ -52,7 +52,7 @@
           .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
             .bpinfocard2
               h6.bpHeading Do Good
-              h6.bpinfoText Divert your Boid Power towards important non-profits in epic fundraising campaigns.
+              h6.bpinfoText Divert your Boid Power towards awesome projects in epic fundraising campaigns.
     .gt-sm(style="height:200px;")
     .gt-xs(style="height:100px;")
 

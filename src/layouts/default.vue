@@ -6,7 +6,7 @@
           | boid
         q-btn(color="green" outline) Login
     q-page-container
-      router-view(props={})
+      router-view(style="height: 100vh")
     q-modal(ref="videoModal" @show="videoModalOpen = true" @hide="videoModalOpen = false")
       .q-video.bg-black.videocontainer(v-if="videoModalOpen")
         iframe(width="100%" height="100%" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=1;autohide=1;hd=1;modestbranding=1;" frameborder="0" allowfullscreen)

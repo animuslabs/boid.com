@@ -1,70 +1,66 @@
 <template lang="pug">
-  q-page
-    .relative-position
-      .sharethis-inline-follow-buttons
-      .heading.relative-position
-        .row.justify-center
-          .col-12.headingtextoffset
-            h2.text-center The Social Supercomputer
-          .col-auto
-            transition(appear enter-active-class="animated pulse"
-            leave-active-class="animated fadeOut")
-              q-btn.shadow-5(style="z-index:1000" rounded push :size="buttonSize" color="green-6" @click="openURL('https://app.boid.com')") Join Us
-            // q-btn.shadow-5(:size="buttonSize" color="blue") Learn More 
-              q-icon.on-right(name="arrow_downward")
+  .relative-position
+    .heading.relative-position
+      .row.justify-center
+        .col-12.headingtextoffset
+          h2.text-center The Social Supercomputer
+        .col-auto
+          q-btn.shadow-5(:size="buttonSize" color="green-6" @click="openURL('https://app.boid.com')") Join Us
+          // q-btn.shadow-5(:size="buttonSize" color="blue") Learn More 
+            q-icon.on-right(name="arrow_downward")
+      .row.justify-center
+        .col-12
+          .row.justify-center
+            .col-auto.q-mt-lg
+              q-btn(rounded outline size="md" color="white" @click="openURL('http://twitter.com/boidcom')") Follow us @boidcom
+      .row.absolute-bottom.justify-center
+        // img.transition(src="~assets/transition1.svg")
+        svg.headingsvgheight(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
+          path(id="svg_1" d="m99.63963,0.09011c26.928091,179.641359 -76.806212,36.664882 -99.81981,99.90985l101,0c-0.3934,-33.30328 -0.78679,-66.60657 -1.18019,-99.90985z" fill="#fff")
+    .row.justify-center.gutter-md
+      .col-12.relative-position(style="margin-top:100px; margin-bottom:100px;")
+        div.absolute-center
+          h3 Do something Huge
+          h4 boid makes it easy
+      div(style="height:30px;").lt-lg
+    .row.justify-center.xl-padding.md-padding(style="margin-top:120px;")
+      .col-lg-3.col-md-6.col-sm-12
+        .row.justify-center.relative-position
+          img.heroicon.absolute-center(src="~assets/connectdevices.svg")
+        .herocard.bg-white.shadow-3
+          h5.text-center Connect your Devices
+          p Install the Boid app on your computers and phones.
+      .col-12.gt-sm.lt-lg(style="height:200px;")
+      .verticalSpacer.lt-md
+      .col-lg-3.col-md-6.col-sm-12
+        .row.justify-center.relative-position
+          img.heroicon.absolute-center(src="~assets/contribute3.svg")
+        .herocard.bg-white.shadow-3
+          h5.text-center Contribute to big ideas
+          p Your spare computing resouces will make an impact in important science and cryptocurrency projects.
+      .verticalSpacer.lt-md
+      .col-lg-3.col-md-6.col-sm-12
+        .row.justify-center.relative-position
+          img.heroicon.absolute-center(src="~assets/earnrewards.svg")
+        .herocard.bg-white.shadow-3
+          h5.text-center Earn Rewards
+          p Earn money for your computing power, or donate your earnings to charity.
+    .relative-position.justify-center(style="top:103px;")
+      svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100px" style="fill: white;" viewBox="0 0 100 100" preserveAspectRatio="none")
+        path(d="M0 0 C 50 100 80 100 100 0 Z")
+      .absolute-bottom.full-width.videobuttonoffset
         .row.justify-center
           .col-12
             .row.justify-center
-              .col-auto.q-mt-lg
-                q-btn(style="z-index:1000" rounded outline size="md" color="white" @click="openURL('http://twitter.com/boidcom')") Follow us @boidcom
-        .row.absolute-bottom.justify-center
-          // img.transition(src="~assets/transition1.svg")
-          svg.headingsvgheight(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
-            path(id="svg_1" d="M0 100 C 60 10 90 50 100 100 Z" fill="#fff")
-      .row.justify-center.gutter-md
-        .col-12.relative-position(style="margin-top:100px; margin-bottom:100px;")
-          div.absolute-center
-            h3 Do something Huge
-            h4 boid makes it easy
-        div(style="height:30px;").lt-lg
-      .row.justify-center.xl-padding.md-padding(style="margin-top:120px;")
-        .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          .row.justify-center.relative-position
-            img.heroicon.absolute-center(src="~assets/connectdevices.svg")
-          .herocard
-            h5.text-center Connect Your Devices
-            // p Install the Boid app on your computers and phones.
-        .col-12.gt-sm.lt-lg(style="height:200px;")
-        .verticalSpacer.lt-md
-        .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          .row.justify-center.relative-position
-            img.heroicon.absolute-center(src="~assets/contribute3.svg")
-          .herocard
-            h5.text-center Contribute To Big Ideas
-            // p Your spare computing resouces will make an impact in important science and cryptocurrency projects.
-        .verticalSpacer.lt-md
-        .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          .row.justify-center.relative-position
-            img.heroicon.absolute-center(src="~assets/earnRewards2.svg")
-          .herocard
-            h5.text-center Earn Rewards
-            // p Earn money for your computing power, or donate your earnings to charity.
-      .relative-position.justify-center(style="top:103px;")
-        svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100px" style="fill: white;" viewBox="0 0 100 100" preserveAspectRatio="none")
-          path(d="M0 0 C 50 100 80 100 100 0 Z")
-        .absolute-bottom.full-width.videobuttonoffset(@click="videoPlaying=true,$root.$emit('videoModal',true)" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").cursor-pointer
-          .row.justify-center
-            .col-12
-              .row.justify-center
-                q-btn(round push :size="buttonSize3" color="white" @click="videoPlaying=true,$root.$emit('videoModal',true)").bg-green-5
-                  q-icon(name="play_arrow")
-            h4.text-white.q-pt-lg.cursor-pointer Explainer Video
-    div(style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").relative-position.cursor-pointer
-      .videocover(@click="videoPlaying=true,$root.$emit('videoModal',true)" v-bind:class="{highlightVideo:highlightVideo}")
-      iframe(v-if="!videoPlaying" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
-    .relative-position.adjustvideofooter
-      .relative-position(style="top:-100px;")
-        <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100px" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
+              q-btn(round push :size="buttonSize3" color="white" @click="videoPlaying=true,$root.$emit('videoModal',true)").bg-green-5
+                q-icon(name="play_arrow")
+          h4.text-white.q-pt-lg Explainer Video
+  div(style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden").relative-position
+    .videocover
+    iframe(v-if="!videoPlaying" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
+  .relative-position.adjustvideofooter
+    .relative-position(style="top:-50px;")
+      <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
       div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
         .row.justify-center.gutter-sm(style="margin-top:100px; margin-bottom:10px; padding-bottom: 80px;")
           .col-xl-4.col-lg-5.col-md-auto.col-sm-10
@@ -99,13 +95,13 @@
             ul.gt-md(style="max-width:500px;")
               transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
                 li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
-                  h6 Team leaders rally users around important causes.
+                  h6 Team Leaders rally users around important causes
                 li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
-                  h6 Users contribute their computing resouces on global leaderboards.
+                  h6 Users contribute their computing resouces on global leaderboards
                 li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
-                  h6 Users can win money and prizes for their contributions.
+                  h6 Users can win money and prizes for their contributions
                 li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
-                  h6 Team leaders can keep or donate commisions earned from their team performance.
+                  h6 Team leaders can keep or donate commisions earned from their team performance
           .col-xl-4.col-lg-5.col-md-12.gt-md
             q-carousel.carouselfix(ref="teamSlides" infinite :autoplay="4000")
               q-carousel-slide
@@ -129,15 +125,15 @@
                   q-btn-toggle.absolute-center(@input="clearSciInterval" :size="buttonSize2" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="amber-8" :options="scienceBtns")
                 .col-12(style="height:15px;")
                 .col-sm-12.col-md-5.col-lg-4.col-xl-3.relative-position(style="height:310px;")
-                  img(v-if="refresh").scienceIcons.absolute-center.animate-fade(:src="scienceInfo.img")
+                  img.scienceIcons.absolute-center(:src="scienceInfo.img")
                 .col-xs-10.col-sm-12.col-md-6.col-lg-6.col-xl-8
                   div
-                    .scienceCard.animate-fade(v-if="refresh")
-                      h4.scienceHeader.text-grey-8(key="headertxt") {{scienceInfo.headerText}}
-                      h6.bpinfoText(key="infotxt") {{scienceInfo.paragraphText}}
-                q-btn.full-width(v-if="hideSciExplain" color="blue" size="lg" @click="hideSciExplain = false" push) Learn How
+                    .scienceCard
+                      h4.scienceHeader.text-grey-8 {{scienceInfo.headerText}}
+                      h6.bpinfoText {{scienceInfo.paragraphText}}
+                q-btn.full-width(v-if="hideSciExplain" color="blue" size="lg" glossy @click="hideSciExplain = false") Learn How
         .gt-md(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
-        .gt-xs.lt-lg(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
+        .gt-xs.lt-md(style="height:200px;" v-bind:class="{hidden:!hideSciExplain}")
         .lt-sm(style="height:160px;" v-bind:class="{hidden:!hideSciExplain}")
         div(v-bind:class="{hidden:hideSciExplain}")
           // .lt-md(style="height: 1780px;")
@@ -146,7 +142,7 @@
             .col-lg-12(style="height: 150px;")
               .absolute
                 h3 This is how it works
-          .gt-sm(style="height:80px;")
+          .lt-xl.gt-sm(style="height:80px;")
           .row.justify-center.gutter-lg.xl-padding(style="margin-top:200px;")
             .col-lg-5.col-md-12.col-xl-6.sciexplainspacer
               .row.justify-center.relative-position
@@ -214,17 +210,21 @@
                     th 
                       h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
         .lt-md(style="height:200px" v-if="hideSciExplain")
-      boidApp
-      boidPower
-      roadMap
-      faq
-      bFooter
+
+      // boidApp
+      // boidPower
+      // roadMap
+      // faq
+      // bFooter
 </template>
 
 <style lang="stylus">
 @import '~variables'
 .sciexplainspacer
-  height 700px
+  @media screen and (max-width: $breakpoint-xl) 
+    height 900px
+  @media screen and (max-width: $breakpoint-lg) 
+    height 700px
   @media screen and (max-width: $breakpoint-md) 
     height 750px
   @media screen and (max-width: $breakpoint-sm) 
@@ -237,13 +237,9 @@
   @media screen and (max-width: $breakpoint-md) 
     margin-top: 50px
 .headingsvgheight
-  height: 150px
-  @media screen and (max-width: $breakpoint-md) 
-    height 100px
-  @media screen and (max-width: $breakpoint-sm) 
-    height 80px
-
-
+  height: 300px
+@media screen and (max-width: $breakpoint-md) 
+  height 100px
 
 .q-btn
   font-weight 800
@@ -296,7 +292,8 @@ body
     top: -50px
   @media screen and (max-width: $breakpoint-xs) 
     top: 0px
-
+.videoadjust:hover
+  height: 0px
 
 .videocover
   background-image: linear-gradient(to left top, #00e8ff, alpha(#00c8f7,.9), alpha(#00a7ea,.7), #0086d7, #0064bd);
@@ -306,17 +303,11 @@ body
   top: 0px;
   left: 0px;
   z-index: 100;
-  opacity: .5;
-  cursor: pointer
-// .videocover:hover
-//   opacity: .8
-//   cursor: pointer;
-//   background-color black
-.highlightVideo
-  opacity: .8
-  cursor: pointer;
+  opacity: .7;
+.videocover:hover
+  opacity: 1
   background-color black
-  // height: 0px
+  height: 0px
 .sciwidget
   width: 600px
 
@@ -455,17 +446,17 @@ body
 
 @keyframes powerflicker
   0% 
-    filter: drop-shadow( 1px 1px 30px alpha($yellow-11,1))
+    filter: drop-shadow( 1px 1px 60px alpha($yellow-11,1))
   2% 
-    filter: drop-shadow( 1px 1px 20px alpha($yellow-9,.1))
+    filter: drop-shadow( 1px 1px 30px alpha($yellow-9,.1))
   4% 
-    filter: drop-shadow( 1px 1px 20px alpha($yellow-9,.5))
+    filter: drop-shadow( 1px 1px 30px alpha($yellow-9,.5))
   8%
-    filter: drop-shadow( 1px 1px 10px alpha($yellow-11,1))
+    filter: drop-shadow( 1px 1px 20px alpha($yellow-11,1))
   70%
-    filter: drop-shadow( 1px 1px 50px alpha($yellow-9,.1))
+    filter: drop-shadow( 1px 1px 10px alpha($yellow-9,.1))
   100%
-    filter: drop-shadow( 1px 1px 30px alpha($yellow-11,1))
+    filter: drop-shadow( 1px 1px 60px alpha($yellow-11,1))
 
 .poverride {
   padding-left: 10px;
@@ -483,7 +474,7 @@ th {
 
 .sciExplain 
   padding: 10px;
-  width: 700px;
+  width: 680px;
   // background-color: $blue-9;
   // border-radius: 100%;
   z-index: 3;
@@ -608,7 +599,7 @@ li {
   margin-top: 110px;
   margin-left:15px;
   margin-right:15px;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .transition {
@@ -660,35 +651,28 @@ h5 {
   font-size: 35px;
   margin-top: 25px;
   margin-bottom: 20px;
-  font-family: 'Comfortaa'
-
 }
 h6 
   margin: 0px
   font-weight:400
   @media screen and (max-width: $breakpoint-md) 
     font-size 20px
-  @media screen and (max-width: $breakpoint-sm) 
+  @media screen and (max-width: $breakpoint-md) 
     font-size 16px
 
 
 .heading 
-  background: linear-gradient(to right, rgba(30, 87, 153, 0.7) 0%, rgba(79, 138, 194, 0.65) 52%, rgba(125, 185, 232, 0.7) 100%), url('~assets/header2.png');
+  background: linear-gradient(to right, rgba(30, 87, 153, 0.5) 0%, rgba(79, 138, 194, 0.45) 52%, rgba(125, 185, 232, 0.5) 100%), url('~assets/header2.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  // background-attachment: fixed;
+  background-position: top center;
   width: 100%;
   height: 100%;
   min-height: 700px;
-  @media screen and (max-width: $breakpoint-xl) 
-    min-height: 690px
-  @media screen and (max-width: $breakpoint-lg) 
-    min-height: 690px
   @media screen and (max-width: $breakpoint-md) 
     min-height: 490px
   @media screen and (max-width: $breakpoint-sm) 
-    min-height: 410px
+    min-height: 390px
 
 
 </style>
@@ -703,8 +687,6 @@ import { openURL } from 'quasar'
 export default {
   data() {
     return {
-      refresh:true,
-      highlightVideo:false,
       videoPlaying:false,
       hideSciExplain:true,
       screenSize:{
@@ -716,7 +698,7 @@ export default {
       sciInterval: "",
       scienceBtns: [
         { label: "Medicine", value: 0 },
-        { label: "Climatology", value: 1 },
+        { label: "Ecology", value: 1 },
         { label: "Astronomy", value: 2 },
         { label: "Machine Learning", value: 3 }
       ]
@@ -743,14 +725,14 @@ export default {
       if (this.activeScienceBtn > 3) {
         this.activeScienceBtn = 0;
       } else this.activeScienceBtn++;
-    }, 5000);
+    }, 1000);
     this.$refs.teamSlides.$on("slide", i => {
       this.teamActiveItem = i;
     });
   },
   computed: {
     buttonSize(){
-      if (this.screenSize.width > 769) return '30px'
+      if (this.screenSize.width > 769) return 'xl'
       else return 'lg'
     },
     buttonSize2(){
@@ -776,24 +758,24 @@ export default {
         };
       } else if (this.activeScienceBtn === 1) {
         return {
-          headerText: "Weather Prediction",
+          headerText: "Study Global Warming",
           paragraphText:
-            "Help run simulations that predict the effects of climate change on our planet.",
+            "Help run climate simulations that predict the effects of climate change on our planet.",
           img: require("assets/scicons/earth.svg")
         };
       } else if (this.activeScienceBtn === 2) {
         return {
-          headerText: "Star Stuff",
+          headerText: "Save Lives",
           paragraphText:
-            "Simulate the movement of celestial bodies and help researchers study the most fundamental aspects of how the universe works.",
+            "Your computer can help scientists simulate proteins to isolate more effictive treatments for cancer, alzheimers, and many other diseases.",
           img: require("assets/scicons/planetary.svg")
         };
       } else if (this.activeScienceBtn === 3) {
         return {
-          headerText: "Neural Networks",
+          headerText: "Save Lives",
           paragraphText:
-            "Help train neural networks to power the next generation of artificial inteligence.",
-          img: require("assets/scicons/brain.svg")
+            "Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.",
+          img: require("assets/scicons/magnifyingglass.svg")
         };
       } else if (this.activeScienceBtn === 4) {
         return {
@@ -810,14 +792,5 @@ export default {
       clearInterval(this.sciInterval)
     },
     openURL
-  },
-  watch:{
-    activeScienceBtn(){
-      this.refresh = false
-      setTimeout(()=>{
-        this.refresh = true
-      },100)
-    }
   }
 };
-</script>

@@ -30,16 +30,26 @@
             td(style="padding-top:35px; padding-left:20px")
               h6.bpHeading.text-white Seamless 
               h6.bpinfoText.text-white The application inteligently runs in the background to utilize unused resouces. 
+      .col-12
+        .row.justify-center
+          div
+            q-btn(@click="openURL('https://app.boid.com')" size="30px" color="blue" rounded push) Get Started
     svg.absolute-bottom(style="width:100%; height:50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none") 
       // polygon.svg--sm(fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100")
       polygon.svg--lg(fill="rgb(0, 112, 208)" points="0,0 15,100 33,21 45,100 72,20 85,100 95,50 100,80 100,100 0,100")
+
 </template>
 
 <script>
+import { openURL } from 'quasar'
+
 export default {
   // name: 'ComponentName',
   data () {
     return {}
+  },
+  methods:{
+    openURL
   }
 }
 </script>

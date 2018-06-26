@@ -1,13 +1,13 @@
 <template lang="pug">
-  .row.justify-center
+  .row.justify-center.q-pb-xl.bg-grey-9
     .col-12.justify-center
       .row.justify-center
         .col-auto
           h2.text-blue-5 FAQ
     .col-sm-12.col-md-11.col-lg-10.col-xl-9
       .row.justify-center
-        QBtnToggle(toggle-color="blue-5" v-model="activeFaqTab" :size="tabSize" rounded :options="faqTabs" style="")
-      .faqcontainer
+        QBtnToggle(toggle-color="blue-5" v-model="activeFaqTab" :size="tabSize" rounded :options="faqTabs" style="").text-grey-7.bg-white
+      .faqcontainer.bg-white.q-mt-lg
         div(v-if="activeFaqTab === 0")
           q-collapsible(v-for="(faqItem,index) in $options.faqContent.general" :key="index+'0'" :label="faqItem.q" )
             | {{faqItem.a}}
@@ -71,6 +71,7 @@ export default {
   box-shadow 0px 3px 5px $grey-5
   min-height 400px
   padding 20px
+  border-radius 30px
 
 
 

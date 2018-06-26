@@ -34,7 +34,7 @@
                 h6.bpinfoText.text-white The Boid Network will function as a decentralized platform using EOS blockchain technology.
       .col-12.q-pt-xl(v-if="!viewTimeline")
         .row.justify-center
-          q-btn(color="green" style="z-index:10" size="lg" rounded glossy @click="viewTimeline = true") View Detailed Roadmap
+          q-btn(color="green" style="z-index:10" size="lg" rounded push @click="viewTimeline = true") View Detailed Roadmap
            
     .col-11(v-if="viewTimeline")
       .row.justify-center
@@ -150,7 +150,9 @@ h3
   padding-left: 10px;
 .q-timeline-subtitle
   color: $grey-5
-  padding:5px
+  @media screen and (max-width: $breakpoint-md)
+    // padding-left:15px
+    // padding-right:15px
   // padding-left: 20px
   font-size:25px;
 
