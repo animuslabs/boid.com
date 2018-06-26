@@ -29,7 +29,7 @@
               q-icon(name="visibility_off" size="70px" color="white")
             td(style="padding-top:35px; padding-left:20px")
               h6.bpHeading.text-white Seamless 
-              h6.bpinfoText.text-white The application inteligently runs in the background to utilize unused resouces. 
+              h6.bpinfoText.text-white The application intelligently runs in the background to utilize unused resouces. 
       .col-12
         .row.justify-center
           div

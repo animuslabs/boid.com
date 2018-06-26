@@ -2,7 +2,7 @@ module.exports = {
 timelineEntries1:[
   {
     title:'Initial Research',
-    content:'Studing blockchain protocols and implementations.',
+    content:'Studying blockchain protocols and implementations.',
     icon:'check',
     color:'green'
   },

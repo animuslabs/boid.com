@@ -91,7 +91,7 @@
                         li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
                           h6 Team leaders rally users around important causes.
                         li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
-                          h6 Users contribute their computing resouces on global leaderboards.
+                          h6 Users contribute their computing resources on global leaderboards.
                         li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
                           h6 Users can win money and prizes for their contributions.
                         li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
@@ -101,7 +101,7 @@
                 li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
                   h6 Team leaders rally users around important causes.
                 li(key="1" v-bind:class="{activelist:teamActiveItem === 1}").q-pa-sm
-                  h6 Users contribute their computing resouces on global leaderboards.
+                  h6 Users contribute their computing resources on global leaderboards.
                 li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
                   h6 Users can win money and prizes for their contributions.
                 li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
@@ -771,7 +771,7 @@ export default {
         return {
           headerText: "Save Lives",
           paragraphText:
-            "Your computer can help scientists simulate and isolate more effictive treatments for cancer, alzheimers, and many other diseases.",
+            "Your computer can help scientists simulate and isolate more effective treatments for cancer, alzheimers, and many other diseases.",
           img: require("assets/scicons/chemistry.svg")
         };
       } else if (this.activeScienceBtn === 1) {
@@ -792,7 +792,7 @@ export default {
         return {
           headerText: "Neural Networks",
           paragraphText:
-            "Help train neural networks to power the next generation of artificial inteligence.",
+            "Help train neural networks to power the next generation of artificial intelligence.",
           img: require("assets/scicons/brain.svg")
         };
       } else if (this.activeScienceBtn === 4) {
