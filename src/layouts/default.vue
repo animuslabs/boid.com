@@ -4,7 +4,7 @@
       q-toolbar(color="white" text-color="black")
         q-toolbar-title.q-ma-sm
           | boid
-        q-btn(color="green" outline) Login
+        q-btn(color="green" outline @click="openURL('https://app.boid.com')") Login
     q-page-container
       router-view(style="height: 100vh")
     q-modal(ref="videoModal" @show="videoModalOpen = true" @hide="videoModalOpen = false")
