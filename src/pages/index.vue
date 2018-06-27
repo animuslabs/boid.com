@@ -45,7 +45,7 @@
         .verticalSpacer.lt-md
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
           .row.justify-center.relative-position
-            img.heroicon.absolute-center(src="~assets/earnRewards3.svg")
+            img.heroicon.absolute-center(src="~assets/earnrewards3.svg")
           .herocard
             h5.text-center Earn Rewards
             // p Earn money for your computing power, or donate your earnings to charity.
