@@ -34,7 +34,7 @@
                 h6.bpinfoText.text-white The Boid Network will function as a decentralized platform using EOS blockchain technology.
       .col-12.q-pt-xl(v-if="!viewTimeline")
         .row.justify-center
-          q-btn(color="green" style="z-index:10" size="lg" rounded push @click="viewTimeline = true") View Detailed Roadmap
+          q-btn(color="green" style="z-index:10" size="lg" @click="viewTimeline = true") View Detailed Roadmap
            
     .col-11(v-if="viewTimeline")
       .row.justify-center

@@ -45,7 +45,7 @@
         .verticalSpacer.lt-md
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
           .row.justify-center.relative-position
-            img.heroicon.absolute-center(src="~assets/earnRewards2.svg")
+            img.heroicon.absolute-center(src="~assets/earnRewards3.svg")
           .herocard
             h5.text-center Earn Rewards
             // p Earn money for your computing power, or donate your earnings to charity.
@@ -740,7 +740,7 @@ export default {
       this.screenSize = data
     })
     this.sciInterval = setInterval(() => {
-      if (this.activeScienceBtn > 3) {
+      if (this.activeScienceBtn > 2) {
         this.activeScienceBtn = 0;
       } else this.activeScienceBtn++;
     }, 5000);
