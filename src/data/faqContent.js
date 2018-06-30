@@ -63,11 +63,11 @@ module.exports = {
     }
   ],
   tokenization: [{
-      "q": "What is the BOID",
+      "q": "What is the BOID?",
       "a": "Boid will have a native cryptocurrency called BOID. The token will be airdropped to EOS token holders in 2018 Q3. You can earn BOID IOUs during the Alpha by running the Boid app. More details about tokeneconomics will be released soon."
     },
     {
-      "q": "What is the function of BOIDs",
+      "q": "What is the function of BOIDs?",
       "a": "The Boid token (BOID) unlocks advanced functionality on the Boid platform. Users can stake their BOIDs to upgrade their account functionality. Staking BOIDS is required to create a Boid Team and issue team assets. BOIDs can also be staked for Proof-of-stake mining and voting. Staking BOIDs is required to operate a Boid masternode."
     },
     {

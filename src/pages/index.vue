@@ -771,7 +771,7 @@ export default {
         return {
           headerText: "Save Lives",
           paragraphText:
-            "Your computer can help scientists simulate and isolate more effective treatments for cancer, alzheimers, and many other diseases.",
+            "Your computer can help scientists simulate and isolate more effective treatments for cancer, Alzheimers, and many other diseases.",
           img: require("assets/scicons/chemistry.svg")
         };
       } else if (this.activeScienceBtn === 1) {
