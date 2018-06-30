@@ -95,7 +95,7 @@
                         li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
                           h6 Users can win money and prizes for their contributions.
                         li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
-                          h6 Team leaders can keep or donate commisions earned from their team performance.
+                          h6 Team leaders can keep or donate commissions earned from their team performance.
             ul.gt-md(style="max-width:500px;")
               transition-group(appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
                 li(key="0" v-bind:class="{activelist:teamActiveItem === 0}").q-pa-sm
@@ -105,7 +105,7 @@
                 li(key="2" v-bind:class="{activelist:teamActiveItem === 2}").q-pa-sm
                   h6 Users can win money and prizes for their contributions.
                 li(key="3" v-bind:class="{activelist:teamActiveItem === 3}").q-pa-sm
-                  h6 Team leaders can keep or donate commisions earned from their team performance.
+                  h6 Team leaders can keep or donate commissions earned from their team performance.
           .col-xl-4.col-lg-5.col-md-12.gt-md
             q-carousel.carouselfix(ref="teamSlides" infinite :autoplay="4000")
               q-carousel-slide
