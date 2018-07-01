@@ -51,7 +51,7 @@ module.exports = {
     },
     {
       "q": "What is the boid desktop app?",
-      "a": "The Boid Desktop app apps act as a wrapper over multiple blockchains and distributed scientific computing technologies. The Boid apps automatically connect and run various computing tasks based on your computer hardware. The app connects to your Boid account, and can tap into your CPU, GPU, and HDD space automatically. You can install the Boid app on as many of your devices as you like. Desktop computers with dedicated GPUs tend to perform the best, but laptops and cell-phones can also work as well.\n"
+      "a": "The Boid Desktop app acts as a wrapper over multiple blockchains and distributed scientific computing technologies. The Boid apps automatically connect and run various computing tasks based on your computer hardware. The app connects to your Boid account, and can tap into your CPU, GPU, and HDD space automatically. You can install the Boid app on as many of your devices as you like. Desktop computers with dedicated GPUs tend to perform the best, but laptops and cell-phones can also work as well.\n"
     },
     {
       "q": "What is distributed computing?",

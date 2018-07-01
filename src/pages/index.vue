@@ -10,8 +10,6 @@
             transition(appear enter-active-class="animated pulse"
             leave-active-class="animated fadeOut")
               q-btn.shadow-5(style="z-index:1000" :size="buttonSize" color="green-6" @click="openURL('https://app.boid.com')") Join Us
-            // q-btn.shadow-5(:size="buttonSize" color="blue") Learn More 
-              q-icon.on-right(name="arrow_downward")
         .row.justify-center
           .col-12
             .row.justify-center
