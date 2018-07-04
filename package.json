@@ -1,8 +1,8 @@
 {
   "name": "boidcom",
   "version": "1.0.0",
-  "description": "Boidcom",
-  "productName": "Boidcom",
+  "description": "Boid is the social blockchain easy mining platform to earn money and make a difference.",
+  "productName": "Boid.com",
   "cordovaId": "org.cordova.quasar.app",
   "author": "John Heeter <john@boid.com>",
   "private": true,
