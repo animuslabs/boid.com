@@ -5,7 +5,7 @@
         div
           .absolute()
             .relative-position(style="height:00px; width:400px;")
-              svg.absolute(style="left: -200px; top:-320px;" viewBox="0 -60 100 80" xmlns="http://www.w3.org/2000/svg")
+              svg.absolute(style=" pointer-events:none; z-index: 1; left: -200px; top:-320px;" viewBox="0 -60 100 80" xmlns="http://www.w3.org/2000/svg")
                 circle(fill="#424242" cx="50" cy="50" r="50")
                 // circle(fill="red" cx="50" cy="50" r="50")
       .row.justify-center(style="padding-bottom:0px;")

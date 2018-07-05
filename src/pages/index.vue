@@ -47,8 +47,9 @@
           .herocard
             h5.text-center Earn Rewards
             // p Earn money for your computing power, or donate your earnings to charity.
-      .relative-position.justify-center(style="top:103px;")
-        svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100px" style="fill: white;" viewBox="0 0 100 100" preserveAspectRatio="none")
+      div(style="height:120px;")
+      .relative-position.justify-center
+        svg.transitioncurve.absolute-top(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"  style="fill: white;" viewBox="0 0 100 100" preserveAspectRatio="none")
           path(d="M0 0 C 50 100 80 100 100 0 Z")
         .absolute-bottom.full-width.videobuttonoffset(@click="videoPlaying=true,$root.$emit('videoModal',true)" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").cursor-pointer
           .row.justify-center
@@ -56,13 +57,14 @@
               .row.justify-center
                 q-btn( round :size="buttonSize3" color="white" @click="videoPlaying=true,$root.$emit('videoModal',true)").bg-green-5
                   q-icon(name="play_arrow")
-            h4.text-white.q-pt-lg.cursor-pointer Explainer Video
+            h5.text-white.q-pt-sm.cursor-pointer Explainer Video
     div(style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").relative-position.cursor-pointer
       .videocover(@click="videoPlaying=true,$root.$emit('videoModal',true)" v-bind:class="{highlightVideo:highlightVideo}")
       iframe(v-if="!videoPlaying" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
     .relative-position.adjustvideofooter
-      .relative-position(style="top:-100px;")
-        <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100px" style="position:absolute; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); top:0px;" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 C 60 10 90 50 100 100 Z"></path></svg>
+      .relative-position
+        svg.transitioncurve.pointer-none(xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="position:absolute; pointer-events: none; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); bottom:0px;" viewBox="0 0 100 100" preserveAspectRatio="none")
+          path(d="M0 100 C 60 10 90 50 100 100 Z")
       div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
         .row.justify-center.gutter-sm(style="margin-top:100px; margin-bottom:10px; padding-bottom: 80px;")
           .col-xl-4.col-lg-5.col-md-auto.col-sm-10
@@ -212,15 +214,24 @@
                     th 
                       h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
         .lt-md(style="height:200px" v-if="hideSciExplain")
-      boidApp
-      boidPower
-      roadMap
-      faq
+      boidApp(ref="app" id="app")
+      boidPower(ref="power")
+      boidToken(ref="token")
+      roadMap(ref="timeline")
+      faq(ref="faq")
       bFooter
 </template>
 
 <style lang="stylus">
 @import '~variables'
+.transitioncurve
+  height: 130px
+  @media screen and (max-width: $breakpoint-md) 
+    height 70px
+  @media screen and (max-width: $breakpoint-sm) 
+    height 60px
+  @media screen and (max-width: $breakpoint-xs) 
+    height 50px
 .sciexplainspacer
   height 700px
   @media screen and (max-width: $breakpoint-md) 
@@ -255,15 +266,15 @@ body
 
 .videobuttonoffset
   z-index:999 
-  top:-30px
+  top:10px
   @media screen and (max-width: $breakpoint-lg) 
-    top: 20px
+    top: 0px
   @media screen and (max-width: $breakpoint-md) 
-    top: -10px
+    top: -30px
   @media screen and (max-width: $breakpoint-sm) 
-    top: 10px
+    top: -20px
   @media screen and (max-width: $breakpoint-xs) 
-    top: 10px
+    top: -20px
 .adjustvideofooter
   top: -600px
   @media screen and (min-width 1200px) and (max-width 1560px)
@@ -377,8 +388,10 @@ body
     top:-60px
     width:100%
     height:auto
-    padding 25px
+    padding 35px
     padding-top 55px
+    border-radius 0px
+
 
 .bpinfocard
   height:290px
@@ -400,8 +413,10 @@ body
     top:-60px
     width:100%
     height:auto
-    padding 25px
+    padding 35px
     padding-top 55px
+    border-radius 0px
+
 
 .bpicons
   width: 650px
@@ -692,6 +707,7 @@ h6
 </style>
 
 <script>
+import boidToken from 'components/boidtoken.vue'
 import roadMap from 'components/roadmap.vue'
 import boidPower from 'components/boidPower.vue'
 import boidApp from 'components/boidApp.vue'
@@ -725,9 +741,20 @@ export default {
     boidPower,
     boidApp,
     faq,
-    bFooter
+    bFooter,
+    boidToken
   },
   mounted() {
+    var container = this.$el.querySelector("#app")
+    container.scrollTop = container.scrollHeight
+    if(this.$route.hash){
+      // this.$nextTick(() =>{
+      //   var result = this.$refs[this.$route.hash.replace('#','')]
+      //   console.log(result.$el)
+      //   if (result) result.$el.scrollIntoView() 
+      // })
+
+    }
     this.$root.$on('videoPlaying',(data)=>{
       this.videoPlaying = data
     })

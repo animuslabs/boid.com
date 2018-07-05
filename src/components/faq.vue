@@ -72,6 +72,9 @@ export default {
   min-height 400px
   padding 20px
   border-radius 30px
+  @media screen and (max-width: $breakpoint-sm) 
+    border-radius 0px
+
 
 
 

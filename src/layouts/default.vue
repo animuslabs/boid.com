@@ -8,12 +8,17 @@
     q-page-container
       router-view(style="height: 100vh")
     q-modal(ref="videoModal" @show="videoModalOpen = true" @hide="videoModalOpen = false")
-      .q-video.bg-black.videocontainer(v-if="videoModalOpen")
-        iframe(width="100%" height="100%" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=1;autohide=1;hd=1;modestbranding=1;" frameborder="0" allowfullscreen)
+      div
+        .q-video.bg-black.videocontainer(v-if="videoModalOpen")
+          iframe(width="100%" height="90%" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=1;autohide=1;hd=1;modestbranding=1;" frameborder="0" allowfullscreen allow="autoplay")
+      .absolute-bottom.row.justify-center.block(style="height:300px;")
+        // q-btn(color="blue" size="20px") Return to site
 </template>
 
 <script>
-import { openURL } from 'quasar'
+import { openURL, scroll } from 'quasar'
+const { getScrollTarget, setScrollPosition } = scroll
+
 
 export default {
   name: 'LayoutDefault',
@@ -29,6 +34,12 @@ export default {
   methods: {
     openURL,
     logout(){
+    },
+    scrollToElement(el) {
+      let target = getScrollTarget(el)
+      let offset = el.offsetTop*1.5 - el.scrollHeight
+      let duration = 1000
+      setScrollPosition(target, offset, duration)
     }
   },
   mounted(){
@@ -60,9 +71,10 @@ export default {
   font-size 35px
   color #089cfc
 .videocontainer
-  width:70vw 
-  height:70vh
-  @media screen and (max-width: $breakpoint-md) 
+  width:80vw 
+  height:80vh
+  @media screen and (max-width: $breakpoint-lg) 
     width: 100vw
-    height: 100vh
+    height: 70vh
+
 </style>
