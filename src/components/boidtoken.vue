@@ -13,7 +13,7 @@
         .row.justify-center.gutter-sm.q-ma-md
           .col-sm-12.col-md-10.col-lg-8.col-xl-7
             h5 BOID is the EOSIO token that will power the Boid blockchain.
-            h6 The Token distribution is happening soon.
+            h6 The token distribution is happening soon.
       .col-sm-12.col-md-6.col-lg-3.col-xl-2
         .relative-position.q-ma-md
           div(style="padding-top:15px; padding-left:20px")
@@ -84,12 +84,12 @@ export default {
       categories:['Airdrop', 'Team','Development','Early Adopters','Advisors','Marketing'],
       categoryColor:['red','green','blue','orange', 'yellow','purple'],
       categoryDescription:[
-        'Distributed fairly to EOS token holders',
-        'Founding team tokens are vested over two years',
-        'Growing development team and infrastructure',
-        'Bountys and rewards for users duing the Alpha and Beta phases.',
-        'Founding advisors receive tokens that vest over one year',
-        'This included bounties and promotional events'
+        'Tokens are distributed fairly to EOS holders.',
+        'The founding team tokens are vested over two years.',
+        'These tokens are alloted for the growth of the development team and infrastructure.',
+        'This includes incentives for participants duing the alpha and beta phases.',
+        'Founding advisors receive tokens that vest over one year.',
+        'This includes bounties and promotional events.'
         ],
       categoryPercentages:[10,25,25,10,5,25]
     }
