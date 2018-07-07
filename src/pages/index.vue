@@ -224,6 +224,12 @@
 
 <style lang="stylus">
 @import '~variables'
+
+ul
+  @media screen and (max-width: $breakpoint-xs) 
+    padding-left: 10px
+    padding-right: 10px
+
 .transitioncurve
   height: 130px
   @media screen and (max-width: $breakpoint-md) 
