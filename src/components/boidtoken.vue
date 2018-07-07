@@ -50,14 +50,14 @@
               q-icon(name="domain" size="70px" color="blue-5")
             td(style="padding-top:35px; padding-left:20px")
               h6.bpHeading.text-grey-8 Supernodes 
-              h6.bpinfoText.text-black Stake your BOIDs as part of a Boid Supernode to provide important infrastructure support to the network. Each masternode is a associated with a specific team, and receives dividends based on team performance.
+              h6.bpinfoText.text-black Stake your BOIDs as part of a Boid Supernode to provide important infrastructure support to the network. Each supernode is a associated with a specific team, and receives dividends based on team performance.
       .col-12
         .row.justify-center.gutter-lg
           .col-sm-12.col-md-10.col-lg-5.col-xl-3
             .row.justify-center
               .relative-position(style="max-width:400px;")
-                distChart(:percentages="categoryPercentages" @hover="getHoverData")
-                .absolute-center(style="z-index:1;")
+                distChart.cursor-pointer(:percentages="categoryPercentages" @selected="getSelected")
+                .absolute-center(style="z-index:1; pointer-events:none;")
                   img.boidtoken.shadow-12(  src="~assets/boidlogo1.png")
           .col-sm-12.col-md-10.col-lg-6.col-xl-4
             ul
@@ -96,9 +96,8 @@ export default {
   },
   methods:{
     openURL,
-    getHoverData(data){
-      if (data.length === 0) return
-      this.activeItem = data[0]._index
+    getSelected(data){
+      this.activeItem = data
     }
   },
   components:{
@@ -131,6 +130,7 @@ export default {
     border-radius: 10px
   .boidtoken
     border-radius:100%
+    pointer-events:none;
   .tokeninfotext
     font-size: 20px
   .tokendatatext
