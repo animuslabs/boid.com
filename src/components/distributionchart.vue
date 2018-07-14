@@ -1,9 +1,14 @@
 <script>
-  import { Doughnut } from 'vue-chartjs'
+  import { Pie } from 'vue-chartjs'
+  import color from 'tinycolor2'
   var labels = ['Airdrop', 'Team','Development','Early Adopters','Advisors','Marketing']
-  var originalColors = ['#f44336','#4caf50','#2196f3','#ff9800','#ffeb3b','#9c27b0']
+  var originalColors = ['#e57373','#81c784','#64b5f6','#ffb74d','#ce93d8','#ffeb3b']
+  var deselectedColors = originalColors.map((el)=>{
+    return color(el).desaturate(20).lighten(25).toString()
+  })
   var options = {
-    cutoutPercentage:50,
+    // events:['click'],
+    cutoutPercentage:80,
     legend:{
       display:false
     },
@@ -14,10 +19,15 @@
       duration:0
     },
   }
+  function highlightSelected(index){
+    var newColors = deselectedColors.concat([])
+    newColors[index] = originalColors[index]
+    return newColors
+  }
 
 
   export default {
-    extends: Doughnut,
+    extends: Pie,
     data:()=>{
       return {
         renderChartData:{},
@@ -34,7 +44,7 @@
       initChartData(){
         var datasets = [
           {
-            backgroundColor: ['#f44336','#4caf50','#2196f3','#ff9800','#ffeb3b','#9c27b0'],
+            backgroundColor: originalColors.concat([]),
           }
         ]
         datasets[0].data = this.percentages
@@ -50,37 +60,16 @@
           // this.setActiveItem(selected)
           this.$emit('selected',selected)
         }
-        this.options.onHover = (data,graphData) =>{ 
-          if (!graphData[0]) return this.setHoverItem(null)
-          var selected = graphData[0]._index
-          this.setHoverItem(selected)
-        }
       },
       setActiveItem(active){
-        if (active != null){
-          this.renderChartData.datasets[0].backgroundColor = ['#C13333','#4F9452','#08599b','#cc7a00','#e0ca00','#671a75']
-          this.renderChartData.datasets[0].backgroundColor[active] = originalColors[active]
+        if (active != null){ 
+          this.renderChartData.datasets[0].backgroundColor = highlightSelected(active)
         }else{
           this.renderChartData.datasets[0].backgroundColor = originalColors
         }
         setTimeout(()=>{
           this.refreshChart()
-        },200)
-      },
-      setHoverItem(active){
-        if (this.activeItem === null) return
-        this.renderChartData.datasets[0].backgroundColor = ['#C13333','#4F9452','#08599b','#cc7a00','#e0ca00','#671a75']
-        this.renderChartData.datasets[0].backgroundColor[this.activeItem] = originalColors[this.activeItem]
-        if (active != null){
-        this.renderChartData.datasets[0].backgroundColor[active] = originalColors[active]
-        }else{
-          if (this.hoverItem != active){
-            setTimeout(()=>{
-              this.refreshChart()
-            },200)
-          }
-        }
-        this.hoverItem = active
+        },10)
       }
     },
     watch:{

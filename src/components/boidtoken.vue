@@ -8,24 +8,21 @@
           .col
             h1.text-blue-5.text-center(style="text-shadow: 0px 1px 0px grey") BOID
             .row.justify-center
-              img.boidtoken.shadow-12(src="~assets/boidlogo1.png")
+              img.boidtoken(src="~assets/NewBoidLogo.svg")
             // h4.text-blue-5.text-center.q-mt-xl(style="margin-bottom: 0px;") Our native token
         .row.justify-center.gutter-sm.q-ma-md
-          .col-sm-12.col-md-10.col-lg-8.col-xl-7
-            h5 BOID is the EOSIO token that will power the Boid blockchain.
-            h6 The token distribution is happening soon.
+          .col-sm-12.col-md-10.col-lg-9.col-xl-9
+            h5.text-center BOID will be the native token of the Boid EOS sidechain.
       .col-sm-12.col-md-6.col-lg-3.col-xl-2
         .relative-position.q-ma-md
           div(style="padding-top:15px; padding-left:20px")
             h6.tokeninfotext.text-grey-8 Initial Supply
-            h4.tokendatatext 50 Billion
+            h4.tokendatatext {{totalSupply}} Billion
             h6.tokeninfotext.text-grey-8 Token Symbol
             h4.tokendatatext BOID
             h6.tokeninfotext.text-grey-8 EOS Snapshot date
             h4.tokendatatext June 1st
-            h6.tokeninfotext.text-grey-8 Airdrop Ratio
-            h4.tokendatatext 10:1
-      .col-sm-12.col-md-10.col-lg-7.col-xl-4
+      .col-sm-12.col-md-10.col-lg-7.col-xl-5
         table.full-width.q-pa-lg
           tr
             td
@@ -58,17 +55,14 @@
               .relative-position(style="max-width:380px;")
                 distChart.cursor-pointer(:percentages="categoryPercentages" :activeItem="activeItem" @selected="getSelected")
                 .absolute-center(style="z-index:1; pointer-events:none;")
-                  img.boidtoken.shadow-12.cursor-pointer( style="pointer-events:auto; width:250px;" @click="activeItem=null" src="~assets/boidlogo1.png")
-          .col-sm-12.col-md-10.col-lg-6.col-xl-4
+                  img.boidtoken.cursor-pointer( style="pointer-events:none; user-select:none; width:300px;" @click="activeItem=null" src="~assets/NewBoidLogo.svg")
+          .col-sm-12.col-md-10.col-lg-6.col-xl-3
             ul
-              h5.categoryList.cursor-pointer( style="max-width: 500px;" @click="activeItem=index" v-for="(item,index) in categories " :key="index" v-bind:class="{selected: activeItem===index}") 
-                q-icon(name="fiber_manual_record" :color="categoryColor[index]")
-                |  {{categoryPercentages[index]}}% {{item}}
+              h5.cursor-pointer(style="max-width: 500px;" @click="activeItem=index" v-for="(item,index) in categories " :key="index" v-bind:class="{selected: activeItem===index, categoryList:activeItem != index}") 
+                q-icon.inline(name="fiber_manual_record" :color="categoryColor[index]")
+                | {{categoryPercentages[index]}}% {{item}}
+                p(style="padding-left:38px;") {{tokenAmount(categoryPercentages[index])}} BOIDs
                 h6.q-pa-lg.text-white(v-if="index === activeItem") {{categoryDescription[index]}}
-
-      
-              
-            
 
 </template>
 
@@ -80,9 +74,10 @@ export default {
   // name: 'ComponentName',
   data () {
     return {
+      totalSupply: 1,
       activeItem:null,
       categories:['Airdrop', 'Team','Development','Early Adopters','Advisors','Marketing'],
-      categoryColor:['red','green','blue','orange', 'yellow','purple'],
+      categoryColor:['red-4','green-4','blue-4','orange-4','purple-3','yellow'],
       categoryDescription:[
         'Tokens are distributed fairly to EOS holders.',
         'The founding team tokens are vested over two years.',
@@ -98,6 +93,11 @@ export default {
     openURL,
     getSelected(data){
       this.activeItem = data
+    },
+    tokenAmount(percentage){
+      var supply = this.totalSupply * 1000000000
+      console.log(supply)
+      return (supply * (percentage * .01)).toLocaleString()
     }
   },
   watch:{
@@ -130,18 +130,28 @@ export default {
   }
 
   .categoryList
-    padding: 10px
+    padding: 15px
+    padding-top:25px
+    padding-bottom:10px
     margin: 0px
     border-radius: 10px
+  .categoryList:hover
+    background-color:$grey-2
   .boidtoken
-    border-radius:100%
+    // border-radius:100%
+    filter: drop-shadow( 1px 4px 2px alpha(black,.2))
   .tokeninfotext
     font-size: 20px
   .tokendatatext
     margin-bottom 10px
     margin-top 10px
   .selected
+    padding: 15px
+    padding-top:25px
+    padding-bottom:10px
+    margin: 0px
     background-color $grey-8
     box-shadow 0px 4px 4px $grey-4
+    border-radius: 10px
     color white
 </style>
