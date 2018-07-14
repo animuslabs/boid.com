@@ -74,7 +74,7 @@ export default {
   // name: 'ComponentName',
   data () {
     return {
-      totalSupply: 1,
+      totalSupply: 50,
       activeItem:null,
       categories:['Airdrop', 'Team','Development','Early Adopters','Advisors','Marketing'],
       categoryColor:['red-4','green-4','blue-4','orange-4','purple-3','yellow'],
@@ -139,7 +139,7 @@ export default {
     background-color:$grey-2
   .boidtoken
     // border-radius:100%
-    filter: drop-shadow( 1px 4px 2px alpha(black,.2))
+    filter: drop-shadow( 0px 5px 4px alpha(black,.3))
   .tokeninfotext
     font-size: 20px
   .tokendatatext
