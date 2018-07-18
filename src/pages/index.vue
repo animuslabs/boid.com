@@ -218,6 +218,7 @@
       boidPower(ref="power")
       boidToken(ref="token")
       roadMap(ref="timeline")
+      team
       faq(ref="faq")
       bFooter
 </template>
@@ -719,6 +720,7 @@ import boidPower from 'components/boidPower.vue'
 import boidApp from 'components/boidApp.vue'
 import faq from 'components/faq.vue'
 import bFooter from 'components/footer.vue'
+import team from 'components/team.vue'
 import { openURL } from 'quasar'
 export default {
   data() {
@@ -748,7 +750,8 @@ export default {
     boidApp,
     faq,
     bFooter,
-    boidToken
+    boidToken,
+    team
   },
   mounted() {
     var container = this.$el.querySelector("#app")

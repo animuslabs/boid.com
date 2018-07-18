@@ -74,7 +74,7 @@ export default {
   // name: 'ComponentName',
   data () {
     return {
-      totalSupply: 50,
+      totalSupply: 25,
       activeItem:null,
       categories:['Airdrop', 'Team','Development','Early Adopters','Advisors','Marketing'],
       categoryColor:['red-4','green-4','blue-4','orange-4','purple-3','yellow'],
@@ -86,7 +86,7 @@ export default {
         'Founding advisors receive tokens that vest over one year.',
         'This includes bounties and promotional events.'
         ],
-      categoryPercentages:[10,25,25,10,5,25]
+      categoryPercentages:[20,20,20,15,5,20]
     }
   },
   methods:{
