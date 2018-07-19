@@ -14,7 +14,12 @@
           .col-12
             .row.justify-center
               .col-auto.q-mt-lg
-                q-btn(style="z-index:1000" outline size="md" color="white" @click="openURL('http://twitter.com/boidcom')") Follow us @boidcom
+                  q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')") 
+                    img.on-left(style="width: 40px;" src="~assets/twitterlogo.svg")
+                    p Follow us @boidcom
+                  q-btn(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/52RWWP')") 
+                    img.on-left( style="width: 40px;" src="https://discordapp.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg")
+                    p Join our Discord
         .row.absolute-bottom.justify-center
           // img.transition(src="~assets/transition1.svg")
           svg.headingsvgheight(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
@@ -645,10 +650,12 @@ h1
   @media screen and (max-width: $breakpoint-sm) 
     font-size 80px
 
-h2 {
-  color: white;
-  font-family: 'Comfortaa';
-}
+h2 
+  color: white
+  font-family: 'Comfortaa'
+  @media screen and (max-width: $breakpoint-sm) 
+    font-size 45px
+
 
 h3 
   color: #089cfc;

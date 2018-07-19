@@ -6,9 +6,9 @@
           img.teamimg.teamimg2(:src="person.image")
           img.absolute.linkedinico(src="~assets/linkedin.svg")
     .row.justify-center
-      .teamname.text-center {{person.position}}
+      .teamposition.text-center {{person.position}}
     .row.justify-center
-      .teamposition {{person.name}}
+      .teamname {{person.name}}
 </template>
 <script>
   import { openURL } from 'quasar'
@@ -39,15 +39,15 @@
 .teamimg2
   // box-shadow 0px 3px 4px rgb(0,0,0,0.2)
 .teamimg2:hover
-  // box-shadow 0px 10px 15px alpha($green-5,.2)
-  background-color $green-5
+  // box-shadow 0px 5px 2px alpha($green-9,.6)
+  background-color $green-6
 
 .teamname
   color $grey-9
   margin-bottom 5px
-  font-size 30px
+  font-size 20px
 .teamposition
   color $green-7
   margin-bottom 5px
-  font-size 30px
+  font-size 25px
 </style>
