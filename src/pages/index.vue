@@ -1,9 +1,9 @@
 <template lang="pug">
-  q-page
+  q-page(style="{hidden:scrolling}")
     .relative-position
       heading(:buttonSize="buttonSize")
-      intro
-      .relative-position.justify-center
+      intro(ref="intro")
+      .relative-position.justify-center(ref="video")
         svg.transitioncurve.absolute-top(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"  style="fill: white;" viewBox="0 0 100 100" preserveAspectRatio="none")
           path(d="M0 0 C 50 100 80 100 100 0 Z")
         .absolute-bottom.full-width.videobuttonoffset(@click="videoPlaying=true,$root.$emit('videoModal',true)" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").cursor-pointer
@@ -13,7 +13,7 @@
                 q-btn( round :size="buttonSize3" color="white" @click="videoPlaying=true,$root.$emit('videoModal',true)").bg-green-5
                   q-icon(name="play_arrow")
             h5.text-white.q-pt-sm.cursor-pointer Explainer Video
-    div(ref="video" style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").relative-position.cursor-pointer
+    div( style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").relative-position.cursor-pointer
       .videocover(@click="videoPlaying=true,$root.$emit('videoModal',true)" v-bind:class="{highlightVideo:highlightVideo}")
       iframe(v-if="!videoPlaying" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
     .relative-position.adjustvideofooter
@@ -688,6 +688,7 @@ export default {
       highlightVideo:false,
       videoPlaying:false,
       hideSciExplain:true,
+      scrolling:false,
       screenSize:{
         height: window.innerHeight,
         width: window.innerWidth
@@ -715,6 +716,7 @@ export default {
     heading
   },
   mounted() {
+    // this.$q.loading.show()
     if(this.$route.hash){
       this.scrollTo()
     }
@@ -800,15 +802,20 @@ export default {
     openURL,
     scrollTo(){
       this.$nextTick(() =>{
-        console.log('we are here')
+        this.scrolling = true
         var result = this.$refs[this.$route.hash.replace('#','')]
         console.log(result)
         if (result) {
+          if (result.$el){
+            result = result.$el
+          }
           console.log(result)
           this.$nextTick(()=>{
             setTimeout(()=>{
-              this.$scrollTo(result.$el, 1000)
-            },500)
+
+              this.$scrollTo(result, 0)
+              this.scrolling=false
+            },0)
           })
         }
       })
@@ -822,7 +829,17 @@ export default {
       },100)
     },
     '$route.hash'(){
-      this.scrollto()
+      this.scrollTo()
+    },
+    scrolling(val){
+      if (val){
+        // this.$q.loading.show({
+        //   delay: 0 // ms
+        // })
+      }else{
+        // this.$q.loading.hide()
+      }
+ 
     }
   }
 };

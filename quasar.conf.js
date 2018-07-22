@@ -67,7 +67,6 @@ module.exports = function (ctx) {
         'QTimeline',
         'QTimelineEntry',
         'QCollapsible',
-        'QParallax'
       ],
       directives: [
         'Ripple'

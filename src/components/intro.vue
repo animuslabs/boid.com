@@ -29,5 +29,5 @@
 <style lang="stylus">
 </style>
 <script>
-export default {};
+export default {}
 </script>
