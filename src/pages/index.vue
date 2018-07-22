@@ -13,14 +13,14 @@
                 q-btn( round :size="buttonSize3" color="white" @click="videoPlaying=true,$root.$emit('videoModal',true)").bg-green-5
                   q-icon(name="play_arrow")
             h5.text-white.q-pt-sm.cursor-pointer Explainer Video
-    div(style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").relative-position.cursor-pointer
+    div(ref="video" style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").relative-position.cursor-pointer
       .videocover(@click="videoPlaying=true,$root.$emit('videoModal',true)" v-bind:class="{highlightVideo:highlightVideo}")
       iframe(v-if="!videoPlaying" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
     .relative-position.adjustvideofooter
       .relative-position
         svg.transitioncurve.pointer-none(xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="position:absolute; pointer-events: none; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); bottom:0px;" viewBox="0 0 100 100" preserveAspectRatio="none")
           path(d="M0 100 C 60 10 90 50 100 100 Z")
-      div(style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
+      div(ref="teams" style="background-color: rgb(0, 112, 208); border-bottom-left-radius: 60% 5%; border-bottom-right-radius: 50% 5%;")
         .row.justify-center.gutter-sm(style="margin-top:100px; margin-bottom:10px; padding-bottom: 80px;")
           .col-xl-4.col-lg-5.col-md-auto.col-sm-10
             .row.justify-center
@@ -72,7 +72,7 @@
               q-carousel-slide
                 img.teamicon(src="~assets/teamleader.svg")
 
-      .explainer.relative-position.layout-padding(style="margin-top:0px;")
+      .explainer.relative-position.layout-padding(ref="science" style="margin-top:0px;")
         .row.reverse.justify-center.relative-position
           .col-sm-10.col-md-12.col-lg-12.col-xl-4
             div.headingfix
@@ -169,11 +169,11 @@
                     th 
                       h6.poverride Users generate ⚡Boid Power in exchange for their contributions.
         .lt-md(style="height:200px" v-if="hideSciExplain")
-      boidApp(ref="app" id="app")
+      boidApp(ref="app")
       boidPower(ref="power")
       boidToken(ref="token")
       roadMap(ref="timeline")
-      team
+      team(ref="team")
       faq(ref="faq")
       bFooter
 </template>
@@ -583,7 +583,7 @@ li {
   margin-top: 110px;
   margin-left:15px;
   margin-right:15px;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .transition {
@@ -716,7 +716,7 @@ export default {
   },
   mounted() {
     if(this.$route.hash){
-
+      this.scrollTo()
     }
     this.$root.$on('videoPlaying',(data)=>{
       this.videoPlaying = data
@@ -797,16 +797,8 @@ export default {
     clearSciInterval() {
       clearInterval(this.sciInterval)
     },
-    openURL
-  },
-  watch:{
-    activeScienceBtn(){
-      this.refresh = false
-      setTimeout(()=>{
-        this.refresh = true
-      },100)
-    },
-    '$route.hash'(){
+    openURL,
+    scrollTo(){
       this.$nextTick(() =>{
         console.log('we are here')
         var result = this.$refs[this.$route.hash.replace('#','')]
@@ -820,6 +812,17 @@ export default {
           })
         }
       })
+    }
+  },
+  watch:{
+    activeScienceBtn(){
+      this.refresh = false
+      setTimeout(()=>{
+        this.refresh = true
+      },100)
+    },
+    '$route.hash'(){
+      this.scrollto()
     }
   }
 };
