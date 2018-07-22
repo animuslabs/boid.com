@@ -1,58 +1,8 @@
 <template lang="pug">
   q-page
     .relative-position
-      .sharethis-inline-follow-buttons
-      .heading.relative-position
-        .row.justify-center
-          .col-12.headingtextoffset
-            h2.text-center The Social Supercomputer
-          .col-auto
-            transition(appear enter-active-class="animated pulse"
-            leave-active-class="animated fadeOut")
-              q-btn.shadow-5(style="z-index:1000" :size="buttonSize" color="green-6" @click="openURL('https://app.boid.com')") Join Us
-        .row.justify-center
-          .col-12
-            .row.justify-center
-              .col-auto.q-mt-lg
-                  q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')") 
-                    img.on-left(style="width: 40px;" src="~assets/twitterlogo.svg")
-                    p Follow us @boidcom
-                  q-btn(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/52RWWP')") 
-                    img.on-left( style="width: 40px;" src="https://discordapp.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg")
-                    p Join our Discord
-        .row.absolute-bottom.justify-center
-          // img.transition(src="~assets/transition1.svg")
-          svg.headingsvgheight(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
-            path(id="svg_1" d="M0 100 C 60 10 90 50 100 100 Z" fill="#fff")
-      .row.justify-center.gutter-md
-        .col-12.relative-position(style="margin-top:100px; margin-bottom:100px;")
-          div.absolute-center
-            h3 Do something Huge
-            h4 boid makes it easy
-        div(style="height:30px;").lt-lg
-      .row.justify-center.xl-padding.md-padding(style="margin-top:120px;")
-        .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          .row.justify-center.relative-position
-            img.heroicon.absolute-center(src="~assets/connectdevices.svg")
-          .herocard
-            h5.text-center Connect Your Devices
-            // p Install the Boid app on your computers and phones.
-        .col-12.gt-sm.lt-lg(style="height:200px;")
-        .verticalSpacer.lt-md
-        .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          .row.justify-center.relative-position
-            img.heroicon.absolute-center(src="~assets/contribute3.svg")
-          .herocard
-            h5.text-center Contribute To Big Ideas
-            // p Your spare computing resouces will make an impact in important science and cryptocurrency projects.
-        .verticalSpacer.lt-md
-        .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          .row.justify-center.relative-position
-            img.heroicon.absolute-center(src="~assets/earnrewards3.svg")
-          .herocard
-            h5.text-center Earn Rewards
-            // p Earn money for your computing power, or donate your earnings to charity.
-      div(style="height:120px;")
+      heading(:buttonSize="buttonSize")
+      intro
       .relative-position.justify-center
         svg.transitioncurve.absolute-top(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"  style="fill: white;" viewBox="0 0 100 100" preserveAspectRatio="none")
           path(d="M0 0 C 50 100 80 100 100 0 Z")
@@ -728,6 +678,8 @@ import boidApp from 'components/boidApp.vue'
 import faq from 'components/faq.vue'
 import bFooter from 'components/footer.vue'
 import team from 'components/team.vue'
+import intro from 'components/intro.vue'
+import heading from 'components/header.vue'
 import { openURL } from 'quasar'
 export default {
   data() {
@@ -758,17 +710,12 @@ export default {
     faq,
     bFooter,
     boidToken,
-    team
+    team,
+    intro,
+    heading
   },
   mounted() {
-    var container = this.$el.querySelector("#app")
-    container.scrollTop = container.scrollHeight
     if(this.$route.hash){
-      // this.$nextTick(() =>{
-      //   var result = this.$refs[this.$route.hash.replace('#','')]
-      //   console.log(result.$el)
-      //   if (result) result.$el.scrollIntoView() 
-      // })
 
     }
     this.$root.$on('videoPlaying',(data)=>{
@@ -858,6 +805,21 @@ export default {
       setTimeout(()=>{
         this.refresh = true
       },100)
+    },
+    '$route.hash'(){
+      this.$nextTick(() =>{
+        console.log('we are here')
+        var result = this.$refs[this.$route.hash.replace('#','')]
+        console.log(result)
+        if (result) {
+          console.log(result)
+          this.$nextTick(()=>{
+            setTimeout(()=>{
+              this.$scrollTo(result.$el, 1000)
+            },500)
+          })
+        }
+      })
     }
   }
 };

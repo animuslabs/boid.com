@@ -7,6 +7,7 @@
   "author": "John Heeter <john@boid.com>",
   "private": true,
   "scripts": {
+    "dev": "quasar dev",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "tinycolor2": "^1.4.1",
     "vue-animate-scroll": "^0.1.3",
     "vue-chartjs": "^3.3.2",
+    "vue-scroll-reveal": "^1.0.8",
     "vue-scrollto": "^2.11.0"
   },
   "devDependencies": {

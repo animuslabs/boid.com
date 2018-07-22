@@ -5,13 +5,13 @@
       h2.text-blue-5(style="margin:10px;") Team
   .col-xs-12.col-sm-12.col-md-10.col-xl-10
     .row.justify-center.relative-position.gutter-lg
-      teamCard.col-xs-12.col-sm-5.col-md-5.col-lg-3(v-for="(person,index) in team" :key="index" :person='person')
+      teamCard.col-xs-12.col-sm-5.col-md-5.col-lg-3(v-for="(person,index) in team" :key="index" :person='person' v-scroll-reveal="calcDelay(index)")
   .col-12
     .row.justify-center(style="margin-top:100px;")
       h2.text-blue-5(style="margin:10px;") Advisors
   .col-sm-12.col-md-10.col-xl-10
     .row.justify-center.relative-position.gutter-lg
-      teamCard.col-xs-12.col-sm-5.col-md-5.col-lg-3(v-for="(person,index) in advisors" :key="index" :person='person')
+      teamCard.col-xs-12.col-sm-5.col-md-5.col-lg-3(v-for="(person,index) in advisors" :key="index" :person='person' v-scroll-reveal="calcDelay(index)")
         
 </template>
 
@@ -81,6 +81,13 @@ export default {
   created(){
   },
   computed:{
+  },
+  methods:{
+    calcDelay(index){
+      return {
+        delay: (index+1) * 100
+      } 
+    }
   }
 }
 </script>

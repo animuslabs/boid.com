@@ -16,8 +16,7 @@
 </template>
 
 <script>
-import { openURL, scroll } from 'quasar'
-const { getScrollTarget, setScrollPosition } = scroll
+import { openURL } from 'quasar'
 
 
 export default {
@@ -34,12 +33,6 @@ export default {
   methods: {
     openURL,
     logout(){
-    },
-    scrollToElement(el) {
-      let target = getScrollTarget(el)
-      let offset = el.offsetTop*1.5 - el.scrollHeight
-      let duration = 1000
-      setScrollPosition(target, offset, duration)
     }
   },
   mounted(){

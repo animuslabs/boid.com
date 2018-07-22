@@ -4,27 +4,27 @@
       path(d="M0 100 C 60 10 90 50 100 100 Z")
     .row.justify-center.gutter-lg
       .col-12
-        .row.justify-center
+        .row.justify-center(v-scroll-reveal={ delay: 50 })
           .col-8
             h3.text-white(style="text-shadow: 0px 1px 0px grey") The Boid app
             h4.text-yellow-8(style="margin-bottom: 0px;") just set it and forget it
-      .col-sm-12.col-md-8.col-lg-5.col-xl-4
+      .col-sm-12.col-md-8.col-lg-5.col-xl-4(v-scroll-reveal={ delay: 100 })
         img(src="~assets/connectdevices.svg" style="max-width:600px; filter: drop-shadow( 1px 4px 2px grey")
       .col-sm-12.col-md-10.col-lg-5.col-xl-4
         table.full-width
-          tr
+          tr(v-scroll-reveal={ delay: 150 })
             td
               q-icon(name="security" size="70px" color="white")
             td(style="padding-top:35px; padding-left:20px")
               h6.bpHeading.text-white Secure 
               h6.bpinfoText.text-white Modern code sandboxing and cryptography ensure personal data security.
-          tr
+          tr(v-scroll-reveal={ delay: 250 })
             td
               q-icon(name="check_circle" size="70px" color="white")
             td(style="padding-top:35px; padding-left:20px")
               h6.bpHeading.text-white Simple 
               h6.bpinfoText.text-white All you need to do is install the application and link it to your Boid account.
-          tr
+          tr(v-scroll-reveal={ delay: 350 })
             td
               q-icon(name="visibility_off" size="70px" color="white")
             td(style="padding-top:35px; padding-left:20px")
