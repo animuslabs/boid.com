@@ -60,7 +60,7 @@ export default {
 
 <style lang="stylus">
 .q-toolbar-title
-  font-family 'Comfortaa' !important
+  font-family 'boidFont' !important
   font-size 35px
   color #089cfc
 .videocontainer

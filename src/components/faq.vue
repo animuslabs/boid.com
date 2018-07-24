@@ -62,7 +62,7 @@ export default {
 .q-item-label
   font-size 20px
   font-weight 500
-  font-family: 'Comfortaa'
+  font-family: 'boidFont'
 .q-collapsible-sub-item
   font-size 18px
   padding-left 50px

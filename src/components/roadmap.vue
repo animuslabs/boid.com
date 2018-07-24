@@ -1,15 +1,10 @@
 <template lang="pug">
   .row.justify-center.roadmapmaster
     .col-12
-      .row.justify-center
-        div
-          .absolute()
-            .relative-position(style="height:00px; width:400px;")
-              svg.absolute(style=" pointer-events:none; z-index: 1; left: -200px; top:-320px;" viewBox="0 -60 100 80" xmlns="http://www.w3.org/2000/svg")
-                circle(fill="#424242" cx="50" cy="50" r="50")
-                // circle(fill="red" cx="50" cy="50" r="50")
+      .row.justify-center.relative-position
+        div.bg-grey-9(style="z-index:1; height:300px; width: 300px; position:absolute; top:-80px; border-radius:100%; clip:rect(0px,300px,80px,0px)")
       .row.justify-center(style="padding-bottom:0px;")
-        h2.text-blue-5(style="margin:10px;") Timeline
+        h2.text-blue-5(style="margin:10px; z-index:2;") Timeline
     .row.justify-center
       .row.justify-center
         .col-sm-10.col-lg-7.col-xl-6
@@ -134,11 +129,11 @@ export default {
   color: $grey-2
   font-size: 20px;
   font-weight: 800
-  font-family: 'Comfortaa'
+  font-family: 'boidFont'
 .q-timeline-heading-title
   color: $grey-3
   font-size: 35px;
-  font-family: 'Comfortaa'
+  font-family: 'boidFont'
   padding-bottom: 5px
   margin-top 60px
 h3

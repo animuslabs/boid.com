@@ -1,17 +1,17 @@
 <template lang="pug">
-  .relative-position.bg-white(v-scroll-reveal={ delay: 0 } style="padding-bottom:200px")
+  .relative-position.bg-white(style="padding-bottom:200px")
     svg(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" style="position:absolute; padding-top:0;  margin-top:0;fill: white; top:-100px;" viewBox="0 0 100 100" preserveAspectRatio="none")
       path(d="M0 100 C 60 10 90 50 100 100 Z")
     .row.justify-center.gutter-lg
       .col-12
         .row.justify-center
           .col
-            h1.text-blue-5.text-center(style="text-shadow: 0px 1px 0px grey") BOID
-            .row.justify-center
+            h1.text-blue-5.text-center(v-scroll-reveal style="text-shadow: 0px 1px 0px grey") BOID
+            .row.justify-center(v-scroll-reveal )
               img.boidtoken(src="~assets/NewBoidLogo.svg")
             // h4.text-blue-5.text-center.q-mt-xl(style="margin-bottom: 0px;") Our native token
         .row.justify-center.gutter-sm.q-ma-md
-          .col-sm-12.col-md-10.col-lg-9.col-xl-9
+          .col-sm-12.col-md-10.col-lg-9.col-xl-9(v-scroll-reveal)
             h5.text-center BOID will be the native token of the Boid EOS sidechain.
       .col-sm-12.col-md-6.col-lg-3.col-xl-2(v-scroll-reveal={ delay: 0 })
         .relative-position.q-ma-md

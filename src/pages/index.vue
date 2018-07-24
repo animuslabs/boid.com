@@ -1,6 +1,6 @@
 <template lang="pug">
-  q-page(style="{hidden:scrolling}")
-    .relative-position
+  q-page
+    .relative-position()
       heading(:buttonSize="buttonSize")
       intro(ref="intro")
       .relative-position.justify-center(ref="video")
@@ -15,7 +15,9 @@
             h5.text-white.q-pt-sm.cursor-pointer Explainer Video
     div( style="padding-bottom: 57.25%; padding-top:0px; margin-top:0px; height:100px; z-index:-2; overflow: hidden" @mouseout ="highlightVideo = false" @mouseover="highlightVideo = true").relative-position.cursor-pointer
       .videocover(@click="videoPlaying=true,$root.$emit('videoModal',true)" v-bind:class="{highlightVideo:highlightVideo}")
-      iframe(v-if="!videoPlaying" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
+      iframe.gt-sm(v-if="!videoPlaying" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/3-C5dxJvFMA?rel=0&amp;autoplay=1;fs=0;autohide=1;hd=0;mute=1;controls=0;showinfo=0;modestbranding=1;loop=1;playlist=3-C5dxJvFMA" frameborder="0").videoadjust
+      .lt-md.videoplaceholder.bg-blue-7
+        img(src="~assets/videoplaceholder.jpg" style="width: 100%;")
     .relative-position.adjustvideofooter
       .relative-position
         svg.transitioncurve.pointer-none(xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="position:absolute; pointer-events: none; padding-top:0; margin-top:0;fill: rgb(0, 112, 208); bottom:0px;" viewBox="0 0 100 100" preserveAspectRatio="none")
@@ -28,8 +30,8 @@
                 h3.text-white(style="") Fight the good fight
                 h4(style="margin-bottom:0px; text-shadow: 0px 2px 4px grey-1;").text-green-4 Our communities have real impact
             .row.justify-center
-              .col-lg-4.col-md-10.col-sm-10.col-xs-12.lt-lg.teamExplainer
-                .relative-position(style="width:450px;" )
+              .col-lg-4.col-md-10.col-sm-8.col-xs-10.lt-lg.teamExplainer
+                .relative-position(style="" )
                   .relative-position(style="height:300px;")
                     q-carousel.carouselfix2(ref="teamSlides" infinite no-swipe :autoplay="4000" style="position:absolute; top:-30px; margin:0px !important;")
                       q-carousel-slide
@@ -203,27 +205,16 @@ ul
   @media screen and (max-width: $breakpoint-xs) 
     height 500px
 
-.headingtextoffset
-  margin-top 150px
-  @media screen and (max-width: $breakpoint-md) 
-    margin-top: 50px
-.headingsvgheight
-  height: 150px
-  @media screen and (max-width: $breakpoint-md) 
-    height 100px
-  @media screen and (max-width: $breakpoint-sm) 
-    height 80px
-
-
 
 .q-btn
   font-weight 800
 button
-  font-family: 'Comfortaa'
+  font-family: 'boidFont'
   font-weight 1000
-body
-  overflow-y: scroll
-  overflow-x: hidden
+
+.videoplaceholder
+  background: url('~assets/header2.png')
+  height 600px
 
 
 .videobuttonoffset
@@ -327,7 +318,7 @@ body
   font-weight: 500
   font-size 35px
   color $grey-8
-  font-family: 'Comfortaa';
+  font-family: 'boidFont';
 
 .bpinfocard2
   height:290px
@@ -409,7 +400,35 @@ body
   @media screen and (min-width 1200px) and (max-width 1800px)
     padding-right: 0px
     padding-left: 0px
-  
+.heading 
+  background: linear-gradient(to right, rgba(30, 87, 153, 0.7) 0%, rgba(79, 138, 194, 0.65) 52%, rgba(125, 185, 232, 0.7) 100%), url('~assets/header2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  @media screen and (max-width: $breakpoint-xl) 
+    min-height: 690px
+  @media screen and (max-width: $breakpoint-lg) 
+    min-height: 690px
+  @media screen and (max-width: $breakpoint-md) 
+    min-height: 490p
+  @media screen and (max-width: $breakpoint-sm) 
+    min-height: 460px
+
+.headingtextoffset
+  margin-top 130px
+  @media screen and (max-width: $breakpoint-md) 
+    margin-top: 30px
+
+.headingsvgheight
+  height: 150px
+  @media screen and (max-width: $breakpoint-md) 
+    height 100px
+  @media screen and (max-width: $breakpoint-sm) 
+    height 80px
 
 .headingfix
   @media screen and (min-width 1200px) and (max-width 1800px)
@@ -592,7 +611,7 @@ li {
 }
 
 h1
-  font-family 'Comfortaa'
+  font-family 'boidFont'
   margin-top: 0px
   margin-bottom 0px
   @media screen and (max-width: $breakpoint-lg) 
@@ -602,14 +621,14 @@ h1
 
 h2 
   color: white
-  font-family: 'Comfortaa'
+  font-family: 'boidFont'
   @media screen and (max-width: $breakpoint-sm) 
     font-size 45px
 
 
 h3 
   color: #089cfc;
-  font-family: 'Comfortaa';
+  font-family: 'boidFont';
   text-transform: uppercase;
   margin-bottom: 0px;
   @media screen and (max-width: $breakpoint-sm) 
@@ -623,7 +642,7 @@ p {
 h4 
   color $green-5
   margin-top 0px
-  font-family: 'Comfortaa'
+  font-family: 'boidFont'
   font-weight 800
   @media screen and (max-width: $breakpoint-lg) 
     font-size 34px
@@ -637,7 +656,7 @@ h5 {
   font-size: 35px;
   margin-top: 25px;
   margin-bottom: 20px;
-  font-family: 'Comfortaa'
+  font-family: 'boidFont'
 
 }
 h6 
@@ -649,23 +668,7 @@ h6
     font-size 16px
 
 
-.heading 
-  background: linear-gradient(to right, rgba(30, 87, 153, 0.7) 0%, rgba(79, 138, 194, 0.65) 52%, rgba(125, 185, 232, 0.7) 100%), url('~assets/header2.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  // background-attachment: fixed;
-  width: 100%;
-  height: 100%;
-  min-height: 700px;
-  @media screen and (max-width: $breakpoint-xl) 
-    min-height: 690px
-  @media screen and (max-width: $breakpoint-lg) 
-    min-height: 690px
-  @media screen and (max-width: $breakpoint-md) 
-    min-height: 490px
-  @media screen and (max-width: $breakpoint-sm) 
-    min-height: 410px
+
 
 
 </style>
@@ -681,6 +684,8 @@ import team from 'components/team.vue'
 import intro from 'components/intro.vue'
 import heading from 'components/header.vue'
 import { openURL } from 'quasar'
+
+
 export default {
   data() {
     return {
@@ -723,6 +728,9 @@ export default {
     this.$root.$on('videoPlaying',(data)=>{
       this.videoPlaying = data
     })
+    if(this.$q.platform.is.mobile){
+      this.highlightVideo = true
+    }
     // setInterval(()=>{
     //   console.log(window.scrollY)
     // },1000)
@@ -815,7 +823,7 @@ export default {
 
               this.$scrollTo(result, 0)
               this.scrolling=false
-            },0)
+            },100)
           })
         }
       })
