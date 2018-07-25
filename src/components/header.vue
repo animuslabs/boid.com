@@ -12,7 +12,7 @@
               q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')") 
                 img.on-left(style="width: 40px;" src="~assets/twitterlogo.svg")
                 p Follow us @boidcom
-              q-btn(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/52RWWP')") 
+              q-btn(style="z-index:1000" flat color="white" @click="openURL('https://discordapp.com/invite/DCQ6FrC')") 
                 img.on-left( style="width: 40px;" src="~assets/discordicon.svg")
                 p Join our Discord
       .row.absolute-bottom.justify-center

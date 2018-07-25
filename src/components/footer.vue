@@ -5,8 +5,8 @@
     q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')") 
       img.on-left(style="width: 40px;" src="~assets/twitterlogo.svg")
       p Follow us @boidcom
-    q-btn(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/52RWWP')") 
-      img.on-left( style="width: 40px;" src="https://discordapp.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg")
+    q-btn(style="z-index:1000" flat color="white" @click="openURL('openURL('https://discord.gg/52RWWP')") 
+      img.on-left( style="width: 40px;" src="~assets/discordicon.svg")
       p Join our Discord
 </template>
 
