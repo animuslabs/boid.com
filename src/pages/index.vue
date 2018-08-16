@@ -86,7 +86,7 @@
                   q-btn-toggle.absolute-center(@input="clearSciInterval" :size="buttonSize2" rounded color="white" text-color="grey-8" v-model="activeScienceBtn" toggle-color="amber-8" :options="scienceBtns")
                 .col-12(style="height:15px;")
                 .col-sm-12.col-md-5.col-lg-4.col-xl-3.relative-position(style="height:310px;")
-                  img(v-if="refresh").scienceIcons.absolute-center.animate-fade(:src="scienceInfo.img")
+                  img(v-if="refresh" :src="scienceInfo.img").scienceIcons.absolute-center.animate-fade
                 .col-xs-10.col-sm-12.col-md-6.col-lg-6.col-xl-8
                   div
                     .scienceCard.animate-fade(v-if="refresh")

@@ -16,7 +16,7 @@
       .col-sm-12.col-md-6.col-lg-3.col-xl-2(v-scroll-reveal={ delay: 0 })
         .relative-position.q-ma-md
           div(style="padding-top:15px; padding-left:20px")
-            h6.tokeninfotext.text-grey-8 Initial Supply
+            h6.tokeninfotext.text-grey-8 Total Supply
             h4.tokendatatext {{totalSupply}} Billion
             h6.tokeninfotext.text-grey-8 Token Symbol
             h4.tokendatatext BOID
