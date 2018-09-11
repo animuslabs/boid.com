@@ -1,9 +1,9 @@
 <template lang="pug">
   .heading.relative-position()
     .row.justify-center
-      .col-12.headingtextoffset(v-scroll-reveal={ delay: 150 })
+      .col-12.headingtextoffset(v-scroll-reveal={ delay: 0 })
         h2.text-center The Social Supercomputer
-      .col-auto(v-scroll-reveal={ delay: 250 })
+      .col-auto(v-scroll-reveal={ delay: 50 })
         q-btn.shadow-5(style="z-index:1000" :size="buttonSize" color="green-6" @click="openURL('https://app.boid.com')") Join Us
     .row.justify-center()
       .col-12(v-scroll-reveal={ delay: 350 })
