@@ -1,7 +1,7 @@
 <template lang="pug">
   .heading.relative-position()
     .row.justify-center(style="padding:10%; padding-top:0%")
-      .col-12.headingtextoffset.shadow-4(v-scroll-reveal={ delay: 50 })
+      .col-12.headingtextoffset.shadow-8(style="padding:10%; padding-top:0%" v-scroll-reveal={ delay: 50 })
         h2 Welcome Texans for Cures!
         p As the leading organization advancing Phase 1 clinical trials for cancer and heart disease, we are thrilled to be working with the Boid team to help us. Boid is cutting edge blockchain technology that allows you to donate your unused computer power to generate crypto currency and get us to our goal. By downloading and installing the Boid application here:
         ul
