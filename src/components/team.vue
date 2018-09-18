@@ -31,12 +31,12 @@ export default {
           linkedIn:"johnheeter"
 
         },
-        {
-          name:"José Luis Romero",
-          image:require("assets/team/Jose.svg"),
-          position:"COO",
-          linkedIn:"jose-luis-romero-何希-8a98b824"
-        },
+        // {
+        //   name:"José Luis Romero",
+        //   image:require("assets/team/Jose.svg"),
+        //   position:"COO",
+        //   linkedIn:"jose-luis-romero-何希-8a98b824"
+        // },
         {
           name:"Justin Suttmiller",
           image:require("assets/team/Justin.svg"),
