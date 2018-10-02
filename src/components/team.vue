@@ -43,12 +43,12 @@ export default {
           position:"CPO",
           linkedIn:"justin-suttmiller-7b1424b"
         },
-        {
-          name:"Scott Mattson",
-          image:require("assets/team/Scott.svg"),
-          position:"VP Partnerships",
-          linkedIn:"gamecentergroup"
-        }
+        // {
+        //   name:"Scott Mattson",
+        //   image:require("assets/team/Scott.svg"),
+        //   position:"VP Partnerships",
+        //   linkedIn:"gamecentergroup"
+        // }
       ],
     advisors:[
       {
