@@ -47,7 +47,7 @@
               q-icon(name="domain" size="70px" color="blue-5")
             td(style="padding-top:35px; padding-left:20px")
               h6.bpHeading.text-grey-8 Supernodes 
-              h6.bpinfoText.text-black Stake your BOIDs as part of a Boid supernode to provide important infrastructure support to the network. Each supernode is a associated with a specific team, and receives dividends based on team performance.
+              h6.bpinfoText.text-black Stake your BOIDs as part of a Boid supernode to provide important infrastructure support to the network. Each supernode is a associated with a specific team, and receives income based on team performance.
       .col-12()
         .row.justify-center.gutter-lg
           .col-sm-12.col-md-10.col-lg-5.col-xl-3
@@ -65,7 +65,7 @@
                   p(style="padding-left:38px;") {{tokenAmount(categoryPercentages[index])}} BOIDs
                   h6.q-pa-lg.text-white(v-if="index === activeItem") {{categoryDescription[index]}}
         .row.justify-center.q-pt-lg(v-scroll-reveal={delay:500})
-          q-btn(size="24px" color="blue-5" @click="openURL('https://app.boid.com')") Join the Airdrop
+          //- q-btn(size="24px" color="blue-5" @click="openURL('https://app.boid.com')") Join the Airdrop
 
 </template>
 
@@ -85,7 +85,7 @@ export default {
         'Tokens are distributed fairly to EOS holders.',
         'The founding team tokens are vested over two years.',
         'These tokens are alloted for the growth of the development team and infrastructure.',
-        'These tokens will supplement BOID mining and staking profitability.',
+        'Directly minable by users.',
         'Advisors receive tokens that vest over one year.',
         'This includes bounties and promotional events for early adopters.'
         ],

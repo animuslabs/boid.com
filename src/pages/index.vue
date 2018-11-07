@@ -416,7 +416,7 @@ button
   @media screen and (max-width: $breakpoint-md) 
     min-height: 490p
   @media screen and (max-width: $breakpoint-sm) 
-    min-height: 460px
+    min-height: 490px
 
 .headingtextoffset
   margin-top 130px
@@ -579,7 +579,7 @@ li {
 .heroicon 
   // background-color #089cfc
   // border-radius 100%
-  padding: 0px;
+  padding: 20px;
   width: 290px;
   filter: drop-shadow( 0px 2px 1px grey)
   @media screen and (max-width $breakpoint-lg) 
@@ -603,6 +603,7 @@ li {
   margin-left:15px;
   margin-right:15px;
   padding-top: 30px;
+  padding: 20px;
 }
 
 .transition {

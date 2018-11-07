@@ -30,25 +30,7 @@ export default {
           position:"Founder",
           linkedIn:"johnheeter"
 
-        },
-        // {
-        //   name:"José Luis Romero",
-        //   image:require("assets/team/Jose.svg"),
-        //   position:"COO",
-        //   linkedIn:"jose-luis-romero-何希-8a98b824"
-        // },
-        {
-          name:"Justin Suttmiller",
-          image:require("assets/team/Justin.svg"),
-          position:"CPO",
-          linkedIn:"justin-suttmiller-7b1424b"
-        },
-        // {
-        //   name:"Scott Mattson",
-        //   image:require("assets/team/Scott.svg"),
-        //   position:"VP Partnerships",
-        //   linkedIn:"gamecentergroup"
-        // }
+        }
       ],
     advisors:[
       {
