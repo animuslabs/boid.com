@@ -41,12 +41,14 @@ timelineEntries2:[
   {
     title:'Public Alpha',
     content:'Public Alpha with Web and Native applications available to general public.',
-    icon:"timelapse",
-    color:"orange-5"
+    icon:'check',
+    color:'green'
   },
   {
-    title:'Public Beta',
-    content:'Beta with improved compatibility, profitability, and tokenization.',
+    title:'Alpha tokenization',
+    content:'Alpha with improved compatibility, profitability, and tokenization.',
+    icon:"timelapse",
+    color:"orange-5"
   }
 ],
 timelineEntries3:[

@@ -25,6 +25,7 @@ module.exports = function (ctx) {
       // extractCSS: false,
       // useNotifier: false,
       extendWebpack(cfg) {
+        console.log(cfg)
         cfg.module.rules.push({
           test: /\.pug$/,
           loader: 'pug-plain-loader'

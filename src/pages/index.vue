@@ -32,7 +32,7 @@
             .row.justify-center
               .col-lg-4.col-md-10.col-sm-8.col-xs-10.lt-lg.teamExplainer
                 .relative-position(style="" )
-                  .relative-position(style="height:300px;")
+                  .relative-position(style="height:350px;")
                     q-carousel.carouselfix2(ref="teamSlides" infinite no-swipe :autoplay="4000" style="position:absolute; top:-30px; margin:0px !important;")
                       q-carousel-slide
                         img.teamicon(src="~assets/commoncause.svg")

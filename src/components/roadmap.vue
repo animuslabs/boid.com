@@ -26,7 +26,7 @@
                 q-icon(name="timeline" size="70px" color="blue")
               td(style="padding-top:35px; padding-left:20px")
                 h6.bpHeading.text-blue Tomorrow 
-                h6.bpinfoText.text-white The Boid Network will function as a decentralized platform using EOS blockchain technology.
+                h6.bpinfoText.text-white Boid will function as an autonomous network using EOSIO technology.
       .col-12.q-pt-xl(v-if="!viewTimeline")
         .row.justify-center
           q-btn(color="green" style="z-index:10" size="lg" @click="viewTimeline = true") View Detailed Roadmap

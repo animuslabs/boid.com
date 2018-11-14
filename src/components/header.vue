@@ -15,7 +15,7 @@
               q-btn.block(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/zJnRpVz')") 
                 img.on-left( style="width: 40px;" src="~assets/discordicon.svg")
                 p Join our Discord
-              q-btn(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/zJnRpVz')") 
+              q-btn(style="z-index:1000" flat color="white" @click="openURL('https://t.me/Boidcom_official')") 
                 img.on-left( style="width: 40px;" src="~assets/telegramlogo.svg")
                 p Join our Telegram
       .row.absolute-bottom.justify-center

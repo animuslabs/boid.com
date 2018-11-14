@@ -67,7 +67,7 @@ export default {
   methods:{
     calcDelay(index){
       return {
-        delay: (index+1) * 100
+        delay: (index+1) * 50
       } 
     }
   }
