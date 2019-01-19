@@ -33,6 +33,7 @@
   border-radius 100%
   margin 20px
   max-width 300px
+  max-height 300px
   width 100%
   height 100%
   cursor pointer
@@ -48,6 +49,7 @@
   font-size 20px
 .teamposition
   color $green-7
+  margin-top 15px
   margin-bottom 5px
   font-size 25px
 </style>

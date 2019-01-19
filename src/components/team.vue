@@ -5,6 +5,9 @@
       h2.text-blue-5(style="margin:10px;") Team
   .col-xs-12.col-sm-12.col-md-10.col-xl-10
     .row.justify-center.relative-position.gutter-lg
+      teamCard.col-xs-12.col-sm-5.col-md-5.col-lg-3(:person='john' v-scroll-reveal="calcDelay(index)")
+  .col-xs-12.col-sm-12.col-md-10.col-xl-10
+    .row.justify-center.relative-position.gutter-lg
       teamCard.col-xs-12.col-sm-5.col-md-5.col-lg-3(v-for="(person,index) in team" :key="index" :person='person' v-scroll-reveal="calcDelay(index)")
   .col-12
     .row.justify-center(style="margin-top:100px;")
@@ -23,14 +26,46 @@ export default {
   },
   data () {
     return {
+      john:{
+        name:"John Heeter",
+        image:require("assets/team/John.svg"),
+        position:"Founder",
+        linkedIn:"johnheeter"
+
+      },
       team:[
         {
-          name:"John Heeter",
-          image:require("assets/team/John.svg"),
-          position:"Founder",
-          linkedIn:"johnheeter"
+          name:"Eric Solomon",
+          image:"statics/heads/Eric.png",
+          position:"Technical Lead",
+          linkedIn:"eric-solomon-35a22490"
 
-        }
+        },
+        {
+          name:"Luke Dickerson",
+          image:"statics/heads/Luke.png",
+          position:"Engineering",
+          linkedIn:"luke-dickerson-644272b9"
+
+        },
+        {
+          name:"Daniel Carroll",
+          image:"statics/heads/Dan.png",
+          position:"Community Lead",
+          linkedIn:"danielmcarroll"
+        },
+        {
+          name:"Jamie Cupper",
+          image:"statics/heads/Jamie.png",
+          position:"Research",
+          linkedIn:"jamie-cupper-mcips-b1290112"
+        },
+        // {
+        //   name:"Woosang Kwon",
+        //   image:"https://i.imgsafe.org/63/6321667889.jpeg",
+        //   position:"Korean Community Lead",
+        //   linkedIn:"woosang-kwon-941b9540"
+        // }
       ],
     advisors:[
       {
@@ -67,7 +102,7 @@ export default {
   methods:{
     calcDelay(index){
       return {
-        delay: (index+1) * 50
+        delay: (index+1) * 10
       } 
     }
   }
