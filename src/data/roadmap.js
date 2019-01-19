@@ -47,14 +47,16 @@ timelineEntries2:[
   {
     title:'Alpha tokenization',
     content:'Alpha with improved compatibility, profitability, and tokenization.',
-    icon:"timelapse",
-    color:"orange-5"
+    icon:'check',
+    color:'green'
   }
 ],
 timelineEntries3:[
   {
     title:'Boid on EOS Testnet',
     content:'Boid backend functions will be implemented as a Dapp on EOS testnet.',
+    icon:"timelapse",
+    color:"orange-5"
   },
   {
     title:'Boid Protocol expansion',
