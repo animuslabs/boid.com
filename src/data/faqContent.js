@@ -25,7 +25,7 @@ module.exports = {
     },
     {
       "q": "Is Boid safe?",
-      "a": "Security is a top priority for Boid. We only work with the most reputable distributed science projects, and we architected the Boid app such that applications have limited permissions. It’s worth noting that BOINC (the tech behind Boid) has been commonly used since the late 90s with a perfect security track record due to a robust security architecture. We continue to roll out updates to make Boid even more secure and hacker-proof."
+      "a": "Security is a top priority for Boid. We only work with the most reputable distributed science projects, and we architected the Boid app such that applications have limited permissions. It’s worth noting that BOINC (the tech behind Boid) has been commonly used since the late 90s with a perfect security track record due to a robust security architecture. We continue to roll out updates to make Boid even more secure."
     }
   ],
   teams: [{

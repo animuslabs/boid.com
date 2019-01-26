@@ -4,13 +4,10 @@
     q-btn.footerbtn(color="orange" @click="emailUs()") Email us
     q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')") 
       img.on-left(style="width: 40px;" src="~assets/twitterlogo.svg")
-      p Follow us @boidcom
     q-btn(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/zJnRpVz')") 
       img.on-left( style="width: 40px;" src="~assets/discordicon.svg")
-      p Join our Discord
     q-btn(style="z-index:1000" flat color="white" @click="openURL('https://t.me/Boidcom_official')") 
       img.on-left( style="width: 40px;" src="~assets/telegramlogo.svg")
-      p Join our Telegram
 </template>
 
 <script>

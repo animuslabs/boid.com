@@ -1,6 +1,12 @@
 <template lang="pug">
   q-page
     .relative-position()
+      .full-width.bg-white.q-pa-lg
+        h5 Boid Season 0 Starts Feb 7th
+        h6 BOID Staking is now enabled 
+        h6 Staking is only available during season breaks. 
+        br
+        q-btn(color="green" @click="openURL('https://app.boid.com/staking')") Stake BOIDs
       heading(:buttonSize="buttonSize")
       intro(ref="intro")
       .relative-position.justify-center(ref="video")

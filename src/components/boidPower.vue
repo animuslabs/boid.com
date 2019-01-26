@@ -29,8 +29,8 @@
               img.bpicons(src="~assets/boidpower/competitions.svg")
           .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
             .bpinfocard2
-              h6.bpHeading Weekly competitions
-              h6.bpinfoText Users compete in weekly challenges for money and prizes. Our global leaderboards are based on live Boid Power metrics.
+              h6.bpHeading Social competition
+              h6.bpinfoText Users compete in ongoing challenges for money and prizes. Our global leaderboards are based on live Boid Power metrics.
     .gt-sm.bpspacer                
     .row.justify-center.q-mt-xl
       .col-12-auto(v-scroll-reveal={ delay: 10 })
