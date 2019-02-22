@@ -2,7 +2,7 @@
   q-page
     .relative-position()
       .full-width.bg-white.q-pa-lg
-        h5 Boid Season 0 Starts Feb 7th
+        h5 Boid Season 0 is now live
         h6 BOID Staking is now enabled 
         h6 Staking is only available during season breaks
         br
