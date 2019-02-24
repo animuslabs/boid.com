@@ -3,7 +3,7 @@
     .relative-position()
       .full-width.bg-white.q-pa-lg
         h5 Boid Season 0 is now Live
-        q-btn(color="green" @click="openURL('https://app.boid.com/')") Stake BOIDs
+        q-btn(color="green" @click="openURL('https://app.boid.com/')") Get Started
       heading(:buttonSize="buttonSize")
       intro(ref="intro")
       .relative-position.justify-center(ref="video")
