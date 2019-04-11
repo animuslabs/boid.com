@@ -12,7 +12,7 @@
             // h4.text-blue-5.text-center.q-mt-xl(style="margin-bottom: 0px;") Our native token
         .row.justify-center.gutter-sm.q-ma-md
           .col-sm-12.col-md-10.col-lg-9.col-xl-9(v-scroll-reveal)
-            h5.text-center BOID will be the native token of the Boid EOS sidechain.
+            h5.text-center BOID is the native token of the Boid network.
       .col-sm-12.col-md-6.col-lg-3.col-xl-2(v-scroll-reveal={ delay: 0 })
         .relative-position.q-ma-md
           div(style="padding-top:15px; padding-left:20px")
@@ -79,14 +79,14 @@ export default {
     return {
       totalSupply: 25,
       activeItem:null,
-      categories:['Airdrop', 'Team & Advisors','Development','Marketing','Minable'],
+      categories:['Airdrop', 'Team & Advisors','Development','Marketing','Mineable'],
       categoryColor:['red-4','green-4','blue-4','orange-4','purple-3','yellow'],
       categoryDescription:[
         'Tokens were distributed to EOS holders.',
         'The founding team tokens are vested over two years.',
         'These tokens are designated for the growth of the development team and infrastructure.',
         'This includes bounties and promotional events for early adopters.',
-        'Directly minable by participants.',
+        'Directly mineable by participants.',
         ],
       categoryPercentages:[5,5,5,5,80]
     }

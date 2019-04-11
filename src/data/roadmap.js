@@ -54,13 +54,13 @@ timelineEntries2:[
 timelineEntries3:[
   {
     title:'Boid on EOS Testnet',
-    content:'Boid backend functions will be implemented as a Dapp on EOS testnet.',
-    icon:"timelapse",
-    color:"orange-5"
+    content:'Boid backend functions begin migration to smart contracts.',
   },
   {
     title:'Boid Protocol expansion',
-    content:'More Blockchain computing protocols will be implemented into the Boid application.'
+    content:'More Blockchain computing protocols will be implemented into the Boid application.',
+    icon:"timelapse",
+    color:"orange-5"
   },
   {
     title:'Boid Swarm service',
@@ -77,8 +77,8 @@ timelineEntries4:[
     content:'The Boid Decentralized Autonomous Community gives tokenholders the ability to control the direction of the platform.',
   },
   {
-    title:'Boid Testnet launch',
-    content:'Initial testing for the operation of Boid as a standalone blockchain.'
+    title:'Boid Network launch',
+    content:'Initial testing for the operation of Boid as a standalone network.'
   },
   {
     title:'Boid Protocol expansion',
@@ -86,7 +86,7 @@ timelineEntries4:[
   },
   {
     title:'Boid Network official launch',
-    content:'Boid will function as an autonomous blockchain network. The Boid blockchain will communicate with other chains via IBC.'
+    content:'Boid will function as an autonomous network.'
   }
 ]
 }
