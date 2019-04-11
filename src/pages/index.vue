@@ -2,8 +2,9 @@
   q-page
     .relative-position()
       .full-width.bg-white.q-pa-lg
-        h5 Boid Season 0 is now Live
-        q-btn(color="green" @click="openURL('https://app.boid.com/')") Get Started
+        h5.no-margin Boid Season 1 Starts April 21st
+        p.q-pb-lg.q-pt-sm Stake BOID now before the season starts.
+        q-btn(color="green" @click="openURL('https://stake.boid.com')") Stake BOID
       heading(:buttonSize="buttonSize")
       intro(ref="intro")
       .relative-position.justify-center(ref="video")

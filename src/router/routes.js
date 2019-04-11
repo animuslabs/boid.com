@@ -5,6 +5,7 @@ export default [
     children: [
       { path: '', component: () => import('pages/index')},
       { path: 'app', component: () => import('components/boidApp')},
+      { path: 'tfc', component: () => import('components/tfc')},
       { path: 'tfc', component: () => import('components/tfc')}
     ]
   },

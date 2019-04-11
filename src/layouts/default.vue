@@ -1,10 +1,36 @@
 <template lang="pug">
   q-layout(view="lHh Lpr lFf" ref="pageLayout")
     q-layout-header(reveal)
-      q-toolbar(color="white" text-color="black")
-        q-toolbar-title.q-ma-sm
+      q-toolbar.relative-position(color="white" text-color="black")
+        q-toolbar-title(shrink style="width:110px;").q-ma-sm
           | boid
-        q-btn(color="green" outline @click="openURL('https://app.boid.com')") Login
+        .row.justify-end(style="overflow:auto;").full-width
+          div.gt-md
+            q-btn(flat color="grey-8" @click="quickScroll('video')") video
+            q-btn(flat color="grey-8" @click="quickScroll('teams')") teams
+            q-btn(flat color="grey-8" @click="quickScroll('science')") science
+            q-btn(flat color="grey-8" @click="quickScroll('power')") power
+            q-btn(flat color="grey-8" @click="quickScroll('token')") token
+            q-btn(flat color="grey-8" @click="quickScroll('timeline')") timeline
+            q-btn(flat color="grey-8" @click="quickScroll('team')") team
+            q-btn(flat color="grey-8" @click="quickScroll('faq')") FAQ
+          q-btn(color="green" outline @click="openURL('https://app.boid.com')") Go To App
+          q-btn(flat color="grey-8").lt-lg
+            q-icon(name="menu")
+            q-popover(v-model="NavMenu")
+              q-list
+                q-item(link @click.native="quickScroll('video')") Video
+                q-item(link @click.native="quickScroll('teams')") Teams
+                q-item(link @click.native="quickScroll('science')") Science
+                q-item(link @click.native="quickScroll('power')") Power
+                q-item(link @click.native="quickScroll('token')") Token
+                q-item(link @click.native="quickScroll('timeline')") Timeline
+                q-item(link @click.native="quickScroll('team')") Team
+                q-item(link @click.native="quickScroll('faq')") FAQ
+
+
+            
+
     q-page-container
       router-view(style="height: 100vh")
     q-modal(ref="videoModal" @show="videoModalOpen = true" @hide="videoModalOpen = false")
@@ -23,6 +49,7 @@ export default {
   name: 'LayoutDefault',
   data() {
     return {
+      NavMenu:false,
       videoModalOpen:false,
       screenSize:{
         height: window.innerHeight,
@@ -31,6 +58,10 @@ export default {
     }
   },
   methods: {
+    quickScroll(name){
+      this.$router.replace('/')
+      setTimeout(()=>this.$router.replace(`/#${name}`),100)
+    },
     openURL,
     logout(){
     }

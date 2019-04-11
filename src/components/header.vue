@@ -10,11 +10,11 @@
         .row.justify-center.q-pt-lg
           div
           q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')") 
-            img.on-left(style="width: 40px;" src="~assets/twitterlogo.svg")
+            img(style="width: 40px;" src="~assets/twitterlogo.svg")
           q-btn.block(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/zJnRpVz')") 
-            img.on-left( style="width: 40px;" src="~assets/discordicon.svg")
+            img( style="width: 40px;" src="~assets/discordicon.svg")
           q-btn(style="z-index:1000" flat color="white" @click="openURL('https://t.me/Boidcom_official')") 
-            img.on-left( style="width: 40px;" src="~assets/telegramlogo.svg")
+            img( style="width: 40px;" src="~assets/telegramlogo.svg")
       .row.absolute-bottom.justify-center
         svg.headingsvgheight(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
           path(id="svg_1" d="M0 100 C 60 10 90 50 100 100 Z" fill="#fff")
