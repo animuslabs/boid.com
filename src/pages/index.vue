@@ -1,10 +1,10 @@
 <template lang="pug">
   q-page
-    .relative-position()
-      .full-width.bg-white.q-pa-lg
-        h5.no-margin Boid Season 1 Starts April 21st
-        p.q-pb-lg.q-pt-sm Stake BOID now before the season starts.
-        q-btn(color="green" @click="openURL('https://stake.boid.com')") Stake BOID
+    .relative-position
+      // .full-width.bg-white.q-pa-lg
+      //   h5.no-margin Boid Season 1 Starts April 21st
+      //   p.q-pb-lg.q-pt-sm Stake BOID now before the season starts.
+      //   q-btn(color="green" @click="openURL('https://stake.boid.com')") Stake BOID
       heading(:buttonSize="buttonSize")
       intro(ref="intro")
       .relative-position.justify-center(ref="video")
