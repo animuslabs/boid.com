@@ -1,0 +1,28 @@
+{
+    "name": "community",
+    "description": "BOID Community DSP Package",
+    "dsp_json_uri": "https://boid.com/dsp-package.json",
+    "logo":{
+      "logo_1280": "https://ipfs.io/ipfs/QmR1a2iDwF2Dk8vuCEkvFVnYNQXRTZrcYzdLMDo1xj6mun"
+    },
+    "service_level_agreement": {
+        "availability":{
+            "uptime_9s": 5
+        },
+        "performance":{
+            "95": 500
+        }
+    },
+    "pinning":{
+        "ttl": 2400,
+        "public": false
+    },
+    "locations":[
+        {
+          "name": "Alabama",
+          "country": "USA",
+          "latitude": 33.4527,
+          "longitude": 86.8509 
+        }
+    ]
+}
