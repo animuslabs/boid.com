@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
-    "build":  "quasar build && cp _redirects dist/spa-mat && cp dsp-package.json dist/spa-mat/statics",
+    "build":  "quasar build && cp _redirects dist/spa-mat",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
