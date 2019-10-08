@@ -65,7 +65,6 @@
                   p(style="padding-left:38px;") {{tokenAmount(categoryPercentages[index])}} BOIDs
                   h6.q-pa-lg.text-white(v-if="index === activeItem") {{categoryDescription[index]}}
         .row.justify-center.q-pt-lg(v-scroll-reveal={delay:500})
-          //- q-btn(size="24px" color="blue-5" @click="openURL('https://app.boid.com')") Join the Airdrop
 
 </template>
 
@@ -79,16 +78,14 @@ export default {
     return {
       totalSupply: 25,
       activeItem:null,
-      categories:['Airdrop', 'Team & Advisors','Development','Marketing','Mineable'],
+      categories:['Airdrop','Development','Mineable'],
       categoryColor:['red-4','green-4','blue-4','orange-4','purple-3','yellow'],
       categoryDescription:[
         'Tokens were distributed to EOS holders.',
-        'The founding team tokens are vested over two years.',
         'These tokens are designated for the growth of the development team and infrastructure.',
-        'This includes bounties and promotional events for early adopters.',
         'Directly mineable by participants.',
         ],
-      categoryPercentages:[5,5,5,5,80]
+      categoryPercentages:[5,5,85]
     }
   },
   methods:{
