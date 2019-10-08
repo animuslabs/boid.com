@@ -82,10 +82,10 @@ export default {
       categoryColor:['red-4','green-4','blue-4','orange-4','purple-3','yellow'],
       categoryDescription:[
         'Tokens were distributed to EOS holders.',
-        'These tokens are designated for the growth of the development team and infrastructure.',
+        'These tokens are designated for research and development.',
         'Directly mineable by participants.',
         ],
-      categoryPercentages:[5,5,85]
+      categoryPercentages:[5,5,90]
     }
   },
   methods:{
