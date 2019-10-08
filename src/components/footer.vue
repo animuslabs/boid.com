@@ -1,10 +1,10 @@
 <template lang="pug">
   .row.justify-center.footermaster
-    q-btn.footerbtn(size="md" color="green-6" @click="openURL('https://app.boid.com')") Join Us
-    q-btn.footerbtn(color="orange" @click="emailUs()") Email us
+    q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://community.boid.com')") 
+      img(style="width: 40px;" src="~assets/communityicon.png")
     q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')") 
       img(style="width: 40px;" src="~assets/twitterlogo.svg")
-    q-btn(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/zJnRpVz')") 
+    q-btn.block(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/zJnRpVz')") 
       img( style="width: 40px;" src="~assets/discordicon.svg")
     q-btn(style="z-index:1000" flat color="white" @click="openURL('https://t.me/Boidcom_official')") 
       img( style="width: 40px;" src="~assets/telegramlogo.svg")
