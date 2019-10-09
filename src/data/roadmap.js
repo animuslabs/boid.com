@@ -55,20 +55,27 @@ timelineEntries3:[
   {
     title:'Boid on EOS Testnet',
     content:'Boid backend functions begin migration to smart contracts.',
+    icon:'check',
+    color:'green'
   },
   {
     title:'Boid Protocol expansion',
     content:'More Blockchain computing protocols will be implemented into the Boid application.',
+    icon:'check',
+    color:'green'
+
+  },
+  {
+    title:'Boid Validators Live',
+    content:'Boid Validators provide oracle services to calculate Boid Power on-chain and in a decentralized way.',
+    icon:'check',
+    color:'green'
+  },
+  {
+    title:'Boid DAC on Testnet',
+    content:'The Boid DAC with distributed authority and worker proposal system is being tested.',
     icon:"timelapse",
     color:"orange-5"
-  },
-  {
-    title:'Boid Swarm service',
-    content:'Boid Swarm is "distributed computing as a service" powered by the Boid network.'
-  },
-  {
-    title:'Boid Dapp on EOS Mainnet',
-    content:'The Boid network will function as a decentralized application on EOS with robust tokenization implemented.'
   }
 ],
 timelineEntries4:[
