@@ -1,6 +1,8 @@
 <template lang="pug">
   .row.justify-center.footermaster
-    q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://community.boid.com')") 
+    q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('https://bloks.io')") 
+      img(style="width: 40px;" src="~assets/blokslogo.svg")
+    q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('https://community.boid.com')") 
       img(style="width: 40px;" src="~assets/communityicon.png")
     q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')") 
       img(style="width: 40px;" src="~assets/twitterlogo.svg")
