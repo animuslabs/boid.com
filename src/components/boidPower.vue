@@ -40,8 +40,8 @@
               img.bpicons(src="~assets/boidpower/passiveincome.svg")
           .col-sm-12.col-md-7.col-lg-6.relative-position(style="width:400px; height:300px;")
             .bpinfocard
-              h6.bpHeading Passive Income
-              h6.bpinfoText Your Boid Power can be used to mine for various cryptos. Get paid out daily however you like.
+              h6.bpHeading Distributed Mining
+              h6.bpinfoText Your Boid Power can be used as a simplified mining frontend for various cryptos.
     .gt-sm.bpspacer              
     .row.justify-center.q-mt-xl
       .col-12-auto(v-scroll-reveal={ delay: 10 })

@@ -179,7 +179,7 @@
       boidPower(ref="power")
       boidToken(ref="token")
       roadMap(ref="timeline")
-      team(ref="team")
+      //- team(ref="team")
       faq(ref="faq")
       bFooter
 </template>
