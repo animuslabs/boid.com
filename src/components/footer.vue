@@ -10,6 +10,8 @@
       img( style="width: 40px;" src="~assets/discordicon.svg")
     q-btn(style="z-index:1000" flat color="white" @click="openURL('https://t.me/Boidcom_official')") 
       img( style="width: 40px;" src="~assets/telegramlogo.svg")
+    q-btn(style="z-index:1000" flat color="white" @click="openURL('https://discussions.app/tag/boid')") 
+      img( style="width: 40px;" src="~assets/atmos_white.svg")
 </template>
 
 <script>
