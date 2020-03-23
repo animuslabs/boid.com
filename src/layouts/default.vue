@@ -7,13 +7,14 @@
         .row.justify-end(style="overflow:auto;").full-width
           div.gt-md
             q-btn(flat color="grey-8" @click="quickScroll('video')") video
-            q-btn(flat color="grey-8" @click="quickScroll('teams')") teams
             q-btn(flat color="grey-8" @click="quickScroll('science')") science
             q-btn(flat color="grey-8" @click="quickScroll('power')") power
             q-btn(flat color="grey-8" @click="quickScroll('token')") token
             q-btn(flat color="grey-8" @click="quickScroll('timeline')") timeline
             q-btn(flat color="grey-8" @click="quickScroll('team')") team
             q-btn(flat color="grey-8" @click="quickScroll('faq')") FAQ
+            q-btn(color="blue-8" @click="openURL('https://www.boid.com/statics/Boid-WhitePaper-v2.pdf')").on-left Whitepaper
+              q-icon(name="get_app").on-right
           q-btn(color="green" outline @click="openURL('https://app.boid.com')").on-left Go To App
           q-btn(color="blue" outline @click="openURL('https://github.com/boid-com/BoidDesktop/releases')") Download
           q-btn(flat color="grey-8").lt-lg
