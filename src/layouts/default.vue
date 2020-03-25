@@ -26,7 +26,6 @@
                 q-item(link @click.native="quickScroll('power')") Power
                 q-item(link @click.native="quickScroll('token')") Token
                 q-item(link @click.native="quickScroll('timeline')") Timeline
-                q-item(link @click.native="quickScroll('team')") Team
                 q-item(link @click.native="quickScroll('faq')") FAQ
 
 
