@@ -86,16 +86,16 @@ timelineEntries4:[
     color:"orange-5"
   },
   {
-    title:'Boid Network launch',
-    content:'Initial testing for the operation of Boid as a standalone network.'
+    title:'Boid IBC launch',
+    content:'Initial testing for the operation of Boid across multiple public networks.'
   },
   {
     title:'Boid Protocol expansion',
-    content:'More Blockchain computing protocols will be implemented into the Boid application'
+    content:'More Blockchain computing protocols will be implemented into the Boid application.'
   },
   {
-    title:'Boid Network official launch',
-    content:'Boid will function as an autonomous network.'
-  }
+    title:'Boid Web expansion',
+    content:'The Boid social web app will be extended to improve functionality.'
+  },
 ]
 }
