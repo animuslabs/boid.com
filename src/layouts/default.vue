@@ -7,7 +7,7 @@
         .row.justify-end(style="overflow:auto;").full-width
           div.gt-md
             q-btn(flat color="grey-8" @click="quickScroll('video')") video
-            q-item(link @click.native="quickScroll('teams')")  Teams
+            q-btn(flat color="grey-8" @click="quickScroll('teams')") teams
             q-btn(flat color="grey-8" @click="quickScroll('science')") science
             q-btn(flat color="grey-8" @click="quickScroll('power')") power
             q-btn(flat color="grey-8" @click="quickScroll('token')") token
