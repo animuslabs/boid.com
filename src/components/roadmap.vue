@@ -81,8 +81,7 @@
                   :subtitle="'Q' + (index+1)"
                   :side="findSide(index)"
                   :color="entry.color"
-                  :icon="entry.icon"
-                )
+                  :icon="entry.icon")
                   |{{entry.content}}
 </template>
 

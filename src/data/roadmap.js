@@ -74,14 +74,16 @@ timelineEntries3:[
   {
     title:'Boid DAC on Testnet',
     content:'The Boid DAC with distributed authority and worker proposal system is being tested.',
-    icon:"timelapse",
-    color:"orange-5"
+    icon:'check',
+    color:'green'
   }
 ],
 timelineEntries4:[
   {
     title:'Boid DAC launched',
     content:'The Boid Decentralized Autonomous Community gives tokenholders the ability to control the direction of the platform.',
+    icon:"timelapse",
+    color:"orange-5"
   },
   {
     title:'Boid Network launch',

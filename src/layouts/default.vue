@@ -7,6 +7,7 @@
         .row.justify-end(style="overflow:auto;").full-width
           div.gt-md
             q-btn(flat color="grey-8" @click="quickScroll('video')") video
+            q-item(link @click.native="quickScroll('teams')")  Teams
             q-btn(flat color="grey-8" @click="quickScroll('science')") science
             q-btn(flat color="grey-8" @click="quickScroll('power')") power
             q-btn(flat color="grey-8" @click="quickScroll('token')") token
@@ -27,10 +28,6 @@
                 q-item(link @click.native="quickScroll('token')") Token
                 q-item(link @click.native="quickScroll('timeline')") Timeline
                 q-item(link @click.native="quickScroll('faq')") FAQ
-
-
-            
-
     q-page-container
       router-view(style="height: 100vh")
     q-modal(ref="videoModal" @show="videoModalOpen = true" @hide="videoModalOpen = false")
