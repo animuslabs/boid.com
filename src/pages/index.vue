@@ -1,10 +1,12 @@
 <template lang="pug">
   q-page
     .relative-position
-      // .full-width.bg-white.q-pa-lg
-      //   h5.no-margin Boid Season 1 Starts April 21st
-      //   p.q-pb-lg.q-pt-sm Stake BOID now before the season starts.
-      //   q-btn(color="green" @click="openURL('https://stake.boid.com')") Stake BOID
+      .full-width.q-pa-lg
+        .row
+          .col
+            h5.no-margin Boid Season 4 Starts April 27th
+            p.q-pb-lg.q-pt-sm Contribute to the season launch event for a rare NFT + Merchandise
+            q-btn(color="green" @click="openURL('https://launch.boid.com')" size="lg") Season Launch
       heading(:buttonSize="buttonSize")
       intro(ref="intro")
       .relative-position.justify-center(ref="video")
@@ -405,7 +407,7 @@ button
     padding-right: 0px
     padding-left: 0px
 .heading 
-  background: linear-gradient(to right, rgba(30, 87, 153, 0.7) 0%, rgba(79, 138, 194, 0.65) 52%, rgba(125, 185, 232, 0.7) 100%), url('~assets/header2.png');
+  background: linear-gradient(to right, rgba(30, 87, 153, 0.7) 0%, rgba(79, 138, 194, 0.65) 52%, rgba(125, 185, 232, 0.7) 100%), url('/statics/s4motif.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
