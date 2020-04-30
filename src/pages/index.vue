@@ -4,9 +4,9 @@
       .full-width.q-pa-lg
         .row
           .col
-            h5.no-margin Boid Season 4 Starts April 27th
-            p.q-pb-lg.q-pt-sm Contribute to the season launch event for a rare NFT + Merchandise
-            q-btn(color="green" @click="openURL('https://launch.boid.com')" size="lg") Season Launch
+            h5.no-margin Boid Season 4 is Live
+            p.q-pb-lg.q-pt-sm Participate in Boid Season 4
+            q-btn(color="green" @click="openURL('https://app.boid.com')" size="lg") Get Started
       heading(:buttonSize="buttonSize")
       intro(ref="intro")
       .relative-position.justify-center(ref="video")
