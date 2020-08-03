@@ -1,12 +1,12 @@
 <template lang="pug">
   q-page
     .relative-position
-      .full-width.q-pa-lg
-        .row
-          .col
-            h5.no-margin Boid Season 4 is Live
-            p.q-pb-lg.q-pt-sm Participate in Boid Season 4
-            q-btn(color="green" @click="openURL('https://app.boid.com')" size="lg") Get Started
+      //- .full-width.q-pa-lg
+      //-   .row
+      //-     .col
+      //-       h5.no-margin Boid Season 4 is Live
+      //-       p.q-pb-lg.q-pt-sm Participate in Boid Season 4
+      //-       q-btn(color="green" @click="openURL('https://app.boid.com')" size="lg") Get Started
       heading(:buttonSize="buttonSize")
       intro(ref="intro")
       .relative-position.justify-center(ref="video")
