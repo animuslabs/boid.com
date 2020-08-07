@@ -1,0 +1,43 @@
+{
+  "validator_name": "boidanimus",
+  "public_key": "okchainvaloper12lz8qv4dzakx0z3qa7kh0crafdvwre5cp5d06c",
+  
+  "introduction": {
+    "en": "At the heart of Boid is the desire to make the benefits of blockchain technology accessible to all people. We act as a gateway, lowering the barrier to entry for non-technical users to participate in blockchains and distributed computing projects.",
+    "zh": ""
+  },
+ 
+  "org": {
+    "name": "Boid",
+    "website": "boid.com",
+    "email": "john@boid.com",
+    "branding":{
+      "logo_256":"https://docs.boid.com/img/Boid-Bird-256x256.png",
+      "logo_1024":"https://docs.boid.com/img/graphics/BoidLogoLarge.png",
+      "logo_svg":"https://docs.boid.com/img/graphics/BoidLogo.svg"
+      
+    },
+    "location": "World, Earth",
+    "social_network": {
+      "twitter": "https://twitter.com/boidcom",
+      "facebook": "https://www.facebook.com/boidcom",
+      "github": "https://github.com/boid-com",
+      "telegram": "https://t.me/Boidcom_official",
+      "steemit": ""
+    }
+  },
+   "nodes": [
+    {
+      "location": {
+        "name": "boidanimus",
+        "country": "ES",
+        "latitude": 28.46824,
+        "longitude": -16.25462
+      },
+      "p2p_endpoint": "135.181.29.183",
+      "rpc_endpoint": "135.181.29.183",
+      "rust_endpoint": "",
+      "ws_endpoint": ""
+    }
+  ]
+}
