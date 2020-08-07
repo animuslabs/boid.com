@@ -1,2 +1,3 @@
+/validator.json /validator.json      200
 /api/*  https://api.boid.com/:splat  200
 /*    /index.html                    200
