@@ -7,29 +7,40 @@
         h2.text-blue-5(style="margin:10px; z-index:2;") Timeline
     .row.justify-center
       .row.justify-center
-        .col-sm-10.col-lg-7.col-xl-6
-          table.full-width
-            tr(v-scroll-reveal={ delay: 0 })
-              td
-                q-icon(name="check_circle" size="70px" color="green")
-              td(style="padding-top:35px; padding-left:20px")
-                h6.bpHeading.text-green Done 
-                h6.bpinfoText.text-white Private alpha and native applications are implemented.
-            tr(v-scroll-reveal={ delay: 50 })
-              td
-                q-icon(name="timelapse" size="70px" color="orange")
-              td(style="padding-top:35px; padding-left:20px")
-                h6.bpHeading.text-orange Today 
-                h6.bpinfoText.text-white Public alpha is available for early adopters. You can use the Boid Web and Boid Native applications today.
-            tr(v-scroll-reveal={ delay: 100 })
-              td
-                q-icon(name="timeline" size="70px" color="blue")
-              td(style="padding-top:35px; padding-left:20px")
-                h6.bpHeading.text-blue Tomorrow 
-                h6.bpinfoText.text-white Boid will function as an autonomous network using EOSIO technology.
-      .col-12.q-pt-xl(v-if="!viewTimeline")
-        .row.justify-center
-          q-btn(color="green" style="z-index:10" size="lg" @click="viewTimeline = true") View Detailed Roadmap
+        .col-sm-10.col-lg-7 
+          ul
+            li Boid Defi
+            li Boid IBC Bridge
+            li New GPU Miner Integration
+            li New user contracts + Quasar UI
+            li Boid Power/Devices contract rewrite
+            li On-chain WPS system
+            li Boid DAC Voting
+            li Chargeable Boid NFTs
+            li Team staking mechanics
+            li Boid Telegram/Discord Bot
+          //- table.full-width
+          //-   tr(v-scroll-reveal={ delay: 0 })
+          //-     td
+          //-       q-icon(name="check_circle" size="70px" color="green")
+          //-     td(style="padding-top:35px; padding-left:20px")
+          //-       h6.bpHeading.text-green Done 
+          //-       h6.bpinfoText.text-white Private alpha and native applications are implemented.
+          //-   tr(v-scroll-reveal={ delay: 50 })
+          //-     td
+          //-       q-icon(name="timelapse" size="70px" color="orange")
+          //-     td(style="padding-top:35px; padding-left:20px")
+          //-       h6.bpHeading.text-orange Today 
+          //-       h6.bpinfoText.text-white Public alpha is available for early adopters. You can use the Boid Web and Boid Native applications today.
+          //-   tr(v-scroll-reveal={ delay: 100 })
+          //-     td
+          //-       q-icon(name="timeline" size="70px" color="blue")
+          //-     td(style="padding-top:35px; padding-left:20px")
+          //-       h6.bpHeading.text-blue Tomorrow 
+          //-       h6.bpinfoText.text-white Boid will function as an autonomous network using EOSIO technology.
+      //- .col-12.q-pt-xl(v-if="!viewTimeline")
+        //- .row.justify-center
+          //- q-btn(color="green" style="z-index:10" size="lg" @click="viewTimeline = true") View Detailed Roadmap
            
     .col-11(v-if="viewTimeline")
       .row.justify-center
