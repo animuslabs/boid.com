@@ -6,19 +6,20 @@
       .row.justify-center(style="padding-bottom:0px;")
         h2.text-blue-5(style="margin:10px; z-index:2;") Timeline
     .row.justify-center
-      .row.justify-center
-        .col-sm-10.col-lg-7 
-          ul
-            li Boid Defi
-            li Boid IBC Bridge
-            li New GPU Miner Integration
-            li New user contracts + Quasar UI
-            li Boid Power/Devices contract rewrite
-            li On-chain WPS system
-            li Boid DAC Voting
-            li Chargeable Boid NFTs
-            li Team staking mechanics
-            li Boid Telegram/Discord Bot
+      .row.justify-center      
+        .col-auto
+          li Boid Defi
+          li Boid IBC Bridge
+          li New GPU Miner Integration
+          li New user contracts + Quasar UI
+          li BoidVoid Game Alpha
+          li Boid Power/Devices contract rewrite
+        .col-auto
+          li On-chain WPS system
+          li Boid DAC Voting
+          li Chargeable Boid NFTs
+          li Team staking mechanics
+          li Boid Telegram/Discord Bot
           //- table.full-width
           //-   tr(v-scroll-reveal={ delay: 0 })
           //-     td
