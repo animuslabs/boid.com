@@ -12,6 +12,8 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@volar/vue-language-plugin-pug": "^1.0.7",
+    "@vue/compiler-dom": "^3.2.40",
     "autoprefixer": "^8.4.1",
     "axios": "^0.18.0",
     "chart.js": "^2.7.2",
