@@ -15,7 +15,7 @@
     "@volar/vue-language-plugin-pug": "^1.0.7",
     "@vue/compiler-dom": "^3.2.40",
     "autoprefixer": "^8.4.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.2",
     "chart.js": "^2.7.2",
     "tinycolor2": "^1.4.1",
     "vue-animate-scroll": "^0.1.3",
