@@ -4,20 +4,20 @@
       .col-12.headingtextoffset(v-scroll-reveal={ delay: 0 })
         h2.text-center The Social Supercomputer
       .col-auto()
-        q-btn.shadow-5(style="z-index:1000" :size="buttonSize" color="green-6" @click="openURL('https://app.boid.com')") Join Us
+        //- q-btn.shadow-5(style="z-index:1000" :size="buttonSize" color="green-6" @click="openURL('https://app.boid.com')") Join Us
     .row.justify-center
-      q-btn.shadow-5(style="z-index:1000" size="md" color="blue-6" @click="openURL('https://github.com/boid-com/BoidDesktop/releases')") Download Now
+      //- q-btn.shadow-5(style="z-index:1000" size="md" color="blue-6" @click="openURL('https://github.com/boid-com/BoidDesktop/releases')") Download Now
     .row.justify-center()
       .col-12(v-scroll-reveal={ delay: 150 })
         .row.justify-center.q-pt-lg
           div
-          q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://community.boid.com')") 
+          q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://community.boid.com')")
             img(style="width: 40px;" src="~assets/communityicon.png")
-          q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')") 
+          q-btn.block(style="z-index:1000" flat size="md" color="white" @click="openURL('http://twitter.com/boidcom')")
             img(style="width: 40px;" src="~assets/twitterlogo.svg")
-          q-btn.block(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/zJnRpVz')") 
+          q-btn.block(style="z-index:1000" flat color="white" @click="openURL('https://discord.gg/zJnRpVz')")
             img( style="width: 40px;" src="~assets/discordicon.svg")
-          q-btn(style="z-index:1000" flat color="white" @click="openURL('https://t.me/Boidcom_official')") 
+          q-btn(style="z-index:1000" flat color="white" @click="openURL('https://t.me/Boidcom_official')")
             img( style="width: 40px;" src="~assets/telegramlogo.svg")
       .row.absolute-bottom.justify-center
         svg.headingsvgheight(id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" style="fill: #fff;" viewBox="0 0 100 100" preserveAspectRatio="none")
