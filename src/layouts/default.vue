@@ -6,17 +6,17 @@
           | boid
         .row.justify-end(style="overflow:auto;").full-width
           div.gt-md
-            q-btn(flat color="grey-8" @click="quickScroll('video')") video
-            q-btn(flat color="grey-8" @click="quickScroll('teams')") teams
-            q-btn(flat color="grey-8" @click="quickScroll('science')") science
-            q-btn(flat color="grey-8" @click="quickScroll('power')") power
-            q-btn(flat color="grey-8" @click="quickScroll('token')") token
-            q-btn(flat color="grey-8" @click="quickScroll('timeline')") timeline
-            q-btn(flat color="grey-8" @click="quickScroll('faq')").on-left FAQ
+            //- q-btn(flat color="grey-8" @click="quickScroll('video')") video
+            //- q-btn(flat color="grey-8" @click="quickScroll('teams')") teams
+            //- q-btn(flat color="grey-8" @click="quickScroll('science')") science
+            //- q-btn(flat color="grey-8" @click="quickScroll('power')") power
+            //- q-btn(flat color="grey-8" @click="quickScroll('token')") token
+            //- q-btn(flat color="grey-8" @click="quickScroll('timeline')") timeline
+            //- q-btn(flat color="grey-8" @click="quickScroll('faq')").on-left FAQ
             q-btn(color="blue-8" @click="openURL('https://www.boid.com/statics/Boid-WhitePaper-v2.pdf')").on-left Whitepaper
               q-icon(name="get_app").on-right
-          q-btn(color="green" outline @click="openURL('https://app.boid.com')").on-left Go To App
-          q-btn(color="blue" outline @click="openURL('https://github.com/boid-com/BoidDesktop/releases')") Download
+          q-btn(color="green" outline @click="openURL('https://universe.boid.com')").on-left Boidverse
+          //- q-btn(color="blue" outline @click="openURL('https://github.com/boid-com/BoidDesktop/releases')") Download
           q-btn(flat color="grey-8").lt-lg
             q-icon(name="menu")
             q-popover(v-model="NavMenu")
@@ -74,7 +74,7 @@ export default {
       else if (data) this.$refs.videoModal.show()
       else this.$refs.videoModal.hide()
     })
-    
+
   },
   watch:{
     videoModalOpen(data){
@@ -92,9 +92,9 @@ export default {
   font-size 35px
   color #089cfc
 .videocontainer
-  width:80vw 
+  width:80vw
   height:80vh
-  @media screen and (max-width: $breakpoint-lg) 
+  @media screen and (max-width: $breakpoint-lg)
     width: 100vw
     height: 70vh
 
